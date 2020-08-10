@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Kilitom">
+    <meta name="keywords" content="Java基础, Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Kilitom</title>
+    <title>Java基础 | Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Java基础</h1>
                 </div>
             </div>
         </div>
@@ -442,8 +442,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" class="post-category">
-                                技术分享
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                Java学习笔记
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
@@ -471,15 +471,104 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="Java中标识符的命名必须满足以下原则："><a href="#Java中标识符的命名必须满足以下原则：" class="headerlink" title="Java中标识符的命名必须满足以下原则："></a>Java中标识符的命名必须满足以下原则：</h3><pre><code>标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
+标识符可以包含数字，但不能以数字开头
+除下划线“_”和“$”符号外，标识符中不包含任何特殊字符，如空格
+标识符区分大小写，比如，“abc”和“Abc”是两个不同的标识符
+对于标识符的长度没有限制
+不能使用Java关键字作为标识符 例如 static public void  main</code></pre>
+<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><pre><code>Java中分隔符分为两类：
+没有意义的空白符 
+拥有确定含义的普通分隔符</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">普通分隔符</th>
+<th align="left">名称</th>
+<th align="left">功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">{}</td>
+<td align="left">大括号</td>
+<td align="left">用来定义程序块，类，方法以及局部范围;</td>
+</tr>
+<tr>
+<td align="left">[]</td>
+<td align="left">中括号</td>
+<td align="left">用来进行数组的声明，也可用来表示撤销对数组的引用;</td>
+</tr>
+<tr>
+<td align="left">()</td>
+<td align="left">小括号</td>
+<td align="left">在定义和调用方法时用来容纳参数表，在控制语句或强制类型转换组成的表达式中用来表示执行或计算的优先级 ;</td>
+</tr>
+<tr>
+<td align="left">;</td>
+<td align="left">分号</td>
+<td align="left">用来表示一条语句的结束 ;在for控制语句中用来将圆括号内的语法连接起来;</td>
+</tr>
+<tr>
+<td align="left">,</td>
+<td align="left">逗号</td>
+<td align="left">在变量声明中，用于分割变量表中的各个变量;在for控制语句中用来将圆括号内的语法连接起来;</td>
+</tr>
+<tr>
+<td align="left">:</td>
+<td align="left">冒号</td>
+<td align="left">说明语句标号。例如在三元运算符中使用;</td>
+</tr>
+</tbody></table>
+<h2 id="基本数据类型："><a href="#基本数据类型：" class="headerlink" title="基本数据类型："></a>基本数据类型：</h2><h4 id="（1）数值型："><a href="#（1）数值型：" class="headerlink" title="（1）数值型："></a>（1）数值型：</h4><pre><code>          1）整数类型（byte、short、int、long）
+         2)浮点类型（float、double）
+         注:long a=1234567890L(末尾加“L”、“l”),否则默认为int型；
+            float b=2.3f(末尾加“F”、“f”),否则默认为double型；
+            八进制必须以0（零） 开头；十六必须进制以0X或0x开头（零X或零x）。</code></pre>
+<h4 id="（2）字符型：char型"><a href="#（2）字符型：char型" class="headerlink" title="（2）字符型：char型"></a>（2）字符型：char型</h4><pre><code>         注：每个字符在unicode表中都有相对应的位置，如a在unicode表中的位置是97.
+             转义字符（是字符就要加单引号）：\ddd:1-3为8进制数据所表示的字符，如\123
+                                          \uxxxx:4位16进制数据所表示的字符，如\u0052
+                                          \&#39;:单引号字符
+                                          \\:反斜杠字符
+                                          \t:垂直制表符，将光标移到下一个制表符的位置
+                                          \r:回车
+                                          \n:换行
+                                          \b:退格
+                                          \f:换页</code></pre>
+<h4 id="（3）布尔型（boolean）"><a href="#（3）布尔型（boolean）" class="headerlink" title="（3）布尔型（boolean）:"></a>（3）布尔型（boolean）:</h4><pre><code> 又称为逻辑类型，只有true和false两个值，表示真和假。</code></pre>
+<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h4 id="1-常量：在程序执行过程中，其值不能被改变的量。"><a href="#1-常量：在程序执行过程中，其值不能被改变的量。" class="headerlink" title="1.常量：在程序执行过程中，其值不能被改变的量。"></a>1.常量：在程序执行过程中，其值不能被改变的量。</h4><pre><code> (1)常量的声明（定义常量）：1)final 数据类型 常量名称[=值];如final int a=5;
+    注:1）常量通常也被称为final变量
+ 2）用final定义“成员变量（全局变量）”时，必须立刻设初值，否则会产生编译错误。</code></pre>
+<h4 id="2-变量：在程序执行过程中，其值能被改变的量。"><a href="#2-变量：在程序执行过程中，其值能被改变的量。" class="headerlink" title="2.变量：在程序执行过程中，其值能被改变的量。"></a>2.变量：在程序执行过程中，其值能被改变的量。</h4><pre><code>(1)成员变量（全局变量）：定义在类中；成员变量又分为静态变量和实例变量；
+ 1）静态变量（有static关键字）：有效范围跨类，甚至可达整个程序中（应用程序由若干个类构成）。
+ 2）实例变量（无static关键字）：有效范围当前类。
+(2)局部变量：定义在方法中。
+   注：当局部变量名与成员变量名相通时，成员变量将在此方法中暂时失效。</code></pre>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h5 id="1-赋值运算符（-）"><a href="#1-赋值运算符（-）" class="headerlink" title="(1)赋值运算符（=）"></a>(1)赋值运算符（=）</h5><pre><code> 例：int a=3;(将3赋给a)
+     int b=a+c;(将a+c的和赋给b)
+     x=y=z=5;(将5的值赋给x、y、z，不建议使用)</code></pre>
+<h5 id="2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））"><a href="#2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））" class="headerlink" title="(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））"></a>(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））</h5><pre><code> 例：12.45f*15=27.45;
+     45-30=15;
+     5*3=15;
+     6/2=3;
+     12%10=2;</code></pre>
+<h5 id="3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量"><a href="#3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量" class="headerlink" title="(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量"></a>(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量</h5><pre><code> 例：假设a=5;以自增为例。
+     b=++a;//此时a先加1，再赋值给b,所以b=6;
+     b=a++;//此时a直接赋给b,之后加1，所以b=5;</code></pre>
+<h5 id="4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）"><a href="#4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）" class="headerlink" title="(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）"></a>(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）</h5><pre><code> 例：4&gt;5,结果为false.
+     4!=5,结果为true.
+ 注：结果为布尔值</code></pre>
+<h5 id="5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）"><a href="#5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）" class="headerlink" title="(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）"></a>(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）</h5><pre><code> 与：同真为真
+ 或：一真为真
+ 注：1）结果都为布尔值（flase、true）
+     2）短路运算符（&amp;&amp;）：第一个为假，就不再判断第二个。
+        非短路运算符（&amp;）：第一个为假，依然判断第二个，相比之下更浪费时间。</code></pre>
+<h5 id="6-三元运算符（条件式？值1：值2）：等价于if…-else语句"><a href="#6-三元运算符（条件式？值1：值2）：等价于if…-else语句" class="headerlink" title="(6)三元运算符（条件式？值1：值2）：等价于if…..else语句"></a>(6)三元运算符（条件式？值1：值2）：等价于if…..else语句</h5><pre><code> 例：int y=a&gt;b?x+1:x-1;
+    含义：如果a&gt;b成立，y=x+1;否则y=x-1；</code></pre>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h5 id="（1）隐式类型转换（自动类型转换）"><a href="#（1）隐式类型转换（自动类型转换）" class="headerlink" title="（1）隐式类型转换（自动类型转换）"></a>（1）隐式类型转换（自动类型转换）</h5><pre><code> 例：int a=3;
+     float x=a;
+     执行结果为3.0</code></pre>
+<h5 id="（2）显式类型转换（强制类型转换）"><a href="#（2）显式类型转换（强制类型转换）" class="headerlink" title="（2）显式类型转换（强制类型转换）"></a>（2）显式类型转换（强制类型转换）</h5><pre><code>例：int a=(int)4.25;
+    执行结果为：4</code></pre>
 
             </div>
             <hr/>
@@ -505,7 +594,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/09/hello-world/">https://kilitom.github.io/2020/08/09/hello-world/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/java-ji-chu/">https://kilitom.github.io/2020/08/10/java-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,39 +801,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/09/java-ru-men/">
+                <a href="/2020/08/10/java-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
                         
-                        <span class="card-title">Java入门</span>
+                        <span class="card-title">Java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            了解JavaJava特点
-​    简单性
-​    面向对象性
-​    分布式
-​    健壮性
-​    高性能
-​    多线程
-​    动态性
-
-Java运行环境环境变量配置
-​        JAVA_HOME​       
+                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
+标识符可以包含数字，但不能以数字开头
+除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -757,6 +839,7 @@ Java运行环境环境变量配置
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -775,25 +858,30 @@ Java运行环境环境变量配置
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/09/wo-de-di-yi-pian-bo-ke-wen-zhang/">
+                <a href="/2020/08/09/java-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="我的第一篇博客文章">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
                         
-                        <span class="card-title">我的第一篇博客文章</span>
+                        <span class="card-title">Java入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ##第一章
-内容
-##第二章
-内容
-##参考文件
-www.baidu.com
+                            了解JavaJava特点
+1. ​    简单性
+2. ​    面向对象性
+3. ​    分布式
+4. ​    健壮性
+5. ​    高性能
+6. ​    多线程
+7. ​    动态性
 
+
+Java运行环境环境变量配置
+- ​ 
                         
                     </div>
                     <div class="publish-info">
@@ -804,8 +892,8 @@ www.baidu.com
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    Java学习笔记
                                 </a>
                             
                             
@@ -815,8 +903,8 @@ www.baidu.com
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">-Linux</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">-Java</span>
                     </a>
                     
                 </div>
