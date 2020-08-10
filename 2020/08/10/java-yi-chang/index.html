@@ -479,7 +479,7 @@ Exception（异常）：因编程错误或偶然的外在因素导致的一般�
 检查型(checked)异常 ：是指编译器要求必须处置的异常，是程序在运行时由于外界因素造成的一般性异常，该类异常是Exception类型及其子类（RuntimeException类及其子类除外） </code></pre>
 <h5 id="从开发应用角度考虑可以将异常分为以下两类-："><a href="#从开发应用角度考虑可以将异常分为以下两类-：" class="headerlink" title="从开发应用角度考虑可以将异常分为以下两类 ："></a>从开发应用角度考虑可以将异常分为以下两类 ：</h5><pre><code>系统异常：系统异常在性质上比应用异常更加严重，前者通常和应用逻辑无关，而是底层出现了问题，如数据库服务器的异常终止等。
 应用异常：应用异常是由于违反了商业规则或者业务逻辑而导致的错误。例如，一个被锁定的用户试图登入应用。 </code></pre>
-<h5 id="Java异常体系"><a href="#Java异常体系" class="headerlink" title="Java异常体系"></a>Java异常体系</h5><p><img src="/2020/08/10/java-yi-chang/DEMO\blog\source_posts\Java异常\异常体系.png" alt="异常体系"></p>
+<h5 id="Java异常体系"><a href="#Java异常体系" class="headerlink" title="Java异常体系"></a>Java异常体系</h5><p><img src="/2020/08/10/java-yi-chang/Exception.png" alt="异常体系"></p>
 <h5 id="Java语言提供两种处理异常的机制："><a href="#Java语言提供两种处理异常的机制：" class="headerlink" title="Java语言提供两种处理异常的机制："></a>Java语言提供两种处理异常的机制：</h5><pre><code>捕获异常 ：在程序运行过程中系统得到一个异常对象时，它将会沿着方法的调用栈逐层回溯，寻找处理这一异常的代码，找到处理这种类型异常的方法后，运行时系统把当前异常对象交给这个方法进行处理，该过程称为捕获(catch)异常。
 声明抛出异常 ：当运行时系统得到一个异常对象，如果当前方法并不知道如何处理所出现的异常或者此时处理不合适，则可在定义方法时，声明抛出（throws）异常。 </code></pre>
 <h5 id="处理异常关键字"><a href="#处理异常关键字" class="headerlink" title="处理异常关键字"></a>处理异常关键字</h5><pre><code>try , catch ,finally ,throw和throws
@@ -489,7 +489,7 @@ finally :无论是否发生异常都会运行
 throw:明确抛出一个异常
 throws:方法声明抛出异常</code></pre>
 <h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><pre><code>为了构建自己的业务异常逻辑, 提高用户体验</code></pre>
-<h5 id="多重异常流程"><a href="#多重异常流程" class="headerlink" title="多重异常流程"></a>多重异常流程<img src="/2020/08/10/java-yi-chang/DEMO\blog\source_posts\Java异常\多重异常.png" alt="多重异常"></h5>
+<h5 id="多重异常流程"><a href="#多重异常流程" class="headerlink" title="多重异常流程"></a>多重异常流程<img src="/2020/08/10/java-yi-chang/Exceptions.png" alt="多重异常"></h5>
             </div>
             <hr/>
 
