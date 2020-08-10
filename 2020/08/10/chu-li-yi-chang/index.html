@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java面向对象, Kilitom">
+    <meta name="keywords" content="Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java面向对象 | Kilitom</title>
+    <title>Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java面向对象</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">-Java</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Java学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -455,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-05
+                    2020-08-10
                 </div>
                 
 
@@ -471,84 +458,245 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><pre><code>封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。</code></pre>
-<h2 id="封装的原则"><a href="#封装的原则" class="headerlink" title="封装的原则"></a>封装的原则</h2><pre><code>使对象以外的部分不能随意存取对象的内部数据，从而有效的避免了外部错误对它的“交叉感染”。数据隐藏特性提升了系统安全性，使软件错误能够局部化，减少查错和排错的难度。 </code></pre>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><pre><code>继承是软件重用的一种形式，它通过重用现有类的属性和方法，并增加新功能或修改现有功能来构建新的类。</code></pre>
-<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><pre><code>多态是指在父类中定义的属性或方法被子类继承之后，可以具有不同的表现行为。这使得同一个属性或方法在父类及其各个子类中具有不同的语义。</code></pre>
-<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><pre><code>类是对象的模板,对象是类的实例</code></pre>
-<h5 id="类由属性和方法构成"><a href="#类由属性和方法构成" class="headerlink" title="类由属性和方法构成"></a>类由属性和方法构成</h5><pre><code>对象的特征在类中表示为成员变量，称为类的属性。 
-类的方法是对象执行操作的一种规范。方法指定以何种方式操作对象的数据，是操作的实际实现。</code></pre>
-<h5 id="Java中声明类的格式"><a href="#Java中声明类的格式" class="headerlink" title="Java中声明类的格式"></a>Java中声明类的格式</h5><pre class=" language-java"><code class="language-java"><span class="token punctuation">[</span>访问符<span class="token punctuation">]</span> <span class="token punctuation">[</span>修饰符<span class="token punctuation">]</span> <span class="token keyword">class</span> <span class="token operator">&lt;</span>类名<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-         <span class="token punctuation">[</span>属性<span class="token punctuation">]</span>
-         <span class="token punctuation">[</span>方法<span class="token punctuation">]</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h5><pre><code>声明一个变量
-创建该对象,并把该对象的引用赋给声明好的变量.这是通过new运算符实现的</code></pre>
-<h5 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h5><pre class=" language-java"><code class="language-java">Rectangle rect1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-Rectangle rect2<span class="token punctuation">;</span>
-rect2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-Rectangle rect3 <span class="token operator">=</span> null<span class="token punctuation">;</span>
-rect3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><pre><code>构造方法是一种特殊的方法，在对象被创建时用来初始化对象；
-它具有和它所在的类完全一样的名字；
-构造方法和类的方法类似，只不过构造方法没有返回类型；
-构造方法的任务是初始化一个对象的内部状态。</code></pre>
-<h6 id="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"><a href="#如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。" class="headerlink" title="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"></a>如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。</h6><h5 id="this调用的是本类中的对象或者方法"><a href="#this调用的是本类中的对象或者方法" class="headerlink" title="this调用的是本类中的对象或者方法"></a>this调用的是本类中的对象或者方法</h5><h5 id="对象的初始化"><a href="#对象的初始化" class="headerlink" title="对象的初始化"></a>对象的初始化</h5><pre class=" language-java"><code class="language-java">Rectangle rectangle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></code></pre>
-<h5 id="类的方法"><a href="#类的方法" class="headerlink" title="类的方法"></a>类的方法</h5><pre><code>方法是类行为的体现，其他对象可以根据类的方法对类进行访问。类的方法包括方法的说明和方法的实现两部分 ，格式如下所示：
-[access]  [modifiers] &lt;return_type&gt; methodName ([&lt;argu_list&gt;])  &#123;&#125;</code></pre>
-<h6 id="方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。"><a href="#方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。" class="headerlink" title="方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。"></a>方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。</h6><h5 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h5><pre><code>当分配完一个对象后，可以使用点操作符“.”来实现对属性和方法的访问：
-对象名.属性;//访问对象的属性
-对象名.方法名();//访问对象的方法</code></pre>
-<h1 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h1><h5 id="按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"><a href="#按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。" class="headerlink" title="按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"></a>按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。</h5><h5 id="引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"><a href="#引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。" class="headerlink" title="引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"></a>引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。</h5><h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><pre><code>在Java程序中，如果同一个类中存在两个方法同名，方法的签名(参数个数、参数类型、类型排列次序)上也一样，将无法编译通过。但在Java中多个方法重名是允许的，只要保证方法签名不同即可，这种特性称为方法重载（overload）。</code></pre>
-<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><pre><code>方法名相同；
-参数列表（个数、类型、顺序）不同；</code></pre>
-<h6 id="注意：返回值不影响方法重载。构造方法也可以重载-。"><a href="#注意：返回值不影响方法重载。构造方法也可以重载-。" class="headerlink" title="注意：返回值不影响方法重载。构造方法也可以重载 。"></a>注意：返回值不影响方法重载。构造方法也可以重载 。</h6><h2 id="封装-1"><a href="#封装-1" class="headerlink" title="封装"></a>封装</h2><pre><code>Java中为了将数据有效的保护起来，提供了访问修饰符用来声明、控制属性、方法乃至类本身的访问，以实现隐藏一个类的实现细节，防止对封装数据未经授权的访问，此种形式称为“封装”。
-引入封装，使用者只能通过事先定制好的方法来访问数据，可以方便的加入控制逻辑，限制对属性的不合理操作，有利于保证数据的完整性。
-实现封装的关键是不让外界直接与对象属性交互，而是要通过指定的方法操作对象的属性，如下图所示：</code></pre>
-<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><pre><code>Java中定义了private（私有的）、protected（受保护的）和public（公共的）的访问修饰符，同时也定义了一个缺省的访问级别，用于声明类、属性、方法的访问权限。明确访问修饰符的限制是用好“封装”的关键 ：</code></pre>
-<h5 id="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"><a href="#使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；" class="headerlink" title="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"></a>使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；</h5><h5 id="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"><a href="#使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；" class="headerlink" title="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"></a>使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；</h5><h5 id="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"><a href="#如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；" class="headerlink" title="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"></a>如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；</h5><h5 id="private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"><a href="#private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。" class="headerlink" title="private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"></a>private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。</h5><table>
+                <p><strong>3.1、认识异常（了解）</strong></p>
+<p>异常是程序之中导致程序中断的一种指令流，下面，通过两个程序来进行异常产生问题的对比。</p>
+<p><strong>范例：</strong>不产生异常的程序</p>
+<table>
 <thead>
 <tr>
-<th>访问控制</th>
-<th>privata成员</th>
-<th>省缺成员</th>
-<th>protected成员</th>
-<th>public成员</th>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; int result = 10 / 2 ; System.out.println(“2、除法计算结果：” + result) ; System.out.println(“3、除法计算结束。”) ; } }</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>同一类中成员</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr>
-<td>同一包中其他成员</td>
-<td>×</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr>
-<td>不同包中子类</td>
-<td>×</td>
-<td>×</td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr>
-<td>不同包中非子类</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
-<td>√</td>
+<td>1、除法计算开始。 2、除法计算结果：5 3、除法计算结束。</td>
 </tr>
 </tbody></table>
-<h2 id="静态变量和方法"><a href="#静态变量和方法" class="headerlink" title="静态变量和方法"></a>静态变量和方法</h2><pre><code>“实例相关”的成员描述的是单个实例的状态和方法，其使用必须要通过类的实例来完成;
-“类相关”是在类的成员前面加上“static”关键字，从而直接通过类名就可以访问 。</code></pre>
+<p><strong>范例：</strong>产生异常的程序</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; <strong>int result = 10 / 0 ; // 会出现错误</strong> System.out.println(“2、除法计算结果：” + result) ; System.out.println(“3、除法计算结束。”) ; } }</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1、除法计算开始。 Exception in thread “main” java.lang.<strong>ArithmeticException</strong>: / by zero at TestDemo.main(TestDemo.java:4)</td>
+</tr>
+</tbody></table>
+<p>这时候程序出现了错误，那么出现错误之后的程序不执行了，而是直接进行了错误信息的输出，并且直接结束程序。但是，出现了错误，应该去处理才对，但是现在没有处理。</p>
+<p><strong>3.2、处理异常（重点）</strong></p>
+<p>现在，如果希望程序出现了异常之后，程序依然可以正常的完成的话，那么就可以使用如下的格式进行异常的处理：</p>
+<table>
+<thead>
+<tr>
+<th>try { 可能出现异常的语句 ; } [ catch (异常类型 异常对象) { 处理异常 ; } catch (异常类型 异常对象) { 处理异常 ; } … ] [finally { 不管是否出现异常，都执行此代码 ; }]</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>使用以上的操作处理异常</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; try { <strong>int result = 10 / 0 ; // 异常</strong> System.out.println(“2、除法计算结果：” + result) ; // 之前语句有异常，此语句不再执行 } catch (ArithmeticException e) { System.out.println(e) ; // 异常处理：输出错误信息，java.lang.ArithmeticException: / by zero } System.out.println(“3、除法计算结束。”) ; } }</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1、除法计算开始。 java.lang.ArithmeticException: / by zero 3、除法计算结束。</td>
+</tr>
+</tbody></table>
+<p>可以发现，加入了异常处理之后，程序之中即使有了异常，程序也可以正常的执行完毕，但是现在发现，异常处理时的错误输出信息和之前相比，出错的信息不明确了，那么为了让错误的信息更加的完整，一般而言，都会调用printStackTrace()方法进行异常信息的打印，这个方法打印的异常信息是最完整的：</p>
+<table>
+<thead>
+<tr>
+<th>java.lang.ArithmeticException: / by zero at TestDemo.main(TestDemo.java:5)</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>加入finally</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; try { int result = 10 / 1 ; System.out.println(“2、除法计算结果：” + result) ; } catch (ArithmeticException e) { e.printStackTrace() ; } <strong>finally {</strong>  <strong>System.out.println(“不管是否出现异常都执行”) ;</strong>  <strong>}</strong>  System.out.println(“3、除法计算结束。”) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>对于finally的实际应用必须结合之后的异常处理的标准格式来看，单独看，没意义。</p>
+<p>但是，对于之前的程序现在又有了问题：现在执行数学计算的两个参数，都是由程序默认提供，那么如果说现在两个计算的参数通过初始化参数传递呢？</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; try { <strong>int x = Integer.parseInt(args[0]) ; // 接收参数 int y = Integer.parseInt(args[1]) ; // 接收参数 int result = x / y ;</strong>  System.out.println(“2、除法计算结果：” + result) ; } catch (ArithmeticException e) { e.printStackTrace() ; } finally { System.out.println(“不管是否出现异常都执行”) ; } System.out.println(“3、除法计算结束。”) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>这个时候，数据由外部传送，那么在这种情况下，就有可能出现以下几类问题：</p>
+<p>· 执行时不输入参数（java TestDemo），ArrayIndexOutOfBoundsException，未处理；</p>
+<p>· 输入的参数不是数字（java TestDemo a b），NumberFormatException，未处理；</p>
+<p>· 被除数为0（java TestDemo 10 0），ArithmeticException，已处理。</p>
+<p>可以发现，以上的程序实际上是存在三种异常，而程序之中只能够处理一种，而对于不能处理的异常，发现程序依然会直接中断执行。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; try { int x = Integer.parseInt(args[0]) ; int y = Integer.parseInt(args[1]) ; int result = x / y ; System.out.println(“2、除法计算结果：” + result) ; } <strong>catch (ArithmeticException e) {</strong>  <strong>e.printStackTrace() ;</strong>  <strong>} catch (ArrayIndexOutOfBoundsException e) {</strong>  <strong>e.printStackTrace() ;</strong>  <strong>} catch (NumberFormatException e) {</strong>  <strong>e.printStackTrace() ;</strong>  <strong>}</strong> finally { System.out.println(“不管是否出现异常都执行”) ; } System.out.println(“3、除法计算结束。”) ; }}</th>
+</tr>
+</thead>
+</table>
+<p>此时，问题就来了，如果按照以上的方式一次一次的测试来进行异常类型的推断，还不如直接编写多个if..else。</p>
+<p><strong>3.3、异常的处理流程（重点）</strong></p>
+<p>以上已经完成了异常的基本处理流程，但是也可以发现问题，所有的异常都像之前那样一条条的判断似乎是一件不可能完成的任务，因为日后肯定会接触到一些不常见的异常信息，那么下面就必须首先研究异常的流程和结构。</p>
+<p>先查看两个异常类的继承结构：</p>
+<table>
+<thead>
+<tr>
+<th><strong>ArithmeticException：</strong></th>
+<th><strong>ArrayIndexOutOfBoundsException：</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java.lang.Object |- <strong>java.lang.Throwable</strong>  |- <strong>java.lang.Exception</strong> |- java.lang.RuntimeException |- java.lang.ArithmeticException</td>
+<td>java.lang.Object |- <strong>java.lang.Throwable</strong>  |- <strong>java.lang.Exception</strong>  |- java.lang.RuntimeException |- java.lang.IndexOutOfBoundsException |- java.lang.ArrayIndexOutOfBoundsException</td>
+</tr>
+</tbody></table>
+<p>可以发现所有的异常类型最高的继承类是Throwable，通过doc文档可以发现在Throwable下有两个子类：</p>
+<p>（<strong>面试题：</strong>请解释Error和Exception的区别？）</p>
+<p>· Error：指的是JVM错误，这个时候的程序并没有执行，无法处理；</p>
+<p>· Exception：指的是程序之中出现的错误信息，可以进行异常处理，主要关心Exception。</p>
+<p>那么通过继承关系可以发现，肯定在进行日后异常处理的时候是以Exception为主，而这个时候就可以形成以下的异常处理流程（<strong>面试题：</strong>请解释java之中的异常处理流程。）</p>
+<p>1、<br>如果程序之中产生了异常，那么会自动的由JVM根据异常的类型，实例化一个指定异常类的对象；</p>
+<p>2、<br>如果这个时候程序之中没有任何的异常处理操作，则这个异常类的实例化对象将交给JVM进行处理，而JVM的默认处理方式就是进行异常信息的输出，而后中断程序执行；</p>
+<p>3、 如果程序之中存在了异常处理，则会由try语句捕获产生的异常类对象；</p>
+<p>4、<br>与try之后的每一个catch进行匹配，如果匹配成功，则使用指定的catch进行处理，如果没有匹配成功，则向后面的catch继续匹配，如果没有任何的catch匹配成功，则这个时候将交给JVM执行默认处理；</p>
+<p>5、<br>不管是否有异常都会执行finally程序，如果此时没有异常，执行完finally，则会继续执行程序之中的其他代码，如果此时有异常没有能够处理（没有一个catch可以满足），那么也会执行finally，但是执行完finally之后，将默认交给JVM进行异常的信息输出，并且程序中断；</p>
+<p>通过以上的分析，可以发现，实际上catch捕获异常类型的操作，就和方法接收参数是一样的，那么按照之前所学习过的对象多态性来讲，所有的异常类都是Exception的子类，那么这个时候，实际上所有的异常都可以使用Exception进行接收。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { System.out.println(“1、除法计算开始。”) ; try { int x = Integer.parseInt(args[0]) ; int y = Integer.parseInt(args[1]) ; int result = x / y ; System.out.println(“2、除法计算结果：” + result) ; } catch (<strong>Exception</strong> e) { e.printStackTrace() ; } finally { System.out.println(“不管是否出现异常都执行”) ; } System.out.println(“3、除法计算结束。”) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>那么这个时候就应该可以感受到异常处理所带来的好处了。但是这种操作也存在一种问题。如果在一些异常处理要求严格的项目之中，异常必须分别处理，如果现在异常的处理要求不是很严格，直接编写Exception就足够了。</p>
+<p><strong>3.4、throws关键字（重点）</strong></p>
+<p>thrwos关键字主要是在方法定义上使用的，表示的是此方法之中不进行异常的处理，而交给被调用处处理。</p>
+<table>
+<thead>
+<tr>
+<th>class MyMath { public int div(int x,int y) throws Exception { return x / y ; } }</th>
+</tr>
+</thead>
+</table>
+<p>现在的div()方法之中抛了一个异常出来，表示的是，所有的异常交给被调用处进行处理。</p>
+<table>
+<thead>
+<tr>
+<th>class MyMath { public int div(int x,int y) throws Exception { return x / y ; } } public class TestDemo { public static void main(String args[]) { try { System.out.println(new MyMath().div(10,0)) ; } catch (Exception e) { e.printStackTrace() ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>在调用throws声明方法的时候，一定要使用异常处理操作进行异常的处理，这个是属于强制性的处理，而现在主方法本身也属于方法，那么实际上在主方法上也可以继续使用throws进行异常的抛出。</p>
+<table>
+<thead>
+<tr>
+<th>class MyMath { public int div(int x,int y) throws Exception { return x / y ; } } public class TestDemo { public static void main(String args[]) <strong>throws Exception</strong> { System.out.println(new MyMath().div(10,0)) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>这个时候表示的是将异常继续向上抛，交给JVM进行异常的处理。</p>
+<p><strong>3.5、throw关键字（重点）</strong></p>
+<p>之前的所有异常类对象都是由JVM自动进行实例化操作的，而现在用户也可以自己手工的抛出一个实例化对象，就通过throw完成了。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]){ try { <strong>throw</strong> new Exception(“抛着玩的，你管不着。”) ; } catch (Exception e) { e.printStackTrace() ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>理论上，对于异常应该躲，现在属于不躲反而自己抛了，有病啊？</p>
+<p><strong>3.6、异常处理的标准格式（重点）</strong></p>
+<p>现在觉得有两个内容实在是没有用处：finally、throw。</p>
+<p>现在要求定义一个div()方法，而这个方法有如下的一些要求：</p>
+<p>· 在进行除法操作之前，输出一行提示信息，可以理解为大爷开门；</p>
+<p>· 在除法操作执行完毕后，输出一行提示信息，可以理解为大爷关门；</p>
+<p>· 如果中间产生了异常，则应该交给被调用处来进行处理，譬如：xxOver了。</p>
+<table>
+<thead>
+<tr>
+<th>class MyMath { // 出现异常要交给被调用处出，使用throws <strong>public int div(int x,int y) throws Exception {</strong>  <strong>System.out.println(“===== 计算开始 =====”) ; // 资源打开 int result = 0 ;</strong>  <strong>try {</strong>  <strong>result = x / y ; // 除法计算 } catch (Exception e) {</strong>  <strong>throw e ; // 向上抛 } finally {</strong>  <strong>System.out.println(“===== 计算结束 =====”) ; // 资源关闭 }</strong>  <strong>return result ;</strong>  <strong>}</strong>  } public class TestDemo { public static void main(String args[]){ try { System.out.println(new MyMath().div(10,0)) ; } catch (Exception e) { e.printStackTrace() ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>而对于以上的操作代码也可以按照如下的简化格式编写。</p>
+<table>
+<thead>
+<tr>
+<th>class MyMath { // 出现异常要交给被调用处出，使用throws public int div(int x,int y) throws Exception { System.out.println(“===== 计算开始 =====”) ; // 资源打开 int result = 0 ; <strong>try {</strong>  <strong>result = x / y ; // 除法计算 } finally {</strong>  <strong>System.out.println(“===== 计算结束 =====”) ; // 资源关闭 }</strong>  return result ; } } public class TestDemo { public static void main(String args[]){ try { System.out.println(new MyMath().div(10,0)) ; } catch (Exception e) { e.printStackTrace() ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>以上不带有catch的操作在开发之中并不建议使用。永远的标准格式：try…catch、finally、throws、throw一起使用。</p>
+<p><strong>3.7、RuntimeException（重点）</strong></p>
+<p>在讲解此操作之前，首先来观察如下的一段代码：</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]){ String str = “123” ; int num = Integer.parseInt(str) ; System.out.println(num * num) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>这个程序就是将一个字符串变为了基本数据类型，而后执行乘法操作，但是下面来看一下parseInt()方法定义：</p>
+<table>
+<thead>
+<tr>
+<th>public static int parseInt(String s) throws NumberFormatException</th>
+</tr>
+</thead>
+</table>
+<p>发现这个方法上抛出了一个NumberFormatException的异常，按照之前所讲，如果存在了throws，则必须使用try…catch进行处理，可是现在却没有强制要求处理，来观察一下NumberFormatException的继承结构：</p>
+<table>
+<thead>
+<tr>
+<th>java.lang.Object |- java.lang.Throwable |- java.lang.Exception |- java.lang.<strong>RuntimeException</strong> |- java.lang.IllegalArgumentException |- java.lang.NumberFormatException</th>
+</tr>
+</thead>
+</table>
+<p>发现NumberFormatException属于RuntimeException的子类，而在Java之中明确规定了，对于RuntimeException的异常类型可以有选择性的来进行处理，在开发之中，如果没有处理，那么出现异常之后将交给JVM默认进行处理。</p>
+<p><strong>面试题：</strong>请解释一下RuntimeException和Exception的区别？请列举出几个常见的RuntimeException；</p>
+<p>· RuntimeException是Exception的子类；</p>
+<p>·<br>Exception定义了必须处理的异常，而RuntimeException定义的异常可以选择性的进行处理；</p>
+<p>·<br>常见的RuntimeException：NumberFormatException、ClassCastException、NullPointerException、ArithmeticException、ArrayIndexOutOfBoundsException。</p>
+<p><strong>3.8、断言：assert（了解）</strong></p>
+<p>断言指的是程序执行到某行之后，其结果一定是预期的结果，而在JDK<br>1.4之后增加了一个assert关键字。</p>
+<p><strong>范例：</strong>使用断言</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]){ int x = 10 ; // 假设经过了若干操作 <strong>assert x == 30 : “x的内容不是30” ;</strong>  System.out.println(x) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>默认情况下，Java之中的断言，不会在正常执行的代码中出现，如果要想启用断言，则应该增加一些选项：</p>
+<table>
+<thead>
+<tr>
+<th>java -ea TestDemo</th>
+</tr>
+</thead>
+</table>
+<p>不过断言在开发之中几乎是不使用的技术，知道这个关键字就完了。</p>
+<p><strong>3.9、自定义异常类（了解）</strong></p>
+<p>在Java之中本身已经提供了大量的异常类型，但是在开发之中，这些异常类型根本就不能满足于开发的需要。所以在一些系统架构之中往往会提供一些新的异常类型，来表示一些特殊的错误，而这种操作就称为自定义异常类，而要想实现这种自定义异常类，那么可以让一个类继承Exception或RuntimeException。</p>
+<p><strong>范例：</strong>自定义异常类</p>
+<table>
+<thead>
+<tr>
+<th>class MyException extends Exception { // 自定义异常类 public MyException(String msg) { super(msg) ; } } public class TestDemo { public static void main(String args[]) throws Exception { throw new MyException(“自己的异常类”) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>如果以后见到了一些特殊的没见过的异常类，基本上都表示自定义的。</p>
+<p><strong>4、总结</strong></p>
+<p>1、 异常的处理流程，出现错误之后的程序不执行；</p>
+<p>2、 异常处理的标准结构：try、catch、finally、throw、throws的使用；</p>
+<p>3、 RuntimeException和Exception的区别。</p>
 
             </div>
             <hr/>
@@ -574,7 +722,7 @@ rect3 <span class="token operator">=</span> <span class="token keyword">new</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/05/java-mian-xiang-dui-xiang/">https://kilitom.github.io/2020/08/05/java-mian-xiang-dui-xiang/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/chu-li-yi-chang/">https://kilitom.github.io/2020/08/10/chu-li-yi-chang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -611,11 +759,7 @@ rect3 <span class="token operator">=</span> <span class="token keyword">new</spa
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">-Java</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -785,47 +929,34 @@ rect3 <span class="token operator">=</span> <span class="token keyword">new</spa
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/06/java-lei-zhi-jian-de-guan-xi/">
+                <a href="/2020/08/10/bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java类之间的关系</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            继承父类---&gt;子类
-超类---&gt;派生类
-关键字:extends
-重写当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，则可以在子类中对父类的方法进行改造，也称作重写（overr
+                            3.1、包（重点）
+3.1.1、包的定义
+在Java程序之中的包，主要的目的是可以将不同功能的文件进行分割。在之前的代码开发之中，所有的程序都保存在了同一个目录之中，这样一来所带来的问题：如果出现了同名文件，那么会发生覆盖问题，因为在同一个
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -837,46 +968,33 @@ rect3 <span class="token operator">=</span> <span class="token keyword">new</spa
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/04/java-ji-chu/">
+                <a href="/2020/08/10/jdk-duo-xian-cheng-02/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java基础</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
-标识符可以包含数字，但不能以数字开头
-除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
+                            3、具体内容从多线程开始，Java正式进入到应用部分，而对于多线程的开发，从JavaEE上表现的并不是特别多，但是在Android开发之中使用较多，并且需要提醒的是，笔试或面试的过程之中，多线程所问到的问题是最多的。
+3.1、多线程的基本概
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>

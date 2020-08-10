@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础, Kilitom">
+    <meta name="keywords" content="Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java基础 | Kilitom</title>
+    <title>Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,7 +313,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">-Java</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Java学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -455,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-04
+                    2020-08-10
                 </div>
                 
 
@@ -471,204 +458,123 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="Java中标识符的命名必须满足以下原则："><a href="#Java中标识符的命名必须满足以下原则：" class="headerlink" title="Java中标识符的命名必须满足以下原则："></a>Java中标识符的命名必须满足以下原则：</h3><pre><code>标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
-标识符可以包含数字，但不能以数字开头
-除下划线“_”和“$”符号外，标识符中不包含任何特殊字符，如空格
-标识符区分大小写，比如，“abc”和“Abc”是两个不同的标识符
-对于标识符的长度没有限制
-不能使用Java关键字作为标识符 例如 static public void  main</code></pre>
-<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><pre><code>Java中分隔符分为两类：
-没有意义的空白符 
-拥有确定含义的普通分隔符</code></pre>
+                <p><strong>3.1、网络编程（了解）</strong></p>
+<p>网络编程指的就是通过网络进行程序数据操作，既然是网络开发，那么一定就分为用户和服务两端，而这两个端的开发实际上就有以下的两种不同的架构（<strong>面试题：</strong>请解释C/S和B/S的区别？）：</p>
+<blockquote>
+<p>  · C/S（Client /<br>  Server）：要开发两套程序，一套是服务器端，另外一套是与之对应的客户端，但是这种程序在日后进行维护的时候，是需要维护两套程序，而且客户端的程序更新也必须及时，此类程序安全；</p>
+</blockquote>
+<blockquote>
+<p>  · B/S（Browser /<br>  Server）：要开发一套程序，只开发服务器端的，客户端使用浏览器进行访问，这种程序在日后进行程序维护的时候只需要维护服务器端即可，客户端不需要做任何的修改，此类程序使用公共端口，包括公共协议，所以安全性很差。</p>
+</blockquote>
+<p>如果从网络的开发而言，大的分类是以上的两类，可是从现在的开发来讲，更多的情况是针对于B/S程序进行的开发，或者可以这么理解：B/S程序的开发属于网络时代，而C/S程序的开发属于单机时代。而对于WebService的开发，实话而言，也属于B/S结构的程序（跨平台）。</p>
+<p>而在日后学习Android开发的时候，如果要考虑安全性使用Socket，如果要考虑方便性，还是基于WEB的开发方便使用。而对于网络的开发在Java中也分为两种：TCP（传输控制协议，可靠的传输）、UDP（数据报协议），对于网络开发，本次只专注于TCP程序的实现。</p>
+<p><strong>3.2、网络程序的基本实现（了解）</strong></p>
+<p>如果要进行网络程序的开发，那么首先应该开发出的就是服务器端，本次的操作使用服务器端向客户端输出一个“Hello<br>World.”的字符串信息，而如果要想完成服务器端的开发，则需要java.net包中的两个类：</p>
+<p>·<br>ServerSocket类：是一个封装支持TCP协议的操作类，主要工作在服务器端，用于接收客户端请求；</p>
+<p>· Socket类：也是一个封装了TCP协议的操作类，每一个Socket对象都表示一个客户端。</p>
+<p>而现在必须观察这两个类之中的操作方法：</p>
+<p>· ServerSocket类的方法：</p>
 <table>
 <thead>
 <tr>
-<th align="left">普通分隔符</th>
-<th align="left">名称</th>
-<th align="left">功能说明</th>
+<th><strong>No.</strong></th>
+<th><strong>方法名称</strong></th>
+<th><strong>类型</strong></th>
+<th><strong>描述</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">{}</td>
-<td align="left">大括号</td>
-<td align="left">用来定义程序块，类，方法以及局部范围;</td>
+<td>1</td>
+<td>public ServerSocket(int port) throws IOException</td>
+<td>构造</td>
+<td>开辟一个指定的端口监听，一般使用5000以上</td>
 </tr>
 <tr>
-<td align="left">[]</td>
-<td align="left">中括号</td>
-<td align="left">用来进行数组的声明，也可用来表示撤销对数组的引用;</td>
+<td>2</td>
+<td>public Socket accept() throws IOException</td>
+<td>普通</td>
+<td>服务器端接收客户端请求，通过Socket返回</td>
 </tr>
 <tr>
-<td align="left">()</td>
-<td align="left">小括号</td>
-<td align="left">在定义和调用方法时用来容纳参数表，在控制语句或强制类型转换组成的表达式中用来表示执行或计算的优先级 ;</td>
-</tr>
-<tr>
-<td align="left">;</td>
-<td align="left">分号</td>
-<td align="left">用来表示一条语句的结束 ;在for控制语句中用来将圆括号内的语法连接起来;</td>
-</tr>
-<tr>
-<td align="left">,</td>
-<td align="left">逗号</td>
-<td align="left">在变量声明中，用于分割变量表中的各个变量;在for控制语句中用来将圆括号内的语法连接起来;</td>
-</tr>
-<tr>
-<td align="left">:</td>
-<td align="left">冒号</td>
-<td align="left">说明语句标号。例如在三元运算符中使用;</td>
+<td>3</td>
+<td>public void close() throws IOException</td>
+<td>普通</td>
+<td>关闭服务器端</td>
 </tr>
 </tbody></table>
-<h2 id="基本数据类型："><a href="#基本数据类型：" class="headerlink" title="基本数据类型："></a>基本数据类型：</h2><h4 id="（1）数值型："><a href="#（1）数值型：" class="headerlink" title="（1）数值型："></a>（1）数值型：</h4><pre><code>  1）整数类型（byte、short、int、long）
-  2)浮点类型（float、double）
-  注:long a=1234567890L(末尾加“L”、“l”),否则默认为int型；
-  float b=2.3f(末尾加“F”、“f”),否则默认为double型；
-  八进制必须以0（零） 开头；十六必须进制以0X或0x开头（零X或零x）。</code></pre>
-<h4 id="（2）字符型：char型"><a href="#（2）字符型：char型" class="headerlink" title="（2）字符型：char型"></a>（2）字符型：char型</h4><pre><code> 注：每个字符在unicode表中都有相对应的位置，如a在unicode表中的位置是97.
-  转义字符（是字符就要加单引号）：\ddd:1-3为8进制数据所表示的字符，如\123
-                               \uxxxx:4位16进制数据所表示的字符，如\u0052
-                               \&#39;:单引号字符
-                               \\:反斜杠字符
-                               \t:垂直制表符，将光标移到下一个制表符的位置
-                               \r:回车
-                               \n:换行
-                               \b:退格
-                               \f:换页</code></pre>
-<h4 id="（3）布尔型（boolean）"><a href="#（3）布尔型（boolean）" class="headerlink" title="（3）布尔型（boolean）:"></a>（3）布尔型（boolean）:</h4><pre><code> 又称为逻辑类型，只有true和false两个值，表示真和假。</code></pre>
-<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h4 id="1-常量：在程序执行过程中，其值不能被改变的量。"><a href="#1-常量：在程序执行过程中，其值不能被改变的量。" class="headerlink" title="1.常量：在程序执行过程中，其值不能被改变的量。"></a>1.常量：在程序执行过程中，其值不能被改变的量。</h4><pre><code> (1)常量的声明（定义常量）：1)final 数据类型 常量名称[=值];如final int a=5;
-    注:1）常量通常也被称为final变量
- 2）用final定义“成员变量（全局变量）”时，必须立刻设初值，否则会产生编译错误。</code></pre>
-<h4 id="2-变量：在程序执行过程中，其值能被改变的量。"><a href="#2-变量：在程序执行过程中，其值能被改变的量。" class="headerlink" title="2.变量：在程序执行过程中，其值能被改变的量。"></a>2.变量：在程序执行过程中，其值能被改变的量。</h4><pre><code>(1)成员变量（全局变量）：定义在类中；成员变量又分为静态变量和实例变量；
- 1）静态变量（有static关键字）：有效范围跨类，甚至可达整个程序中（应用程序由若干个类构成）。
- 2）实例变量（无static关键字）：有效范围当前类。
-(2)局部变量：定义在方法中。
-   注：当局部变量名与成员变量名相通时，成员变量将在此方法中暂时失效。</code></pre>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h5 id="1-赋值运算符（-）"><a href="#1-赋值运算符（-）" class="headerlink" title="(1)赋值运算符（=）"></a>(1)赋值运算符（=）</h5><pre><code> 例：int a=3;(将3赋给a)
-     int b=a+c;(将a+c的和赋给b)
-     x=y=z=5;(将5的值赋给x、y、z，不建议使用)</code></pre>
-<h5 id="2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））"><a href="#2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））" class="headerlink" title="(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））"></a>(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））</h5><pre><code> 例：12.45f*15=27.45;
-     45-30=15;
-     5*3=15;
-     6/2=3;
-     12%10=2;</code></pre>
-<h5 id="3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量"><a href="#3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量" class="headerlink" title="(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量"></a>(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量</h5><pre><code> 例：假设a=5;以自增为例。
-     b=++a;//此时a先加1，再赋值给b,所以b=6;
-     b=a++;//此时a直接赋给b,之后加1，所以b=5;</code></pre>
-<h5 id="4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）"><a href="#4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）" class="headerlink" title="(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）"></a>(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）</h5><pre><code> 例：4&gt;5,结果为false.
-     4!=5,结果为true.
- 注：结果为布尔值</code></pre>
-<h5 id="5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）"><a href="#5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）" class="headerlink" title="(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）"></a>(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）</h5><pre><code> 与：同真为真
- 或：一真为真
- 注：1）结果都为布尔值（flase、true）
-     2）短路运算符（&amp;&amp;）：第一个为假，就不再判断第二个。
-        非短路运算符（&amp;）：第一个为假，依然判断第二个，相比之下更浪费时间。</code></pre>
-<h5 id="6-三元运算符（条件式？值1：值2）：等价于if…-else语句"><a href="#6-三元运算符（条件式？值1：值2）：等价于if…-else语句" class="headerlink" title="(6)三元运算符（条件式？值1：值2）：等价于if…..else语句"></a>(6)三元运算符（条件式？值1：值2）：等价于if…..else语句</h5><pre><code> 例：int y=a&gt;b?x+1:x-1;
-    含义：如果a&gt;b成立，y=x+1;否则y=x-1；</code></pre>
-<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h5 id="（1）隐式类型转换（自动类型转换）"><a href="#（1）隐式类型转换（自动类型转换）" class="headerlink" title="（1）隐式类型转换（自动类型转换）"></a>（1）隐式类型转换（自动类型转换）</h5><pre><code> 例：int a=3;
-     float x=a;
-     执行结果为3.0</code></pre>
-<h5 id="（2）显式类型转换（强制类型转换）"><a href="#（2）显式类型转换（强制类型转换）" class="headerlink" title="（2）显式类型转换（强制类型转换）"></a>（2）显式类型转换（强制类型转换）</h5><pre><code>例：int a=(int)4.25;
-    执行结果为：4</code></pre>
-<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h5 id="分支语句-if-else-switch"><a href="#分支语句-if-else-switch" class="headerlink" title="分支语句 if-else , switch"></a>分支语句 if-else , switch</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
-     statement1<span class="token punctuation">;</span>
-<span class="token punctuation">[</span><span class="token keyword">else</span> 
-     statement2<span class="token punctuation">;</span>
-<span class="token punctuation">]</span> 
-<span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token string">'value1'</span><span class="token operator">:</span> 
-      statement1<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token string">'value2 '</span><span class="token operator">:</span> 
-      statement2<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span> 
-    <span class="token keyword">case</span> <span class="token string">'valueN'</span><span class="token operator">:</span> 
-      statementN<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span>
-   <span class="token punctuation">[</span><span class="token keyword">default</span><span class="token operator">:</span>defaultStatement<span class="token punctuation">;</span><span class="token punctuation">]</span> 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="迭代语句-while-do-while-for"><a href="#迭代语句-while-do-while-for" class="headerlink" title="迭代语句 while , do-while , for"></a>迭代语句 while , do-while , for</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    statement<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">do</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    statement<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span>initialization；condition；update<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-     statements<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="转移语句-break-continue-return"><a href="#转移语句-break-continue-return" class="headerlink" title="转移语句 break , continue , return"></a>转移语句 break , continue , return</h5><pre><code>   break语句：在循环中用于立即从当前循环终止控制；
-   continue语句：从其调用处跳至循环的开始处；
-   return语句 ：其之后的语句将不再执行；
-   Java中没有goto语句，在多层循环时，可以用break、continue实现goto语句的功能。</code></pre>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><pre><code>属于引用数据类型;
-由类型相同的元素组成的有顺序的数据集合;
-数组的长度是固定的,不能扩展;
-可以存储基本数据库类型或对象;</code></pre>
-<h5 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h5><pre><code>data_type[] varName;
-或
-data_type varName[];
-示例:
-int a[];
-double b[];</code></pre>
-<h5 id="利用new来为数组型变量分配内存空间"><a href="#利用new来为数组型变量分配内存空间" class="headerlink" title="利用new来为数组型变量分配内存空间"></a>利用new来为数组型变量分配内存空间</h5><pre><code>a= new int[10];
-double b = new double[10];</code></pre>
-<h5 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h5><pre><code>静态初始化
-int[] k = &#123;1,2,3,4&#125;
-或
-int k[] = new int&#123;1,2,3,4&#125;
-动态初始化
-int array = new int[2];
-array[0] = 1;
-array[1] = 2;</code></pre>
-<h5 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h5><pre><code>使用循环语句进行复制
-    使用循环语句遍历源数组每个元素，赋值给目标数组对应位置。
-使用clone()方法
-    在Java中，Object类是所有类的父类，其clone()方法一般用于创建并返回此对象的一个副本，Java中认为一切都是“对象”，所以使用该方法也可以实现数组的复制。
-使用System.arraycopy方法
-    arraycopy()方法是System类的一个静态方法（并且是本地方法，效率非常高），其可以方便的实现数组拷贝功能System.arraycopy()方法的结构如下：
-    System.arraycopy(from, fromIndex, to, toIndex, count)</code></pre>
-<h5 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h5><h6 id="如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下："><a href="#如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下：" class="headerlink" title="如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下："></a>如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下：</h6><pre><code>    data_type[ ][ ] varName;</code></pre>
-<h6 id="动态初始化二维数组"><a href="#动态初始化二维数组" class="headerlink" title="动态初始化二维数组"></a>动态初始化二维数组</h6><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 定义二维数组</span>
-   <span class="token keyword">int</span><span class="token punctuation">[</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> <span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-             array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 把1,2,3,4分别赋给array[i][j]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><h5 id="Scanner类-获取控制台输入。它是一个工具类，属于java-util包。"><a href="#Scanner类-获取控制台输入。它是一个工具类，属于java-util包。" class="headerlink" title="Scanner类:获取控制台输入。它是一个工具类，属于java.util包。"></a>Scanner类:获取控制台输入。它是一个工具类，属于java.util包。</h5><pre><code>用法：Scanner console = new Scanner(System.in);//定义一个Scanner类
-方法: console.nextInt();//输入整数
-      console.nextLine();//输入字符串
-      console.nextDouble() ;//输入小数</code></pre>
-<h5 id="Random类-实现的随机算法是伪随机，也就是有规则的随机"><a href="#Random类-实现的随机算法是伪随机，也就是有规则的随机" class="headerlink" title="Random类:实现的随机算法是伪随机，也就是有规则的随机"></a>Random类:实现的随机算法是伪随机，也就是有规则的随机</h5><pre><code>用法：Random random = new Random();
-方法： random.nextInt();//随机整数
-      random.nextInt(int n);//随机返回[0，n)之间的整数
-      random. nextDouble();//随机返回[0.0,1.0)之间的小数</code></pre>
-<h5 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h5><pre><code>Math.random()是令系统随机选取大于等于 0.0 且小于 1.0 的伪随机 double 值
-公式：Math.random()*(n-m)+m，生成大于等于m小于n的随机数；
-Math.abs();//绝对值
-Math.sqrt();//立方根
-Math.max();//两者之间较大的
-Math.min();//两者之间较小的
-Math.random();//随机数
-Math.pow();//幂
-Math.ceil();//向上取整
-Math.floor();//向下取整
-Math.round();//四舍五入</code></pre>
-<h2 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h2><h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code>charAt(int index)//返回执行下标index对应的字符
-concat(String str)//连接两个字符串返回组合后的字符串
-endsWith(String suffix)//判断字符是否以suffix结尾 true/false
-startWith(String suffix)//判断字符是否以suffix开头 true/false
-equals(Obgect obj)//判断两个字符是否相等,true/false
-indexOf(String suffix)//返回字串suffix对应的下标
-lastindexOf(String suffix)//返回字串suffix最后一次出现的位置
-length()//返回字符串的长度
-matches(String regex)//判断字符串是否与正则表达式相等
-replace(char oldChar,char newChar)//字符串中旧的字串oldChar替换为新的字串newChar
-split(String regex)//按regex对应字符串进行拆分,返回子字符数组
-substring(int beginIndex,int endIndex)//截取指示下标范围内的字串返回子字符串[)
-trim()//去空格</code></pre>
-<h5 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h5><pre><code>StringBuilder:不支持并发操作,线程不安全,不适合多线程使用
-StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
-<h6 id="总结-若操作少量的数据可以使用String-若操作大量数据且要求数据线程安全的情况下-必须使用StringBuffer-其他情况使用StringBuilder"><a href="#总结-若操作少量的数据可以使用String-若操作大量数据且要求数据线程安全的情况下-必须使用StringBuffer-其他情况使用StringBuilder" class="headerlink" title="总结:若操作少量的数据可以使用String;若操作大量数据且要求数据线程安全的情况下,必须使用StringBuffer;其他情况使用StringBuilder."></a>总结:若操作少量的数据可以使用String;若操作大量数据且要求数据线程安全的情况下,必须使用StringBuffer;其他情况使用StringBuilder.</h6>
+<p>· Socket类的方法：</p>
+<table>
+<thead>
+<tr>
+<th><strong>No.</strong></th>
+<th><strong>方法名称</strong></th>
+<th><strong>类型</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>public Socket(String host, int port) throws UnknownHostException, IOException</td>
+<td>构造</td>
+<td>指定要连接的主机（IP地址）和端口</td>
+</tr>
+<tr>
+<td>2</td>
+<td>public OutputStream getOutputStream() throws IOException</td>
+<td>普通</td>
+<td>取得指定客户端的输出对象，使用的时候肯定使用PrintStream装饰操作</td>
+</tr>
+<tr>
+<td>3</td>
+<td>public InputStream getInputStream() throws IOException</td>
+<td>普通</td>
+<td>从指定的客户端读取数据，使用Scanner操作</td>
+</tr>
+</tbody></table>
+<p><strong>范例：</strong>完成一个服务器端程序代码</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>public class</strong> HelloServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); // 在9999端口监听 System.<em>out</em>.println(“服务开始启动…”); Socket client = server.accept(); // 接收客户端连接，进入到阻塞状态 PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); out.println(“Hello World .”); // 向客户端输出 out.close(); // 输出流的关闭 client.close(); // 关闭客户端 server.close(); // 关闭服务器端 System.<em>out</em>.println(“服务器已关闭…”); } }</th>
+</tr>
+</thead>
+</table>
+<p>现在服务器端已经开发完成了，而现在的服务器端虽然是通过Java编写的，但是使用的是TCP协议，所以可以利用系统命令的telnet进行访问。</p>
+<p>· 使用运行方式输入：telnet；</p>
+<p>· 连接服务器：open ip地址 端口，open localhost 9999；</p>
+<p>但是现在是利用了系统的工具完成的，那么在开发之中是不可能使用这工具，应该自己去编写客户端。</p>
+<p><strong>范例：</strong>编写一个客户端</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> HelloClient { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { Socket client = <strong>new</strong> Socket(“localhost”, 9999); Scanner scan = <strong>new</strong> Scanner(client.getInputStream()); scan.useDelimiter(“\n”) ; <strong>if</strong> (scan.hasNext()) { // 有数据 System.<em>out</em>.println(“服务器的回应数据：” + scan.next()); } scan.close() ; client.close() ; } }</th>
+</tr>
+</thead>
+</table>
+<p>整个的操作就是一个输出和输入的过程，只是现在的输出和输入的来源在于网络，而不是像之前那样是通过文件操作了。</p>
+<p><strong>3.3、网络开发的经典模型 —— ECHO程序</strong></p>
+<p>这种开发模型的典型模式指的是客户端要输入信息，而后服务器端接收这端信息之后，前面增加一个“ECHO：”的信息再返回给客户端，也就是说现在的服务器端需要输入和输出数据。</p>
+<p><strong>范例：</strong>编写一个程序的基本模型</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> EchoServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); <strong>boolean</strong> flag = <strong>true</strong>; System.<em>out</em>.println(“服务器运行…”); Socket client = server.accept(); // 接收客户端请求 Scanner <em>scan</em> = <strong>new</strong> Scanner(client.getInputStream()); PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); <strong>while</strong> (flag) { <strong>if</strong> (scan.hasNext()) { // 有内容 String str = scan.next(); <strong>if</strong> (“byebye”.equalsIgnoreCase(str.trim())) { // 程序结束 out.println(“Bye Bye…”); flag = <strong>false</strong>; // 退出循环 } out.println(“ECHO：” + str.trim()); // 回应数据 } } System.<em>out</em>.println(“服务器停止运行…”); server.close(); } }</th>
+</tr>
+</thead>
+</table>
+<p>这个时候程序实际上是一种单线程的运行状态，这样的程序运行起来只能够为一个用户进行服务，所以如果希望一个服务器可以同时处理多个客户的操作，那么就必须为其实现多线程的处理机制，让每一个客户端表示一个独立的线程对象，每个线程对象有自己独立的输入输出操作。</p>
+<p><strong>范例：</strong>为服务器端增加多线程机制，使用匿名内部类</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.IOException; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> EchoServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); <strong>boolean</strong> flag = <strong>true</strong>; System.<em>out</em>.println(“服务器运行…”); <strong>while</strong> (flag) { <strong>final</strong> Socket client = server.accept(); // 接收客户端请求 <strong>new</strong> Thread(<strong>new</strong> Runnable() { @Override <strong>public void</strong> run() { <strong>boolean</strong> runFlag = <strong>true</strong>; <strong>try</strong> { Scanner <em>scan</em> = <strong>new</strong> Scanner(client.getInputStream()); PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); <strong>while</strong> (runFlag) { <strong>if</strong> (scan.hasNext()) { // 有内容 String str = scan.next(); <strong>if</strong> (“byebye”.equalsIgnoreCase(str.trim())) { // 程序结束 out.println(“Bye Bye…”); runFlag = <strong>false</strong>; // 退出循环 } out.println(“ECHO：” + str.trim()); // 回应数据 } } } <strong>catch</strong> (IOException e) { e.printStackTrace(); } <strong>try</strong> { client.close() ; } <strong>catch</strong> (IOException e) { e.printStackTrace(); } } }).start(); } System.<em>out</em>.println(“服务器停止运行…”); server.close(); } }</th>
+</tr>
+</thead>
+</table>
+<p>但是，在这个时候对于线程的控制也需要处理好，如果处理不好，可能就出现死锁问题了。</p>
+<p><strong>4、总结</strong></p>
+<p>知道什么叫网络编程就行了，暂时用不到。</p>
+
             </div>
             <hr/>
 
@@ -693,7 +599,7 @@ StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/04/java-ji-chu/">https://kilitom.github.io/2020/08/04/java-ji-chu/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/java-wang-luo-bian-cheng/">https://kilitom.github.io/2020/08/10/java-wang-luo-bian-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -730,11 +636,7 @@ StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">-Java</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -904,45 +806,37 @@ StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/05/java-mian-xiang-dui-xiang/">
+                <a href="/2020/08/10/mian-xiang-dui-xiang-06/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java面向对象">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java面向对象</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            面向对象封装封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
-封装的原则使对象以外的部分不能随意存取对象的内部
+                            3.1、匿名内部类（重点）内部类：在一个类的内部定义了另外的类，称为内部类，匿名内部类指的是没有名字的内部类。为了清楚内部类的主要作用，下面首先来观察如下的程序：
+范例：思考程序的问题
+
+
+
+interface Message { // 定
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -954,56 +848,34 @@ StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/03/java-ru-men/">
+                <a href="/2020/08/10/bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java入门</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            了解JavaJava特点
-1. ​简单性
-2. ​面向对象性
-3. ​分布式
-4. ​健壮性
-5. ​高性能
-6. ​多线程
-7. ​动态性
-
-
-Java运行环境环境变量配置
-- ​    JAVA_HOME
-  ​        JAVA
+                            3.1、包（重点）
+3.1.1、包的定义
+在Java程序之中的包，主要的目的是可以将不同功能的文件进行分割。在之前的代码开发之中，所有的程序都保存在了同一个目录之中，这样一来所带来的问题：如果出现了同名文件，那么会发生覆盖问题，因为在同一个
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>

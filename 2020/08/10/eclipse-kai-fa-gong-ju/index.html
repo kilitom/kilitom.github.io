@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java异常, Kilitom">
+    <meta name="keywords" content="Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java异常 | Kilitom</title>
+    <title>Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java异常</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">-Java</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Java学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -471,25 +458,147 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h5 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h5><pre><code>异常是指由于程序中的错误而导致正常的程序流程中断的一种事件。如：除数为0，数组越界，文件找不到等都属于异常。</code></pre>
-<h5 id="Java异常分类"><a href="#Java异常分类" class="headerlink" title="Java异常分类"></a>Java异常分类</h5><pre><code>从理论的角度Java中异常分为两类，分别为 ：
-Error（错误）：JVM系统内部错误、资源耗尽等严重情况
-Exception（异常）：因编程错误或偶然的外在因素导致的一般性问题，例如：对负数开平方根、空指针访问、试图读取不存在的文件、网络连接中断等。 </code></pre>
-<h5 id="从编程角度考虑可以将异常（Exception）分为以下两类-："><a href="#从编程角度考虑可以将异常（Exception）分为以下两类-：" class="headerlink" title="从编程角度考虑可以将异常（Exception）分为以下两类 ："></a>从编程角度考虑可以将异常（Exception）分为以下两类 ：</h5><pre><code>非检查型（unchecked）异常 ：是指编译器不要求强制处置的异常，该异常是因设计或实现方式不当导致的问题，是程序员的原因导致的，可以避免这种问题的产生
-检查型(checked)异常 ：是指编译器要求必须处置的异常，是程序在运行时由于外界因素造成的一般性异常，该类异常是Exception类型及其子类（RuntimeException类及其子类除外） </code></pre>
-<h5 id="从开发应用角度考虑可以将异常分为以下两类-："><a href="#从开发应用角度考虑可以将异常分为以下两类-：" class="headerlink" title="从开发应用角度考虑可以将异常分为以下两类 ："></a>从开发应用角度考虑可以将异常分为以下两类 ：</h5><pre><code>系统异常：系统异常在性质上比应用异常更加严重，前者通常和应用逻辑无关，而是底层出现了问题，如数据库服务器的异常终止等。
-应用异常：应用异常是由于违反了商业规则或者业务逻辑而导致的错误。例如，一个被锁定的用户试图登入应用。 </code></pre>
-<h5 id="Java异常体系"><a href="#Java异常体系" class="headerlink" title="Java异常体系"></a>Java异常体系</h5><p><img src="/2020/08/10/java-yi-chang/Exception.png" alt="异常体系"></p>
-<h5 id="Java语言提供两种处理异常的机制："><a href="#Java语言提供两种处理异常的机制：" class="headerlink" title="Java语言提供两种处理异常的机制："></a>Java语言提供两种处理异常的机制：</h5><pre><code>捕获异常 ：在程序运行过程中系统得到一个异常对象时，它将会沿着方法的调用栈逐层回溯，寻找处理这一异常的代码，找到处理这种类型异常的方法后，运行时系统把当前异常对象交给这个方法进行处理，该过程称为捕获(catch)异常。
-声明抛出异常 ：当运行时系统得到一个异常对象，如果当前方法并不知道如何处理所出现的异常或者此时处理不合适，则可在定义方法时，声明抛出（throws）异常。 </code></pre>
-<h5 id="处理异常关键字"><a href="#处理异常关键字" class="headerlink" title="处理异常关键字"></a>处理异常关键字</h5><pre><code>try , catch ,finally ,throw和throws
-try: 可能引发异常的语句,监视异常的发生
-catch: 对发生的异常进行捕获
-finally :无论是否发生异常都会运行
-throw:明确抛出一个异常
-throws:方法声明抛出异常</code></pre>
-<h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><pre><code>为了构建自己的业务异常逻辑, 提高用户体验</code></pre>
-<h5 id="多重异常流程"><a href="#多重异常流程" class="headerlink" title="多重异常流程"></a>多重异常流程<img src="/2020/08/10/java-yi-chang/Exceptions.png" alt="多重异常"></h5>
+                <p><strong>3、具体内容</strong></p>
+<p>Eclipse本身是一个工具，但是对于开发工具，个人认为：程序代码会写了，再去使工具。</p>
+<p><strong>3.1、Eclipse历史</strong></p>
+<p>Eclipse中文翻译为日蚀，指的是吞没一切的光芒，那么这个极其具备挑衅意味的名字实际上是针对于SUN公司。在2000年之后一直处于互联网低潮，而SUN公司自从这一低潮之后就再也没有起来过，而后SUN公司最为尴尬的事，他在硬件上没有过多的收益，而且软件的编程语言Java也不是SUN的赚钱工具，它只是变成了一个出卖版权的公司了。</p>
+<p>对于Java的IDE（集成开发环境）本身也是经过了一些历史的调整：</p>
+<p>·<br>1995年的时候，Java诞生，但是SUN公司却高调宣布，我们自己不生成IDE，给其他第三方公司生产；</p>
+<blockquote>
+<p>  ·<br>  在Java产生之后，Borland公司开始入手Java的IDE生产，所以后来的JBuilder就成为了Java开发的唯一选择（不选择JBuilder都使用记事本，IDEA、JCREATOR、EDITPLUS…），后来一直到了JBuilder<br>  X之后才正常；</p>
+</blockquote>
+<p>· 2003年之后有了Eclipse，在2004年之后有了SUN自己的开发工具 —— NetBeans。</p>
+<p>而从整个国内的Java开发模式上也一直在发生着改变：</p>
+<p>· 豪华级架构：操作系统 + 数据库 + 中间件 + 开发工具；</p>
+<p>|- IBM体系：AIX + IBM DB2 + Websphere Application Server + WSAD；</p>
+<p>|- 超级杂牌军体系：UNIX + Oracle + BEA WebLogic + JBuilder；</p>
+<p>· 免费架构：Linux + MySQL + Tomcat / JBoss + Eclipse；</p>
+<p>而对于开发工具最早的霸主就是JBuilder，但是遗憾的是，在2006年的时候Borland倒闭了，倒闭的原因是因为没有赶上所谓的开源风潮，因为有许多的学习者，他可能并不需要如此专业的工具，所以当时Borland公司的市场就出现了问题，于是倒闭就成为了显示，最后Borland技术部单独成立了一家技术公司，继续从事于JBuilder的研究，但是今天的JBuilder已经基本上无法去问津了，完全被Eclipse取代了。</p>
+<p>Eclipse是由IBM开发的，之后将其转送给了今天的Eclipse组织，进行开源项目的推广，而Eclipse的前身是IBM<br>Visual<br>Age，而后IBM根据Eclipse的1.0模型，产生后来的WSAD开发工具，Eclipse本身是免费的，但是其是靠插件收费（中国连插件都不需要收费），其本身有以下几个基本组成：JDT、JUNIT测试工具、CVS客户端、插件开发。用户可以直接登陆“<strong><a target="_blank" rel="noopener" href="http://www.eclipse.org/">www.eclipse.org</a></strong>”下载Eclipse的最新版，JUNO（朱诺，小行星的名字）版，而且Eclipse现在可以直接解压缩后使用，不再需要单独啊安装，是一个纯粹的绿色版。</p>
+<p>分析原因：可能是由于电脑上本身存在了Oracle，所以Eclipse找不到正确该使用的JDK<br>1.7，那么现在可以在环境属性之中增加一个JAVA_HOME环境属性，让其定义在JDK的安装目录。</p>
+<p>此时很郁闷的是，Eclipse有一个bug，也许以后可以解决。在eclipse的安装目录下有一个eclipse.ini的文件，修改一下，把256修改为128。</p>
+<table>
+<thead>
+<tr>
+<th>-startup plugins/org.eclipse.equinox.launcher_ 1.3.0 .v20120522-1813.jar –launcher.library plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.1.200.v20120522-1813 -product org.eclipse.epp.package.java.product –launcher.defaultAction openFile –launcher.XXMaxPermSize <strong>128M</strong> -showsplash org.eclipse.platform –launcher.XXMaxPermSize <strong>128m</strong> –launcher.defaultAction openFile -vmargs -Dosgi.requiredJavaVersion=1.5 -Dhelp.lucene.tokenizer=standard -Xms 40m -Xmx 512m</th>
+</tr>
+</thead>
+</table>
+<p>Eclipse启动之后，会出现一个对话框，这个对话框的主要目的是询问是否建立一个项目的工作区，在Eclipse之中，每一个工作区之中可以包含多个Java项目。</p>
+<p>现在将工作区建立在d:\myeclipsews目录之中。</p>
+<p><strong>3.2、JDT使用</strong></p>
+<p>启动了Eclipse之后，下面建立一个新的Java项目：MyJavaProject。</p>
+<p>之后输入的项目名称：MyJavaProject。</p>
+<p>当Java项目建立完成之后，可以在项目的目录下发现两个文件夹：</p>
+<p>· src：是保存所有的*.java程序，都是按照包名称进行保存的；</p>
+<p>· bin：保存所有生成的*.class文件，按照包名称进行保存的。</p>
+<p>下面建立一个新的类：TestDemo.java。</p>
+<p>使用Eclipse本身最大的好处是在于方便的进行随笔提示，并且在每一次*.java程序保存的时候，会由Eclipse自动的将其编译为*.class文件。</p>
+<p>另外在Eclipse之中还可以存在一些代码的生成工具，例如：现在有如下一个简单的类：</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.vo; <strong>public class</strong> Person { <strong>private</strong> String name ; <strong>private int</strong> age ; }</th>
+</tr>
+</thead>
+</table>
+<p>这个类肯定是作为简单Java类出现，那么现在很明显简单Java类的开发原则：</p>
+<p>· 所有属性封装，已经封装；</p>
+<p>· 生成setter、getter方法，〖Source〗 〖生成getter和setter方法〗</p>
+<p>· 构造方法，必须要有无参构造，〖Source〗 生成构造方法。</p>
+<p>· 覆写Object类之中的一些操作方法，〖Source〗 〖覆写或实现方法〗。</p>
+<p>或则使用JUNO版的新功能，自动生成toString()；</p>
+<p>不过，除了以上的生成方式，还可以通过快捷键生成代码。</p>
+<p>· ALT + /：代码自动补充提示；</p>
+<p>· CTRL + 1：进行错误代码纠正提示；</p>
+<p>· CTRL + D：删除当前行代码；</p>
+<p>· CTRL + SHIFT + O：组织导入所需要的包.类；</p>
+<p>· CTRL + SHIFT + F：格式化代码显示；</p>
+<p>· CTRL + /：注释或者取消注释当前行代码；</p>
+<p>· CTRL + SHIFT + L：所有快捷键列表；</p>
+<p>· CTRL + H：强搜索代码；</p>
+<p>项目也可以进行删除操作，但是在删除项目的时候有两种方式：</p>
+<p>· 方式一：是从项目的工作区之中删除项目，以后可以恢复；</p>
+<p>· 方式二：彻底从硬盘上删除项目，彻底删除。</p>
+<p>如果要想导入一个项目，则可以使用导入的方式完成。</p>
+<p>之后选择项目文件所在的路径。</p>
+<p>以上是通过导入的方式完成了项目的导入，而现在也可以利用导出的方式，将一个项目之中的所有*.class文件自动生成*.jar文件。</p>
+<p>但是如果一个项目之中，需要使用其他的jar包的话，那么不能依靠之前的classpath配置，需要在Eclipse之中单独配置jar包，找到项目属性的构建路径完成。</p>
+<p>在Eclipse之中，为了方便用户的开发，还提供了DEBUG功能，可以利用此功能进行项目的调试操作，而如果要想进行调试，那么首先需要设置断点：断点指的是程序执行到此处的时候，自动停止，而后交由人工控制执行。</p>
+<p><strong>范例：</strong>定义要调试的程序</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.demo; <strong>class</strong> TestMath { <strong>public static int</strong> div(<strong>int</strong> x, <strong>int</strong> y) <strong>throws</strong> Exception { <strong>int</strong> result = 0; result = x / y; <strong>return</strong> result; } } <strong>public class</strong> TestDemo { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { <strong>int</strong> tempX = 10; <strong>int</strong> tempY = 2; <strong>int</strong> res = TestMath.<em>div</em>(tempX, tempY); // 在此行的左边空栏上双击鼠标左键 System.<em>out</em>.println(“计算结果：” + res); } }</th>
+</tr>
+</thead>
+</table>
+<p>这个时候会自动的出现一个断点（Blue Point），而后以Debug的方式启动程序。</p>
+<p>随后会出现一个信息提示，询问：是否要切换到调试视图上，选择“yes”，进入到调试视图。</p>
+<p>进入到调试视图之后，可以通过以下的四个方式进行代码调试：</p>
+<p>· 单步跳入（F5）：进入到代码之中，观察代码的执行；</p>
+<p>· 单步跳过（F6）：不关心代码之中的执行，只关心最终的结果；</p>
+<p>· 单步返回（F7）：返回到单步跳过的状态；</p>
+<p>· 恢复执行（F8）：不再调试，直接将程序运行完成。</p>
+<p>在每一个Java程序运行的时候都可以设置一些初始化的配置参数，Eclipse也可以，但是麻烦一些，例如：下面建立一个新的类：PrintParam</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.demo; <strong>public class</strong> PrintParam { <strong>public static void</strong> main(String[] args) { <strong>for</strong> (<strong>int</strong> x = 0; x &lt; args.length; x++) { System.<em>out</em>.println(args[x]); } } }</th>
+</tr>
+</thead>
+</table>
+<p>如果要想配置初始化参数，则进入到运行时配置，可是如果要想真正配置，必须保证要配置的程序先执行一次。</p>
+<p><strong>3.3、JUNIT测试工具</strong></p>
+<p>软件测试行业：2003年 ~<br>2006年之间，各个公司一直都在招聘软件测试人员，而且都是外包到IBM或微软的公司进行测试。但是，看今天的软件测试来讲，这个行业已经很难了。</p>
+<p>软件测试是一个黄金职位，对于软件测试是需要有一套完整测试理论和数据设计的，而如果学习过软件工程应该知道软件测试分为两类：</p>
+<p>·<br>黑盒测试：主要是测试功能，例如一些xx版，是不接触代码的，但是公司会提供测试工具；</p>
+<p>· 白盒测试：指的性能测试，或者是算法调整。</p>
+<p>而这几年随着行业的发展，实际上又给出了一种新的测试职位 —— <strong>Use<br>Case（用例）测试工程师</strong>，对于这种职位而言，国内的平均待遇是程序员的3~5倍，如果按照正常的一个程序员的工资是8000来算，那么这种人的平均月薪就是：2<br>~ 5W，但是人很难找。一般而言，此类人员在行业之中需要具备8 ~<br>10年的项目经验，并且精通业务。</p>
+<p>一般而言，年龄在28岁以下的人员，找工作都是凭着技术，而业务是随着项目走的，28岁<br>~<br>35岁之间，干代码是可以干，但是基本上拼不起了，30岁之后你靠的行业业务和管理能力。</p>
+<p>JUNIT是一个比较常用的测试工具，专门可以进行Use<br>Case测试的，在日后所开发的程序里面都要写大量的JUNIT测试程序。</p>
+<p><strong>范例：</strong>定义要测试的程序</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.util; <strong>public class</strong> MyMath { <strong>public static int</strong> add(<strong>int</strong> x, <strong>int</strong> y) { <strong>return</strong> x + y; } <strong>public static int</strong> sub(<strong>int</strong> x, <strong>int</strong> y) { <strong>return</strong> x - y; } <strong>public static int</strong> mul(<strong>int</strong> x, <strong>int</strong> y) { <strong>return</strong> x * y; } <strong>public static int</strong> div(<strong>int</strong> x, <strong>int</strong> y) { <strong>return</strong> x / y; } }</th>
+</tr>
+</thead>
+</table>
+<p>下面如果要想测试的话，则需要建立一个新的JUNIT测试端。</p>
+<p>建立JUNIT测试的时候有两种形式：</p>
+<p>· JUNIT Test Case：表示一个测试用例，主要完成一个业务的测试；</p>
+<p>· JUNIT Test Suite：一组测试用例，包含了多个Test Case。</p>
+<p>由于JUNIT属于第三方的程序包，那么在使用的时候需要配置相关的*.jar文件，此处会提示用户是否需要自动进行配置，选择OK即可。</p>
+<p><strong>范例：</strong>编写测试程序</p>
+<table>
+<thead>
+<tr>
+<th><strong>package</strong> cn.mldn.util; <strong>import</strong> junit.framework.TestCase; <strong>import</strong> org.junit.Test; <strong>public class</strong> MyMathTest { @Test <strong>public void</strong> testAdd() { TestCase.<em>assertEquals</em>(MyMath.<em>add</em>(10, 20), 30); } @Test <strong>public void</strong> testSub() { TestCase.<em>assertEquals</em>(MyMath.<em>sub</em>(20, 10), 10); } @Test <strong>public void</strong> testMul() { TestCase.<em>assertEquals</em>(MyMath.<em>mul</em>(20, 10), 200); } @Test <strong>public void</strong> testDiv() { TestCase.<em>assertEquals</em>(MyMath.<em>div</em>(20, 10), 2); } }</th>
+</tr>
+</thead>
+</table>
+<p>对于JUNIT的测试结果来讲，一共分为两类：</p>
+<p>· GREEN BAR：测试通过；</p>
+<p>· RED BAR：测试失败。</p>
+<p>在日后的所有开发之中，一定要进行程序的分层，其中业务层的测试工具就通过JUNIT完成，包括日后学习课程之中，也一样要编写测试用例。</p>
+<p>工具本身不麻烦，难就难在，如何编写测试用例，数据如何设计？</p>
+<p>项目经理只管理三个原则：时间、成本、利润。</p>
+<p>正常思路：付先生的一生</p>
+<p>· 21 ~ 22岁大学毕业：小工（开发团队：5个人，PM，老大，带着几个小工）；</p>
+<p>· 23 ~<br>25岁之后：如果在一个公司时间长了，慢慢成为主力了，当组长，半个老大，带领新人开发；</p>
+<p>· 25 ~ 26岁之后：如果有一定的管理能力、有一定的文档能力，当个PM；</p>
+<p>· 26 ~ 30岁之间，积累业务能力，同时阔宽人脉；</p>
+<p>· 30岁之后靠你的业务能力存活。</p>
+<p><strong>4、总结</strong></p>
+<p>1、 Eclipse傻子才不会；</p>
+<p>2、 JUNIT不是关键，关键是业务。</p>
+<p><strong>5、预习任务</strong></p>
+<p>JDK 1.5的新特性、多线程。</p>
+<p><strong>6、作业</strong></p>
+<p>1、 把六个开发模型都熟悉一遍；</p>
+<p>2、 总结问题。</p>
+
             </div>
             <hr/>
 
@@ -514,7 +623,7 @@ throws:方法声明抛出异常</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/10/java-yi-chang/">https://kilitom.github.io/2020/08/10/java-yi-chang/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/eclipse-kai-fa-gong-ju/">https://kilitom.github.io/2020/08/10/eclipse-kai-fa-gong-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,11 +660,7 @@ throws:方法声明抛出异常</code></pre>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">-Java</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -721,52 +826,39 @@ throws:方法声明抛出异常</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/10/java-yi-chang/">
+                <a href="/2020/08/10/mian-xiang-dui-xiang-04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java异常">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java异常</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常什么是异常异常是指由于程序中的错误而导致正常的程序流程中断的一种事件。如：除数为0，数组越界，文件找不到等都属于异常。
-Java异常分类从理论的角度Java中异常分为两类，分别为 ：
-Error（错误）：JVM系统内部错误、资源耗尽等严
+                            3.1、链表（理解）
+链表是一种最基本的数据结构，但是对于数据结构的部分，强调以下几点：
+·在整个Java开发领域之中，没有一本真正去讲解数据结构的书，只能去看C语言的数据结构；
+·在所有的开发之中，都会存在数据结构的身影，可以这样去解释：
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -778,45 +870,35 @@ Error（错误）：JVM系统内部错误、资源耗尽等严
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/">
+                <a href="/2020/08/10/dao-she-ji-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java类之间的关系</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            抽象类抽象类在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一类具体的对象，这样的类就是抽象类。
-抽象类往往用来表征对问题领域进行分析、设计中得出的抽象概念，是对一系列
+                            3、具体内容
+之前的所有内容都在本处进行总结，而且对于之前的一些概念不清楚的东西（代码会写）那么都可以不用去看了，把本次程序弄会了，一切就都会了，后面也就都会了。
+3.1、程序分层（理解）
+在一个完整的项目之中，对程序进行合理的分层，可以让
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>

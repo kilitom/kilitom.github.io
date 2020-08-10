@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java类之间的关系, Kilitom">
+    <meta name="keywords" content="Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java类之间的关系 | Kilitom</title>
+    <title>Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java类之间的关系</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">-Java</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Java学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -455,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-07
+                    2020-08-10
                 </div>
                 
 
@@ -471,102 +458,260 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><h5 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h5><pre><code>在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一类具体的对象，这样的类就是抽象类。
-抽象类往往用来表征对问题领域进行分析、设计中得出的抽象概念，是对一系列看上去不同，但是本质上相同的具体概念的抽象。</code></pre>
-<h5 id="抽象类需要注意以下几点："><a href="#抽象类需要注意以下几点：" class="headerlink" title="抽象类需要注意以下几点："></a>抽象类需要注意以下几点：</h5><pre><code>abstract放在class前，指明该类是抽象类；
-abstract放在方法声明中，则该方法是抽象方法，抽象方法没有方法体；
-一个抽象类可以含有多个抽象方法，也可以含有已实现的方法。</code></pre>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h5 id="接口概述"><a href="#接口概述" class="headerlink" title="接口概述"></a>接口概述</h5><pre><code>Java是单继承的语言，利用接口可以模拟多继承；
-接口是对抽象类的进一步抽象，是方法声明和常量的定义集合；
-接口是一种行为规范，是一种“契约”；</code></pre>
-<h5 id="具体格式如下所示："><a href="#具体格式如下所示：" class="headerlink" title="具体格式如下所示："></a>具体格式如下所示：</h5><pre><code>&lt;访问符&gt; interface 接口名 &#123;
-    [访问符] &lt;返回类型&gt; 方法名([参数列表])；
-    ......
-&#125;</code></pre>
-<h6 id="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；"><a href="#注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；" class="headerlink" title="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；"></a>注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；</h6><pre><code>接口中定义的变量默认是public static final 型，且必须赋初值 。</code></pre>
-<h5 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h5><pre><code>接口的使用通过“implements”关键字来实现，示例代码如下 
-public class MyClass implements MyInterface &#123;
-    public void add(int x, int y) &#123;
-        // do something
-    &#125;
-    public void volume(int x, int y, int z) &#123;
-        // do something
-    &#125;
-&#125;</code></pre>
-<h5 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h5><pre><code>通过实现多个接口来实现多重继承，示例代码如下 ：
-public class MyClass2 implements MyInterface, MultiInterface&#123;
-    ......//实现多个接口中的所有方法
-&#125;</code></pre>
+                <h2 id="3-1、匿名内部类（重点）"><a href="#3-1、匿名内部类（重点）" class="headerlink" title="3.1、匿名内部类（重点）"></a>3.1、匿名内部类（重点）</h2><p>内部类：在一个类的内部定义了另外的类，称为内部类，匿名内部类指的是没有名字的内部类。为了清楚内部类的主要作用，下面首先来观察如下的程序：</p>
+<p><strong>范例：</strong>思考程序的问题</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>抽象类</th>
-<th>接口</th>
+<th>interface Message { // 定义了一个接口 public void print() ; // 抽象方法 } <strong>class MessageImpl implements Message { // 定义接口的实现类 public void print() {</strong>  <strong>System.out.println(“Hello World .”) ;</strong>  <strong>}</strong>  <strong>}</strong>  class Demo { public static void get(Message msg) { // 接收接口对象 msg.print() ; } } public class TestDemo { public static void main(String args[]) { Message msg = new MessageImpl() ; // 子类为接口实例化 Demo.get(msg) ; // 传递msg对象 } }</th>
+</tr>
+</thead>
+</table>
+<p>以上的代码是属于正常的开发范畴，但是如果说现在MessageImpl这个子类只使用那么唯一的一次，有必要按照以上的方式进行定义吗？这个时候那么MessageImpl就没有什么意义了，但是可以利用匿名内部类的概念来解决此问题。匿名内部类是在抽象类和接口的基础之上所发展起来的一种应用。</p>
+<table>
+<thead>
+<tr>
+<th>interface Message { // 定义了一个接口 public void print() ; // 抽象方法 } class Demo { public static void get(Message msg) { // 接收接口对象 msg.print() ; } } public class TestDemo { public static void main(String args[]) { Demo.get(new Message() <strong>{ // 匿名内部类 public void print() {</strong>  <strong>System.out.println(“Hello World .”) ;</strong>  <strong>}</strong>  <strong>}</strong>) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>对于匿名内部类的使用，暂时只需要记住它的语法即可，因为如果要想真正的去使用它，还需要一段时间的课程。</p>
+<h2 id="3-2、Object类（重点）"><a href="#3-2、Object类（重点）" class="headerlink" title="3.2、Object类（重点）"></a>3.2、Object类（重点）</h2><p>在Java的定义之中，除了Object类之外，所有的类实际上都存在继承关系，即：如果现在定义了一个类，没有默认继承任何一个父类的话，则默认将继承Object类，以下两种类的最终定义效果是完全一样的。</p>
+<table>
+<thead>
+<tr>
+<th>class Person {}</th>
+<th>class Person <strong>extends Object</strong> {}</th>
+</tr>
+</thead>
+</table>
+<p>那么按照这样的方式理解，即：Object类可以接收所有类的实例化对象。</p>
+<table>
+<thead>
+<tr>
+<th>class Person {} public class TestDemo { public static void main(String args[]) { Object obj = new Person() ; Person per = (Person) obj ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>如果在日后的开发之中，一个操作可能接收所有类的对象，那么使用Object作为参数最合适。</strong></p>
+<p>除此之外，对于任意的一个简单Java类而言，理论上讲应该覆写Object类之中的三个方法：</p>
+<p>· 取得对象信息：public String toString()；</p>
+<p>· 对象比较：public boolean equals(Object obj)；</p>
+<p>· <strong>取得哈希码：</strong>public int hashCode()。</p>
+<h3 id="3-2-1、取得对象信息：toString"><a href="#3-2-1、取得对象信息：toString" class="headerlink" title="3.2.1、取得对象信息：toString()"></a>3.2.1、取得对象信息：toString()</h3><p>在之前提示过，如果说现在一个对象直接输出，那么默认情况下输出的是一个对象的地址。</p>
+<table>
+<thead>
+<tr>
+<th>class Person {} public class TestDemo { public static void main(String args[]) { Person per = new Person() ; System.out.println(per) ; // Person@ 1f 6226 System.out.println(per.toString()) ; // Person@ 1f 6226 } }</th>
+</tr>
+</thead>
+</table>
+<p>现在可以清楚地方发现，如果直接输出一个类的对象，那么和这个对象调用toString()方法的结果是完全一样的，那么就可以得出一个结论：对象直接输出默认调用了Object类之中的toString()方法，但是默认的toString()方法有一个特点：为了适用于所有的子类，那么在toString()默认情况下就是输出了对象地址，当然，每一个子类也可以自己进行修改。</p>
+<table>
+<thead>
+<tr>
+<th>class Person { private String name ; private int age ; public Person(String name,int age) { this.name = name ; this.age = age ; } public String toString() { // 方法覆写 return “姓名：” + this.name + “，年龄：” + this.age ; } } public class TestDemo { public static void main(String args[]) { Person per = new Person(“张三”,20) ; System.out.println(per) ; // Person@ 1f 6226 } }</th>
+</tr>
+</thead>
+</table>
+<h3 id="3-2-2、对象比较：equals"><a href="#3-2-2、对象比较：equals" class="headerlink" title="3.2.2、对象比较：equals()"></a>3.2.2、对象比较：equals()</h3><p>实际上对于equals()方法应该并不陌生了，这个方法在String类中见过，String是Object类的子类，所以String类的equals()方法就是覆写了Object类中的equals()方法，在Object类之中，默认的equals()方法实现比较的是两个对象的内存地址数值，但是并不符合于真正的对象比较需要。对象比较之前也写过，但是之前是自己定义了一个新的方法名称，今天可以给出标准的方法名称：equals()。</p>
+<table>
+<thead>
+<tr>
+<th>class Person { private String name ; private int age ; public Person(String name,int age) { this.name = name ; this.age = age ; } public String toString() { // 方法覆写 return “姓名：” + this.name + “，年龄：” + this.age ; } public boolean equals(Object obj) { if (this == obj) { return true ; } if (obj == null) { return false ; } if (! (obj instanceof Person)) { // 不是本类对象 return false ; } // 因为name和age属性是在Person类中定义，而Object类没有 Person per = (Person) obj ; if (this.name.equals(per.name) &amp;&amp; this.age == per.age) { return true ; } return false ; } } public class TestDemo { public static void main(String args[]) { Person per1 = new Person(“张三”,20) ; Person per2 = new Person(“张三”,20) ; System.out.println(per1.equals(“Hello”)) ; System.out.println(per1.equals(per2)) ; } }</th>
+</tr>
+</thead>
+</table>
+<h3 id="3-2-3、使用Object接收所有的引用数据类型"><a href="#3-2-3、使用Object接收所有的引用数据类型" class="headerlink" title="3.2.3、使用Object接收所有的引用数据类型"></a>3.2.3、使用Object接收所有的引用数据类型</h3><p>Object是所有类的父类，那么Object类可以接收所有类的对象，但是在Java设计的时候，考虑到引用数据类型的特殊性，所以Object类实际上是可以接收所有引用数据类型的数据，这就包括了数组、接口、类。</p>
+<p><strong>范例：</strong>使用Object类接收数组，数组和Object没有任何明确的定义关系</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Object obj = <strong>new int [] {1,2,3}</strong> ; // 接收数组 if (obj instanceof int []) { int [] data = (int []) obj ; // 向下转型 for (int x = 0 ; x &lt; data.length ; x ++) { System.out.println(data[x]) ; } } } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>接收接口对象，从接口定义而言，它是不能去继承一个父类的，但是由于接口依然属于引用类型，所以即使没有继承类，也可以使用Object接收。</p>
+<table>
+<thead>
+<tr>
+<th>interface Message { } class MessageImpl implements Message { // 定义接口子类 public String toString() { return “New Message : Hello World .” ; } } public class TestDemo { public static void main(String args[]) { Message msg = new MessageImpl() ; // 向上转型 Object obj = msg ; // 使用Object接收接口对象，向上转型 Message temp = (Message) obj ; // 向下转型 System.out.println(temp) ; // toString() } }</th>
+</tr>
+</thead>
+</table>
+<p>从代码上讲，以上只能算是一个固定的操作概念，不过从实际来讲，因为有了Object类的出现，所以的操作的数据就可以达到统一，那么之前的链表程序，就应该变的很方便了，所有的数据都使用Object接收，所有的对象比较（删除、查找）都可以使用equals()。</p>
+<h2 id="3-3、包装类（重点）"><a href="#3-3、包装类（重点）" class="headerlink" title="3.3、包装类（重点）"></a>3.3、包装类（重点）</h2><p>在Java的设计之中，一直提倡一个原则：一切皆对象，这个原则本身有一个漏洞 ——<br>基本数据类型不是对象，所以这个原则就出现了问题。那么如果说现在这个问题由我们来解决，该如何做呢？</p>
+<table>
+<thead>
+<tr>
+<th>class Int { // 类 private int num ; // 基本型 public Int(int num) { this.num = num ; } public int intValue() { return this.num ; } } public class TestDemo { public static void main(String args[]) { Int temp = new Int(10) ; // 把基本类型变为类 int result = temp.intValue() ; System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>以上的操作是将基本类型变为了一个对象的形式进行操作了，但是这里面有一个问题：基本数值型数据是可以进行数学运算的，可是以上变为了类的形式，那么肯定无法直接计算了。而且以上的问题既然我们都可以想到方法去解决，那么java也一定早已解决，为此它专门提供了八种包装类：<strong>byte（Byte）、short（Short）、int（Integer）、long（Long）、float（Float）、double（Double）、boolean（Boolean）、char（Character）</strong>，而这八种包装类又分为两大阵营：</p>
+<p>· 数值型（Number子类）：Byte、Short、Integer、Float、Double、Long；</p>
+<p>· 对象型（Object子类）：Boolean、Character。</p>
+<p>可是对于Number的子类，就必须观察出Number类之中定义的方法：byteValue()、intValue()、doubleValue()、shortValue()、floatValue()、doubleValue()，就是从包装的类之中取得所包装的数值。</p>
+<h3 id="3-3-1、装箱与拆箱"><a href="#3-3-1、装箱与拆箱" class="headerlink" title="3.3.1、装箱与拆箱"></a>3.3.1、装箱与拆箱</h3><p>在基本数据类型和包装类之间的转换操作之中分为两个重要概念：</p>
+<p>· 装箱操作：将基本数据类型变为包装类，称为装箱，包装类的构造方法；</p>
+<p>· 拆箱操作：将包装类变为基本数据类型，称为拆箱，各个类的xxValue()方法。</p>
+<p><strong>范例：</strong>以int和Integer为例</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Integer var = new Integer(15) ; // 装箱 int result = var.intValue() ; // 拆箱 System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>以double和Double为例</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Double var = new Double(15.5) ; // 装箱 double result = var.doubleValue() ; // 拆箱 System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>以boolean和Boolean为例</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Boolean var = new Boolean(true) ; // 装箱 boolean result = var.booleanValue() ; // 拆箱 if (result) { System.out.println(“Hello World .”) ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>以上的操作是在JDK 1.5之前所进行的必须的操作，但是到了JDK<br>1.5之后，Java提供了自动的装箱和拆箱机制，并且包装类的对象可以自动的进行数学计算了。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Integer var = 15 ; // 自动装箱 int result = var ; // 自动拆箱 System.out.println(++ var * result) ; } }</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>相同点</td>
-<td>只被继承  不能通过new方式实例化变量可以引用具体实现类的实例</td>
-<td></td>
-</tr>
-<tr>
-<td>不同点属性</td>
-<td>可以定义任意属性可以重新定义或赋值</td>
-<td>默认是常量,用public static final修饰的,必须赋初值</td>
-</tr>
-<tr>
-<td>不同点方法</td>
-<td>可以由抽象方法和已实现的方法</td>
-<td>方法均只有方法声明吗,没有方法体;不存在以实现的方法</td>
-</tr>
-<tr>
-<td>不同点继承</td>
-<td>extends来表示继承抽象类只能继承一个父类继承抽象类的同时必须实现抽象类中的所有方法</td>
-<td>implements来实现接口;实现接口的同时实现接口中的所有方法</td>
-</tr>
-<tr>
-<td>不同点静态</td>
-<td>可以有静态代码块和静态方法</td>
-<td>不能有静态代码块和静态方法</td>
-</tr>
-<tr>
-<td>总结</td>
-<td>接口不是类   单继承的多实现</td>
-<td></td>
+<td>public class TestDemo { public static void main(String args[]) { Boolean var = true ; // 自动装箱 if (var) { // 自动拆箱后操作 System.out.println(“Hello World .”) ; } } }</td>
 </tr>
 </tbody></table>
-<h6 id="抽象类的子类可以是一个抽象类也可以是一个具体实现类"><a href="#抽象类的子类可以是一个抽象类也可以是一个具体实现类" class="headerlink" title="抽象类的子类可以是一个抽象类也可以是一个具体实现类"></a>抽象类的子类可以是一个抽象类也可以是一个具体实现类</h6><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h5 id="1-成员内部类"><a href="#1-成员内部类" class="headerlink" title="1.成员内部类"></a>1.成员内部类</h5><h5 id="成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："><a href="#成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：" class="headerlink" title="　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："></a>　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">double</span> radius <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> radius<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>radius <span class="token operator">=</span> radius<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">class</span> <span class="token class-name">Draw</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//内部类</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">drawSahpe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"drawshape"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="2-局部内部类"><a href="#2-局部内部类" class="headerlink" title="2.局部内部类"></a>2.局部内部类</h5><h5 id="局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"><a href="#局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。" class="headerlink" title="　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"></a>　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">People</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Man</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Man</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> People <span class="token function">getWoman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">class</span> <span class="token class-name">Woman</span> <span class="token keyword">extends</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//局部内部类</span>
-            <span class="token keyword">int</span> age <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Woman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="3-匿名内部类"><a href="#3-匿名内部类" class="headerlink" title="3.匿名内部类"></a>3.匿名内部类</h5><h5 id="匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："><a href="#匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：" class="headerlink" title="　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："></a>　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<p>那么正是因为有了这样的自动装箱和拆箱的机制，所以Object也可以接收基本数据类型的数据。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Object obj = 15 ; // int –&gt; 自动装箱 –&gt; Object int result = (Integer) obj ; // Object –&gt; 包装类 –&gt; 自动拆箱 System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>但是到此处还有一个小问题，实际上这一问题之前已经见过的。</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Integer x = new Integer(10) ; // 新空间 Integer y = 10 ; // 入池 Integer z = 10 ; System.out.println(x == y) ; // false System.out.println(x == z) ; // false System.out.println(z == y) ; // true System.out.println(x.equals(y)) ; // true } }</th>
+</tr>
+</thead>
+</table>
+<p>以后使用包装类的时候还需要考虑equals()和==的区别。</p>
+<h3 id="3-3-2、数据转型"><a href="#3-3-2、数据转型" class="headerlink" title="3.3.2、数据转型"></a>3.3.2、数据转型</h3><p>包装类之中所提供的最大优点还在于可以将字符串变为指定的基本数据类型，下面列出几个操作：</p>
+<p>· <strong>Integer类：</strong>public static int parseInt(String s)；</p>
+<p>· <strong>Double类：</strong>public static double parseDouble(String s)；</p>
+<p>· <strong>Boolean类：</strong>public static boolean parseBoolean(String s)；</p>
+<p>但是Character这个包装类之中，并没有提供一个类似的parseCharacter()，因为字符串String类之中提供了一个charAt()方法，可以取得指定索引的字符，而且一个字符的长度就是一位。</p>
+<p><strong>范例：</strong>将字符串变为int</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { String str = “16” ; int result = Integer.parseInt(str) ; // String –&gt; int System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>但是需要提醒的是，在执行这种转换的操作过程之中，字符串中的全部内容必须由数字所组成，如果有一位内容不是数字，则在转换的过程之中将出现如下的错误提示：NumberFormatException。</p>
+<p><strong>范例：</strong>将字符串变为double</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { String str = “36.” ; double result = Double.parseDouble(str) ; System.out.println(result * result) ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>将字符串变为boolean型数据</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { String str = “true” ; boolean result = Boolean.parseBoolean(str) ; if (result) { System.out.println(“Hello World .”) ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>提示：在使用Boolean型包装类的时候，如果字符串之中的内容不是true或者是false，统一都按照false处理。</p>
+<p>以上的操作是通过字符串变为了一些基本类型的数据，但是反过来讲，基本类型如何变为字符串呢？</p>
+<p>· <strong>方式一：</strong>任何的基本类型数据遇到了String之后都变为String型数据；</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { int num = 100 ; String str = num + <strong>“”</strong> ; // int –&gt; String System.out.println(str.length()) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>· <strong>方式二：</strong>利用String类的方法，public static String valueOf(数据类型 b)</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { int num = 100 ; <strong>String str = String.valueOf(num) ; // int –&gt; String</strong>  System.out.println(str.length()) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>字符串向各个基本数据类型的转换，是一个非常重要的内容，必须熟练。</p>
+<h2 id="3-4、思考题（核心）"><a href="#3-4、思考题（核心）" class="headerlink" title="3.4、思考题（核心）"></a>3.4、思考题（核心）</h2><p>一个动物园有多种动物，现在要求实现某类动物的添加、某一类动物的取消、以及关键字检索动物信息的操作</p>
+<p><strong>提示：</strong>要求代码模型，动物属性以名称和年龄为主</p>
+<p><strong>分析：</strong></p>
+<p>1、<br>首先需要分析出本程序的关系：一个动物园有多种动物，按照道理是属于一对多的操作关系，而多的一方肯定通过Link来表示，而且Link可以针对于各种类型。</p>
+<p>2、<br>什么叫动物？动物是一个标准，既然是标准，肯定在类之上，那么一定就是接口，所以对于整个程序应该先把接口定义出来，那么接口只有两个功能：</p>
+<p><strong>范例：</strong>定义出动物的接口</p>
+<table>
+<thead>
+<tr>
+<th>interface Animal { // 动物 public String getName() ; public int getAge() ; }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>定义动物园，动物园里面只关心接口，而不关心具体有什么动物。</p>
+<table>
+<thead>
+<tr>
+<th>class Zoo { private Link animals = new Link() ; // 多个动物 public void add(Animal ani) { // 增加动物 this.animals.add(ani) ; // 增加动物 } public void delete(Animal ani) { this.animals.remove(ani) ; // 需要equals() } public Link search(String keyWord) { Link result = new Link() ; Object obj [] = this.animals.toArray() ; for (int x = 0 ; x &lt; obj.length ; x ++) { Animal ani = (Animal) obj[x] ; if (ani.getName().contains(keyWord)) { // 满足 result.add(ani) ; } } return result ; } }</th>
+</tr>
+</thead>
+</table>
+<p>动物园没和具体的动物有关，只和动物的标准有关，而后下面按照标准去定义动物。</p>
+<p><strong>范例：</strong>定义狗</p>
+<table>
+<thead>
+<tr>
+<th>class Dog implements Animal { private String name ; private int age ; public Dog(String name,int age) { this.name = name ; this.age = age ; } public String getName() { return this.name ; } public int getAge() { return this.age ; } public boolean equals(Object obj) { if (this == obj) { return true ; } if (obj == null) { return false ; } if (!(obj instanceof Dog)) { return false ; } Dog dog = (Dog) obj ; if (this.name.equals(dog.name) &amp;&amp; this.age == dog.age) { return true ; } return false ; } public String toString() { return “〖狗的信息〗名字：” + this.name + “，年龄：” + this.age ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>定义老虎</p>
+<table>
+<thead>
+<tr>
+<th>class Tiger implements Animal { private String name ; private int age ; public Tiger(String name,int age) { this.name = name ; this.age = age ; } public String getName() { return this.name ; } public int getAge() { return this.age ; } public boolean equals(Object obj) { if (this == obj) { return true ; } if (obj == null) { return false ; } if (!(obj instanceof Dog)) { return false ; } Tiger t = (Tiger) obj ; if (this.name.equals(t.name) &amp;&amp; this.age == t.age) { return true ; } return false ; } public String toString() { return “〖老虎的信息〗名字：” + this.name + “，年龄：” + this.age ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>定义测试类</p>
+<table>
+<thead>
+<tr>
+<th>public class TestDemo { public static void main(String args[]) { Zoo zoo = new Zoo() ; // 动物园 zoo.add(new Dog(“花狗”,1)) ; zoo.add(new Dog(“黄狗”,1)) ; zoo.add(new Dog(“黑狗”,1)) ; zoo.add(new Dog(“斑点狗”,1)) ; zoo.add(new Tiger(“斑点虎”,2)) ; zoo.add(new Tiger(“黑虎”,2)) ; zoo.add(new Tiger(“花虎”,2)) ; zoo.delete(new Dog(“斑点狗”,1)) ; // 删除 Link result = zoo.search(“斑点”) ; Object obj [] = result.toArray() ; for (int x = 0 ; x &lt; obj.length ; x ++) { System.out.println(obj[x]) ; } } }</th>
+</tr>
+</thead>
+</table>
+<p>利用此代码模型，日后可以解决以下问题：</p>
+<p>· 一个停车场可以停放多种车辆；</p>
+<p>· 一列火车上可以有不同国家的人乘座；</p>
+<p>· 一个人的书包可以放多物品；</p>
+<p>· 一个超市里有多种商品，每个人可以购买自己的商品。</p>
+<h1 id="4、总结"><a href="#4、总结" class="headerlink" title="4、总结"></a>4、总结</h1><p>1、 匿名内部类现在不使用；</p>
+<p>2、 Object类可以接收任意的对象，是所有类的父类；</p>
+<p>3、<br>包装类可以使用自动装箱和拆箱进行操作，以及可以与字符串之间进行的数据互相转换；</p>
+<p>4、 接口和链表的应用。</p>
+<h1 id="5、预习任务"><a href="#5、预习任务" class="headerlink" title="5、预习任务"></a>5、预习任务</h1><p>异常的捕获及处理、包及访问控制权限、Eclipse开发工具。</p>
 
             </div>
             <hr/>
@@ -592,7 +737,7 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/">https://kilitom.github.io/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/mian-xiang-dui-xiang-06/">https://kilitom.github.io/2020/08/10/mian-xiang-dui-xiang-06/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,11 +774,7 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">-Java</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -799,51 +940,44 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/10/java-yi-chang/">
+                <a href="/2020/08/10/mian-xiang-dui-xiang-06/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java异常">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java异常</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常什么是异常异常是指由于程序中的错误而导致正常的程序流程中断的一种事件。如：除数为0，数组越界，文件找不到等都属于异常。
-Java异常分类从理论的角度Java中异常分为两类，分别为 ：
-Error（错误）：JVM系统内部错误、资源耗尽等严
+                            3.1、匿名内部类（重点）内部类：在一个类的内部定义了另外的类，称为内部类，匿名内部类指的是没有名字的内部类。为了清楚内部类的主要作用，下面首先来观察如下的程序：
+范例：思考程序的问题
+
+
+
+interface Message { // 定
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -854,47 +988,35 @@ Error（错误）：JVM系统内部错误、资源耗尽等严
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/06/java-lei-zhi-jian-de-guan-xi/">
+                <a href="/2020/08/10/java-wang-luo-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java类之间的关系</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            继承父类---&gt;子类
-超类---&gt;派生类
-关键字:extends
-重写当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，则可以在子类中对父类的方法进行改造，也称作重写（overr
+                            3.1、网络编程（了解）
+网络编程指的就是通过网络进行程序数据操作，既然是网络开发，那么一定就分为用户和服务两端，而这两个端的开发实际上就有以下的两种不同的架构（面试题：请解释C/S和B/S的区别？）：
+
+  · C/S（Client / 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>

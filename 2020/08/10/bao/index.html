@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java入门, Kilitom">
+    <meta name="keywords" content="Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java入门 | Kilitom</title>
+    <title>Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java入门</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">-Java</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Java学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -455,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-03
+                    2020-08-10
                 </div>
                 
 
@@ -471,88 +458,252 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="了解Java"><a href="#了解Java" class="headerlink" title="了解Java"></a>了解Java</h1><h2 id="Java特点"><a href="#Java特点" class="headerlink" title="Java特点"></a>Java特点</h2><ol>
-<li><pre><code>1. ​简单性
-2. ​面向对象性
-3. ​分布式
-4. ​健壮性
-5. ​高性能
-6. ​多线程
-7. ​动态性</code></pre>
-</li>
-</ol>
-<h2 id="Java运行环境"><a href="#Java运行环境" class="headerlink" title="Java运行环境"></a>Java运行环境</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><ul>
-<li><pre><code>- ​    JAVA_HOME
-  ​        JAVA_HOME=JDK的安装路径(自己的安装路径C:\Program Files\Java\jdk1.8.0_151) 
-- ​    Path(系统在任何路径都可以识别 java, javac命令)
-  ​        Path=%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin (系统自带的路径不要删掉)
-- ​    CLASSPATH
-  ​        JAVA加载类路径，只有类在classpath中，java命令才能识别，在路径前加了个  &quot;.&quot;表示
-  ​        当前路径  CLASSPATH=.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</code></pre>
-</li>
-</ul>
-<h3 id="JDK-java-开发-工具包-opt-jdk-or-opt-jdk-1-6-01"><a href="#JDK-java-开发-工具包-opt-jdk-or-opt-jdk-1-6-01" class="headerlink" title="JDK java 开发 工具包 /opt/jdk or /opt/jdk_1.6.01"></a>JDK java 开发 工具包 /opt/jdk or /opt/jdk_1.6.01</h3><ul>
-<li><pre><code>- ​    |-- bin 开发工具(命令：java,javac,jar,javad,jar,rmic,jps...)
-- ​    |-- lib 开发工具的核心实现(tools.jar)
-- ​    |-- src.zip API的源文件 System.java
-- ​    |-- jre JRE Java运行环境
-- ​    |-- lib (rt.jar) Java API(应用编程接口，系统类库)
-- ​    |  (java 提供的现成组件) System.class String.class ...
-- ​    |-- bin (java_vm)JVM Java虚拟机</code></pre>
-</li>
-</ul>
-<h3 id="JDK、JRE、JVM之间的关系"><a href="#JDK、JRE、JVM之间的关系" class="headerlink" title="JDK、JRE、JVM之间的关系"></a>JDK、JRE、JVM之间的关系</h3><ul>
-<li><pre><code>- ​    JDK(Java Developer     Kit) Java开发工具包
-- ​    JRE(Java Runtime     Environment)Java运行环境
-- ​    JVM(Java Virtual     Machine) Java虚拟机</code></pre>
-</li>
-</ul>
-<h3 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h3><ul>
-<li><pre><code>- ​    JDK=JRE+Java开发工具
-- ​    JRE=JVM+Java类库
-- ​    JDK包含JRE，JRE包含JVM</code></pre>
-</li>
-</ul>
-<h2 id="Java运行原理"><a href="#Java运行原理" class="headerlink" title="Java运行原理"></a>Java运行原理</h2><ul>
-<li><pre><code>- ​Java文件类型
-- ​.java  Java源文件
-- ​.class  二进制字节码文件</code></pre>
-</li>
-</ul>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><ol>
-<li><pre><code>1. ​首先，编写.java文件，通过javac命令将.java文件编译成.class文件（字节码文件）。编译过程只能简单的检查语错误；
-2. ​其次，java命令去执行.class文件。
-3. ​类加载器会进行代码装载，如果类需要跨网络，类加载器将执行安全检查；
-4. ​字节码校验器将校验代码格式和对象类型转换，并检查是否发生越权访问；
-5. ​即时编译器会将字节码转换成机器码，如果系统没有即时编译器，java解释器会处理并执行字节码类</code></pre>
-</li>
-</ol>
-<h4 id="一个Java程序的基本结构："><a href="#一个Java程序的基本结构：" class="headerlink" title="一个Java程序的基本结构："></a>一个Java程序的基本结构：</h4><pre class=" language-java"><code class="language-java">    <span class="token keyword">package</span>  xxx<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// package 包，此类的路径</span>
-    <span class="token keyword">import</span>  xxx<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span>Xxxx<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//引入其他类</span>
-    <span class="token comment" spellcheck="true">//类名称：书写格式：首字母大写，若类名由多个单词组成每个单词的首字母大写</span>
-    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">XxxXxx</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">/* main方法  */</span>
-        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 方法体</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>​    例子：HelloWorld.java</p>
-<pre class=" language-Java"><code class="language-Java">public class HelloWorld&#123;
-/*第一个Java程序
-*它将打印字符串Hello World
-*/
-    public static void main(String []args)&#123;
-        System.out.println("Hello World");//打印Hello World
-    &#125;
-&#125;</code></pre>
-<h5 id="编译源文件："><a href="#编译源文件：" class="headerlink" title="编译源文件："></a>编译源文件：</h5><pre><code>javac HelloWorld.java </code></pre>
-<h5 id="执行class文件"><a href="#执行class文件" class="headerlink" title="执行class文件"></a>执行class文件</h5><pre><code>java HelloWorld</code></pre>
-<h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><ol>
-<li><pre><code>1. 行注释  // 对某代码进行注释
-2. 块注释  /*… …*/ 注释多行代码或用于说明文件、方法。数据结构等
-3. 文档注释  /**… …*/用于生成HTML格式的代码报告。必须收发室在类、域、构造函数、方法，以及字段定义之间。</code></pre>
-</li>
-</ol>
+                <p><strong>3.1、包（重点）</strong></p>
+<p><strong>3.1.1、包的定义</strong></p>
+<p>在Java程序之中的包，主要的目的是可以将不同功能的文件进行分割。在之前的代码开发之中，所有的程序都保存在了同一个目录之中，这样一来所带来的问题：如果出现了同名文件，那么会发生覆盖问题，因为在同一个目录之中不允许有重名文件，而在不同的目录下可以有重名文件，所谓的包实际上指的就是文件夹。</p>
+<p>在Java之中使用package关键字来定义包，其定义如下：</p>
+<p><strong>范例：</strong>定义Hello.java</p>
+<table>
+<thead>
+<tr>
+<th><strong>package cn.mldn.demo ; // 定义包</strong> public class Hello { public static void main(String args[]) { System.out.println(“Hello World .”) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>一旦包定义完成之后，那么这个类的名字就成了“cn.mldn.demo.Hello”，即这是完整的类名称，而在进行程序编译的时候也需要将*.class文件保存在包之中，于是为了方便开发，那么也就提供了一个打包编译的操作：</p>
+<table>
+<thead>
+<tr>
+<th>javac -d . Hello.java</th>
+</tr>
+</thead>
+</table>
+<p>这个命令之间有空格，每一个操作的含义：</p>
+<p>· -d：表示的是生成文件目录，根据package的定义生成；</p>
+<p>· .：表示在当前所在的目录下生成。</p>
+<p>这个时候类的名字必须带上包的名称，所以执行类的时候：java<br>cn.mldn.demo.Hello，也就是说完整类的名称就是“包.类”，而在所有的开发之中，没有包的类是绝对不存在的，只要是程序一定要有包。</p>
+<p><strong>3.1.2、包的导入</strong></p>
+<p>既然使用包可以将一个大型的程序拆分成不同的功能目录保存，那么这些不同的包之间也一定会存在包的导入问题，而导入包在程序之中使用import完成，下面通过一个程序来进行演示。</p>
+<p><strong>范例：</strong>定义一个Message.java的类</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.util ; class Message { public String getInfo() { return “Hello World .” ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>随后定义另外一个类，使用Message类</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.test ; import cn.mldn.util.Message ; // 导入包 public class Test { public static void main(String args[]) { <strong>Message msg = new Message() ;</strong>  <strong>System.out.println(msg.getInfo()) ;</strong>  } }</th>
+</tr>
+</thead>
+</table>
+<p>这个时候上面的两个类应该是按照顺序编译：</p>
+<p>· 应该首先编译Message.java程序：javac -d . Message.java；</p>
+<p>· 再次编译Test.java程序：javac -d .<br>Test.java，但是这个时候出现了以下的错误提示：</p>
+<table>
+<thead>
+<tr>
+<th>Test.java:2: 错误: Message在<strong>cn.mldn.util</strong>中不是公共的; 无法从外部程序包中对其进行访问 import cn.mldn.util.Message ; // 导入包</th>
+</tr>
+</thead>
+</table>
+<p><strong>提示：</strong>关于public class和class定义类的区别</p>
+<p>· public<br>class：文件名称和类名称保持一致，在一个*.java文件之中只能存在一个public<br>class定义，如果一个类要想被外部的包所访问必须定义为public；</p>
+<p>·<br>class：文件名称可以和类名称不一致，在一个*.java之中可以同时存在多个class定义，并且编译完成之后会形成多个*.class文件，使用class定义的类只能够在一个包中访问，不同包无法访问。</p>
+<p><strong>范例：</strong>修改Message.java程序</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.util ; <strong>public</strong> class Message { public String getInfo() { return “Hello World .” ; } }</th>
+</tr>
+</thead>
+</table>
+<p>但同时也可以发现一个问题，现在这些类编译的时候要有顺序，实在是麻烦了，为此在Java之中专门提供了一个可以进行自动联编的操作，编译的时候使用*.java：javac<br>-d . *.java，将一个目录之中的所有的*.java文件进行编译。</p>
+<p>但是以上的代码还有一个小问题：程序在进行导入的时候使用了“包.类”的完整名称完成的，但是如果在一个程序之中要同时导入一个包的多个类的时候，那么分开去编写实在是很麻烦，为此可以使用通配符“*”完成导入。</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.test ; <strong>import cn.mldn.util.* ; // 导入包</strong> public class Test { public static void main(String args[]) { Message msg = new Message() ; System.out.println(msg.getInfo()) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>但是需要注意的是，在Java之中是使用“*”或者是单独导入，其从实际的操作性能上来讲是没有任何区别的，因为即使使用了*也表示只导入所需要的类，不需要的不导入。</p>
+<p>可是在导入包的时候也会遇到一种比较麻烦的问题：会导入不同包的同名类，例如：对于Message类，现在在两个包中都有：cn.mldn.util、cn.mldnjava.info。</p>
+<table>
+<thead>
+<tr>
+<th>package <strong>cn.mldnjava.info</strong> ; public class <strong>Message</strong> { public String getMsg() { return “世界，你好！” ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>由于某种需要，同时导入两个包，这个时候要使用Message类的时候必须加上类的全名。</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.test ; import cn.mldn.util.* ; // 导入包 import cn.mldnjava.info.* ; // 导入包 public class Test { public static void main(String args[]) { <strong>cn.mldn.util.Message msg = new cn.mldn.util.Message() ;</strong>  System.out.println(msg.getInfo()) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>这种情况在开发之中经常可见到，习惯了就好。</p>
+<p><strong>3.1.3、jar命令</strong></p>
+<p>Jar是一种Java给出的压缩格式文件，即：可以将*.class文件以*.jar压缩包的方式给用户，这样方便程序的维护。如果要使用jar的话，可以直接利用JDK给出的jar命令完成。</p>
+<p>在以上的操作之中，往往只使用三个参数：</p>
+<p>· -c：创建一个新的文件；</p>
+<p>· -v：生成标准的压缩信息；</p>
+<p>· -f：由用户自己指定一个*.jar的文件名称。</p>
+<p><strong>范例：</strong>Message.java</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.util ; public class Message { public String getInfo() { return “Hello World .” ; } }</th>
+</tr>
+</thead>
+</table>
+<p>· 将Message.java程序进行编译：javac -d . Message.java，生成包.类；</p>
+<p>· 将“包.类”压缩成my.jar文件：jar -cvf my.jar cn，出现了一个my.jar包；</p>
+<p><strong>范例：</strong>定义一个测试类，使用以上的程序</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.test ; public class Test { public static void main(String args[]) { cn.mldn.util.Message msg = new cn.mldn.util.Message() ; System.out.println(msg.getInfo()) ; } }</th>
+</tr>
+</thead>
+</table>
+<p>现在my.jar和Test.java处于同一目录之中。但是发现找不到my.jar之中定义的内容，这是因为在java之中每一个*.jar文件都属于一个独立的CLASSPATH路径，如果要想使用，必须配置CLASSPATH。</p>
+<table>
+<thead>
+<tr>
+<th>SET CLASSPATH=.;d:\javademo\my.jar</th>
+</tr>
+</thead>
+</table>
+<p>以上的配置只是针对于一个命令行方式下完成的，如果现在希望针对于全局配置，则需要修改环境属性。</p>
+<p><strong>3.2、Java的常用包（了解）</strong></p>
+<p>Java语言最大的特点是提供了大量的开发支持，尤其是经过了这么多年的发展，几乎只要想做的技术，Java都可以完成了，而且有大量的开发包支撑着。而对于JAVA<br>SE部分也提供了一些常见的系统包，下面分别来看。</p>
+<p>· java.lang：包含了一些系统的常用类，例如：String、Object、Integer等，JDK<br>1.1之后此包默认导入；</p>
+<p>· java.lang.reflect：Java的反射机制操作包；</p>
+<p>· java.util：是一个工具的提供包，里面提供了各种的工具操作类；</p>
+<p>· java.util.regex：正则开发包；</p>
+<p>· java.io：编写IO操作；</p>
+<p>· java.sql：数据库的程序开发包；</p>
+<p>· java.net：网络程序开发包；</p>
+<p>· java.applet：小应用程序开发包；</p>
+<p>在1995年出现java的时候最早就是以小应用程序为主的，小应用程序最大的特点是嵌入在HTML代码之中进行展示，但是这种程序已经随着时间的推移不再开发了，下面演示一个比较简单的程序。</p>
+<p><strong>范例：</strong>定义一个Hello.java类</p>
+<table>
+<thead>
+<tr>
+<th>package cn.mldn.demo ; // 定义包 import java.applet.* ; import java.awt.* ; public class Hello <strong>extends</strong> Applet { public void paint(Graphics g) { g.drawString(“Hello World .”,20,20) ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>定义一个HTML文件，使用以上的程序</p>
+<table>
+<thead>
+<tr>
+<th>&lt;applet code=”cn.mldn.demo.Hello” height=”300” width=”300”/&gt;</th>
+</tr>
+</thead>
+</table>
+<p><strong>提示：</strong>关于Applet和Application的区别？</p>
+<p>· Applet是不需要主方法运行的，需要嵌入在HTML代码之中；</p>
+<p>· Application是需要通过主方法执行。</p>
+<blockquote>
+<p>  ·<br>  java.awt.、javax.swing：是进行图形界面的开发包，其中java.awt是一组重量级的组件包，而javax.swing是属于轻量级的组件包，并且JDK<br>  1.2的最大特点是加入了javax.swing包；</p>
+</blockquote>
+<p><strong>3.3、四种访问权限（重点）</strong></p>
+<p>对于封装型实际上在之前只讲解了一个private，而封装性如果要想讲解完整，必须结合四种访问权限来看。</p>
+<table>
+<thead>
+<tr>
+<th><strong>No.</strong></th>
+<th><strong>范围</strong></th>
+<th><strong>private</strong></th>
+<th><strong>default</strong></th>
+<th><strong>protected</strong></th>
+<th><strong>public</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>在同一包的同一类</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>2</td>
+<td>同一包的不同类</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>3</td>
+<td>不同包的子类</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>4</td>
+<td>不同包的非子类</td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>以上可以简单理解为：</p>
+<p>· private只能在一个类中访问；</p>
+<p>· default：只能在一个包中访问；</p>
+<p>· protected：在不同包子类；</p>
+<p>· public：所有都可以。</p>
+<p><strong>范例：</strong>观察protected权限</p>
+<table>
+<thead>
+<tr>
+<th>package cn.aa ; public class A { protected String info = “Hello World .” ; }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>在不同的包继承此类</p>
+<table>
+<thead>
+<tr>
+<th>package cn.bb ; import cn.aa.A ; public class B extends A { public void print() { System.out.println(super.info) ; } }</th>
+</tr>
+</thead>
+</table>
+<p><strong>范例：</strong>定义测试类</p>
+<table>
+<thead>
+<tr>
+<th>package cn.test ; import cn.bb.* ; public class Test { public static void main(String args[]) { new B().print() ; } }</th>
+</tr>
+</thead>
+</table>
+<p>实际上对于四种权限本人原则：</p>
+<p>· 属性永远都是private；</p>
+<p>· 正常类的方法永远都是public；</p>
+<p>· protected实际上也属于一种封装，但是这种封装知道特点就行了。</p>
+<p>封装：private、default、protected。</p>
+<p><strong>3.4、命名规范（重点）</strong></p>
+<p>命名规范的主要特点就是保证程序之中类名称或方法等名称的标记明显一些，可是对于Java而言，有一些固定的命名规范还是需要遵守的：</p>
+<p>· 类名称：每一个单词的开头首字母大写，例如：TestDemo；</p>
+<p>· 变量名称：第一个单词的首字母小写，之后每个单词的首字母大写，例如：studetName；</p>
+<p>·<br>方法名称：第一个单词的首字母小写，之后每个单词的首字母大写，例如：printInfo()；</p>
+<p>· 常量名称：每个字母大写，例如：FLAG；</p>
+<p>· 包名称：所有字母小写，例如：cn.mldnjava.util。</p>
+<p><strong>4、总结</strong></p>
+<p>1、 所有的类都要有包；</p>
+<p>2、 虽然访问权限有四种，但是我们只需要使用private、public，99%通用原则。</p>
 
             </div>
             <hr/>
@@ -578,7 +729,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/03/java-ru-men/">https://kilitom.github.io/2020/08/03/java-ru-men/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/bao/">https://kilitom.github.io/2020/08/10/bao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -615,11 +766,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">-Java</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -789,46 +936,35 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/04/java-ji-chu/">
+                <a href="/2020/08/10/java-wang-luo-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java基础</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
-标识符可以包含数字，但不能以数字开头
-除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
+                            3.1、网络编程（了解）
+网络编程指的就是通过网络进行程序数据操作，既然是网络开发，那么一定就分为用户和服务两端，而这两个端的开发实际上就有以下的两种不同的架构（面试题：请解释C/S和B/S的区别？）：
+
+  · C/S（Client / 
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -837,60 +973,41 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/03/java-ru-men/">
+                <a href="/2020/08/10/chu-li-yi-chang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java入门</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            了解JavaJava特点
-1. ​简单性
-2. ​面向对象性
-3. ​分布式
-4. ​健壮性
-5. ​高性能
-6. ​多线程
-7. ​动态性
+                            3.1、认识异常（了解）
+异常是程序之中导致程序中断的一种指令流，下面，通过两个程序来进行异常产生问题的对比。
+范例：不产生异常的程序
 
 
-Java运行环境环境变量配置
-- ​    JAVA_HOME
-  ​        JAVA
+
+public class TestDemo { public static void main(S
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Java学习笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kilitom
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">-Java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
