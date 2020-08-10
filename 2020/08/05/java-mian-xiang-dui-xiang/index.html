@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础, Kilitom">
+    <meta name="keywords" content="Java面向对象, Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java基础 | Kilitom</title>
+    <title>Java面向对象 | Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础</h1>
+                    <h1 class="description center-align post-title">Java面向对象</h1>
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-05
                 </div>
                 
 
@@ -471,104 +471,84 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="Java中标识符的命名必须满足以下原则："><a href="#Java中标识符的命名必须满足以下原则：" class="headerlink" title="Java中标识符的命名必须满足以下原则："></a>Java中标识符的命名必须满足以下原则：</h3><pre><code>标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
-标识符可以包含数字，但不能以数字开头
-除下划线“_”和“$”符号外，标识符中不包含任何特殊字符，如空格
-标识符区分大小写，比如，“abc”和“Abc”是两个不同的标识符
-对于标识符的长度没有限制
-不能使用Java关键字作为标识符 例如 static public void  main</code></pre>
-<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><pre><code>Java中分隔符分为两类：
-没有意义的空白符 
-拥有确定含义的普通分隔符</code></pre>
-<table>
+                <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><pre><code>封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。</code></pre>
+<h2 id="封装的原则"><a href="#封装的原则" class="headerlink" title="封装的原则"></a>封装的原则</h2><pre><code>使对象以外的部分不能随意存取对象的内部数据，从而有效的避免了外部错误对它的“交叉感染”。数据隐藏特性提升了系统安全性，使软件错误能够局部化，减少查错和排错的难度。 </code></pre>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><pre><code>继承是软件重用的一种形式，它通过重用现有类的属性和方法，并增加新功能或修改现有功能来构建新的类。</code></pre>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><pre><code>多态是指在父类中定义的属性或方法被子类继承之后，可以具有不同的表现行为。这使得同一个属性或方法在父类及其各个子类中具有不同的语义。</code></pre>
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><pre><code>类是对象的模板,对象是类的实例</code></pre>
+<h5 id="类由属性和方法构成"><a href="#类由属性和方法构成" class="headerlink" title="类由属性和方法构成"></a>类由属性和方法构成</h5><pre><code>对象的特征在类中表示为成员变量，称为类的属性。 
+类的方法是对象执行操作的一种规范。方法指定以何种方式操作对象的数据，是操作的实际实现。</code></pre>
+<h5 id="Java中声明类的格式"><a href="#Java中声明类的格式" class="headerlink" title="Java中声明类的格式"></a>Java中声明类的格式</h5><pre class=" language-java"><code class="language-java"><span class="token punctuation">[</span>访问符<span class="token punctuation">]</span> <span class="token punctuation">[</span>修饰符<span class="token punctuation">]</span> <span class="token keyword">class</span> <span class="token operator">&lt;</span>类名<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+         <span class="token punctuation">[</span>属性<span class="token punctuation">]</span>
+         <span class="token punctuation">[</span>方法<span class="token punctuation">]</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<h5 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h5><pre><code>声明一个变量
+创建该对象,并把该对象的引用赋给声明好的变量.这是通过new运算符实现的</code></pre>
+<h5 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h5><pre class=" language-java"><code class="language-java">Rectangle rect1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Rectangle rect2<span class="token punctuation">;</span>
+rect2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Rectangle rect3 <span class="token operator">=</span> null<span class="token punctuation">;</span>
+rect3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><pre><code>构造方法是一种特殊的方法，在对象被创建时用来初始化对象；
+它具有和它所在的类完全一样的名字；
+构造方法和类的方法类似，只不过构造方法没有返回类型；
+构造方法的任务是初始化一个对象的内部状态。</code></pre>
+<h6 id="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"><a href="#如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。" class="headerlink" title="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"></a>如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。</h6><h5 id="this调用的是本类中的对象或者方法"><a href="#this调用的是本类中的对象或者方法" class="headerlink" title="this调用的是本类中的对象或者方法"></a>this调用的是本类中的对象或者方法</h5><h5 id="对象的初始化"><a href="#对象的初始化" class="headerlink" title="对象的初始化"></a>对象的初始化</h5><pre class=" language-java"><code class="language-java">Rectangle rectangle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></code></pre>
+<h5 id="类的方法"><a href="#类的方法" class="headerlink" title="类的方法"></a>类的方法</h5><pre><code>方法是类行为的体现，其他对象可以根据类的方法对类进行访问。类的方法包括方法的说明和方法的实现两部分 ，格式如下所示：
+[access]  [modifiers] &lt;return_type&gt; methodName ([&lt;argu_list&gt;])  &#123;&#125;</code></pre>
+<h6 id="方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。"><a href="#方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。" class="headerlink" title="方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。"></a>方法的返回类型是该方法运行后返回值的数据类型；如果方法没有返回值，则方法的返回类型为void。</h6><h5 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h5><pre><code>当分配完一个对象后，可以使用点操作符“.”来实现对属性和方法的访问：
+对象名.属性;//访问对象的属性
+对象名.方法名();//访问对象的方法</code></pre>
+<h1 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h1><h5 id="按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"><a href="#按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。" class="headerlink" title="按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"></a>按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。</h5><h5 id="引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"><a href="#引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。" class="headerlink" title="引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"></a>引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。</h5><h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><pre><code>在Java程序中，如果同一个类中存在两个方法同名，方法的签名(参数个数、参数类型、类型排列次序)上也一样，将无法编译通过。但在Java中多个方法重名是允许的，只要保证方法签名不同即可，这种特性称为方法重载（overload）。</code></pre>
+<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><pre><code>方法名相同；
+参数列表（个数、类型、顺序）不同；</code></pre>
+<h6 id="注意：返回值不影响方法重载。构造方法也可以重载-。"><a href="#注意：返回值不影响方法重载。构造方法也可以重载-。" class="headerlink" title="注意：返回值不影响方法重载。构造方法也可以重载 。"></a>注意：返回值不影响方法重载。构造方法也可以重载 。</h6><h2 id="封装-1"><a href="#封装-1" class="headerlink" title="封装"></a>封装</h2><pre><code>Java中为了将数据有效的保护起来，提供了访问修饰符用来声明、控制属性、方法乃至类本身的访问，以实现隐藏一个类的实现细节，防止对封装数据未经授权的访问，此种形式称为“封装”。
+引入封装，使用者只能通过事先定制好的方法来访问数据，可以方便的加入控制逻辑，限制对属性的不合理操作，有利于保证数据的完整性。
+实现封装的关键是不让外界直接与对象属性交互，而是要通过指定的方法操作对象的属性，如下图所示：</code></pre>
+<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><pre><code>Java中定义了private（私有的）、protected（受保护的）和public（公共的）的访问修饰符，同时也定义了一个缺省的访问级别，用于声明类、属性、方法的访问权限。明确访问修饰符的限制是用好“封装”的关键 ：</code></pre>
+<h5 id="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"><a href="#使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；" class="headerlink" title="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"></a>使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；</h5><h5 id="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"><a href="#使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；" class="headerlink" title="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"></a>使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；</h5><h5 id="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"><a href="#如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；" class="headerlink" title="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"></a>如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；</h5><h5 id="private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"><a href="#private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。" class="headerlink" title="private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"></a>private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。</h5><table>
 <thead>
 <tr>
-<th align="left">普通分隔符</th>
-<th align="left">名称</th>
-<th align="left">功能说明</th>
+<th>访问控制</th>
+<th>privata成员</th>
+<th>省缺成员</th>
+<th>protected成员</th>
+<th>public成员</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">{}</td>
-<td align="left">大括号</td>
-<td align="left">用来定义程序块，类，方法以及局部范围;</td>
+<td>同一类中成员</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="left">[]</td>
-<td align="left">中括号</td>
-<td align="left">用来进行数组的声明，也可用来表示撤销对数组的引用;</td>
+<td>同一包中其他成员</td>
+<td>×</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="left">()</td>
-<td align="left">小括号</td>
-<td align="left">在定义和调用方法时用来容纳参数表，在控制语句或强制类型转换组成的表达式中用来表示执行或计算的优先级 ;</td>
+<td>不同包中子类</td>
+<td>×</td>
+<td>×</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="left">;</td>
-<td align="left">分号</td>
-<td align="left">用来表示一条语句的结束 ;在for控制语句中用来将圆括号内的语法连接起来;</td>
-</tr>
-<tr>
-<td align="left">,</td>
-<td align="left">逗号</td>
-<td align="left">在变量声明中，用于分割变量表中的各个变量;在for控制语句中用来将圆括号内的语法连接起来;</td>
-</tr>
-<tr>
-<td align="left">:</td>
-<td align="left">冒号</td>
-<td align="left">说明语句标号。例如在三元运算符中使用;</td>
+<td>不同包中非子类</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+<td>√</td>
 </tr>
 </tbody></table>
-<h2 id="基本数据类型："><a href="#基本数据类型：" class="headerlink" title="基本数据类型："></a>基本数据类型：</h2><h4 id="（1）数值型："><a href="#（1）数值型：" class="headerlink" title="（1）数值型："></a>（1）数值型：</h4><pre><code>          1）整数类型（byte、short、int、long）
-         2)浮点类型（float、double）
-         注:long a=1234567890L(末尾加“L”、“l”),否则默认为int型；
-            float b=2.3f(末尾加“F”、“f”),否则默认为double型；
-            八进制必须以0（零） 开头；十六必须进制以0X或0x开头（零X或零x）。</code></pre>
-<h4 id="（2）字符型：char型"><a href="#（2）字符型：char型" class="headerlink" title="（2）字符型：char型"></a>（2）字符型：char型</h4><pre><code>         注：每个字符在unicode表中都有相对应的位置，如a在unicode表中的位置是97.
-             转义字符（是字符就要加单引号）：\ddd:1-3为8进制数据所表示的字符，如\123
-                                          \uxxxx:4位16进制数据所表示的字符，如\u0052
-                                          \&#39;:单引号字符
-                                          \\:反斜杠字符
-                                          \t:垂直制表符，将光标移到下一个制表符的位置
-                                          \r:回车
-                                          \n:换行
-                                          \b:退格
-                                          \f:换页</code></pre>
-<h4 id="（3）布尔型（boolean）"><a href="#（3）布尔型（boolean）" class="headerlink" title="（3）布尔型（boolean）:"></a>（3）布尔型（boolean）:</h4><pre><code> 又称为逻辑类型，只有true和false两个值，表示真和假。</code></pre>
-<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h4 id="1-常量：在程序执行过程中，其值不能被改变的量。"><a href="#1-常量：在程序执行过程中，其值不能被改变的量。" class="headerlink" title="1.常量：在程序执行过程中，其值不能被改变的量。"></a>1.常量：在程序执行过程中，其值不能被改变的量。</h4><pre><code> (1)常量的声明（定义常量）：1)final 数据类型 常量名称[=值];如final int a=5;
-    注:1）常量通常也被称为final变量
- 2）用final定义“成员变量（全局变量）”时，必须立刻设初值，否则会产生编译错误。</code></pre>
-<h4 id="2-变量：在程序执行过程中，其值能被改变的量。"><a href="#2-变量：在程序执行过程中，其值能被改变的量。" class="headerlink" title="2.变量：在程序执行过程中，其值能被改变的量。"></a>2.变量：在程序执行过程中，其值能被改变的量。</h4><pre><code>(1)成员变量（全局变量）：定义在类中；成员变量又分为静态变量和实例变量；
- 1）静态变量（有static关键字）：有效范围跨类，甚至可达整个程序中（应用程序由若干个类构成）。
- 2）实例变量（无static关键字）：有效范围当前类。
-(2)局部变量：定义在方法中。
-   注：当局部变量名与成员变量名相通时，成员变量将在此方法中暂时失效。</code></pre>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h5 id="1-赋值运算符（-）"><a href="#1-赋值运算符（-）" class="headerlink" title="(1)赋值运算符（=）"></a>(1)赋值运算符（=）</h5><pre><code> 例：int a=3;(将3赋给a)
-     int b=a+c;(将a+c的和赋给b)
-     x=y=z=5;(将5的值赋给x、y、z，不建议使用)</code></pre>
-<h5 id="2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））"><a href="#2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））" class="headerlink" title="(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））"></a>(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））</h5><pre><code> 例：12.45f*15=27.45;
-     45-30=15;
-     5*3=15;
-     6/2=3;
-     12%10=2;</code></pre>
-<h5 id="3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量"><a href="#3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量" class="headerlink" title="(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量"></a>(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量</h5><pre><code> 例：假设a=5;以自增为例。
-     b=++a;//此时a先加1，再赋值给b,所以b=6;
-     b=a++;//此时a直接赋给b,之后加1，所以b=5;</code></pre>
-<h5 id="4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）"><a href="#4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）" class="headerlink" title="(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）"></a>(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）</h5><pre><code> 例：4&gt;5,结果为false.
-     4!=5,结果为true.
- 注：结果为布尔值</code></pre>
-<h5 id="5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）"><a href="#5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）" class="headerlink" title="(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）"></a>(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）</h5><pre><code> 与：同真为真
- 或：一真为真
- 注：1）结果都为布尔值（flase、true）
-     2）短路运算符（&amp;&amp;）：第一个为假，就不再判断第二个。
-        非短路运算符（&amp;）：第一个为假，依然判断第二个，相比之下更浪费时间。</code></pre>
-<h5 id="6-三元运算符（条件式？值1：值2）：等价于if…-else语句"><a href="#6-三元运算符（条件式？值1：值2）：等价于if…-else语句" class="headerlink" title="(6)三元运算符（条件式？值1：值2）：等价于if…..else语句"></a>(6)三元运算符（条件式？值1：值2）：等价于if…..else语句</h5><pre><code> 例：int y=a&gt;b?x+1:x-1;
-    含义：如果a&gt;b成立，y=x+1;否则y=x-1；</code></pre>
-<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h5 id="（1）隐式类型转换（自动类型转换）"><a href="#（1）隐式类型转换（自动类型转换）" class="headerlink" title="（1）隐式类型转换（自动类型转换）"></a>（1）隐式类型转换（自动类型转换）</h5><pre><code> 例：int a=3;
-     float x=a;
-     执行结果为3.0</code></pre>
-<h5 id="（2）显式类型转换（强制类型转换）"><a href="#（2）显式类型转换（强制类型转换）" class="headerlink" title="（2）显式类型转换（强制类型转换）"></a>（2）显式类型转换（强制类型转换）</h5><pre><code>例：int a=(int)4.25;
-    执行结果为：4</code></pre>
+<h2 id="静态变量和方法"><a href="#静态变量和方法" class="headerlink" title="静态变量和方法"></a>静态变量和方法</h2><pre><code>“实例相关”的成员描述的是单个实例的状态和方法，其使用必须要通过类的实例来完成;
+“类相关”是在类的成员前面加上“static”关键字，从而直接通过类名就可以访问 。</code></pre>
 
             </div>
             <hr/>
@@ -594,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/10/java-ji-chu/">https://kilitom.github.io/2020/08/10/java-ji-chu/</a>
+                    <a href="https://kilitom.github.io/2020/08/05/java-mian-xiang-dui-xiang/">https://kilitom.github.io/2020/08/05/java-mian-xiang-dui-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -801,32 +781,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/10/java-ji-chu/">
+                <a href="/2020/08/06/java-lei-zhi-jian-de-guan-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
                         
-                        <span class="card-title">Java基础</span>
+                        <span class="card-title">Java类之间的关系</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
-标识符可以包含数字，但不能以数字开头
-除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
+                            继承父类---&gt;子类
+超类---&gt;派生类
+关键字:extends
+重写当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，则可以在子类中对父类的方法进行改造，也称作重写（overr
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -839,7 +819,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -858,36 +837,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/09/java-ru-men/">
+                <a href="/2020/08/04/java-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
                         
-                        <span class="card-title">Java入门</span>
+                        <span class="card-title">Java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            了解JavaJava特点
-1. ​简单性
-2. ​面向对象性
-3. ​分布式
-4. ​健壮性
-5. ​高性能
-6. ​多线程
-7. ​动态性
-
-
-Java运行环境环境变量配置
-- ​    JAVA_HOME
-  ​        JAVA
+                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
+标识符可以包含数字，但不能以数字开头
+除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
                             </span>
                         <span class="publish-author">
                             
