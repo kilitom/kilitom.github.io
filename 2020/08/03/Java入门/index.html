@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java类之间的关系, Kilitom">
+    <meta name="keywords" content="Java入门, Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java类之间的关系 | Kilitom</title>
+    <title>Java入门 | Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java类之间的关系</h1>
+                    <h1 class="description center-align post-title">Java入门</h1>
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-07
+                    2020-08-03
                 </div>
                 
 
@@ -471,100 +471,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><h5 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h5><pre><code>在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一类具体的对象，这样的类就是抽象类。</code></pre>
-<h5 id="抽象类需要注意以下几点："><a href="#抽象类需要注意以下几点：" class="headerlink" title="抽象类需要注意以下几点："></a>抽象类需要注意以下几点：</h5><pre><code>abstract放在class前，指明该类是抽象类；
-abstract放在方法声明中，则该方法是抽象方法，抽象方法没有方法体；
-一个抽象类可以含有多个抽象方法，也可以含有已实现的方法。</code></pre>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h5 id="接口概述"><a href="#接口概述" class="headerlink" title="接口概述"></a>接口概述</h5><pre><code>Java是单继承的语言，利用接口可以模拟多继承；
-接口是对抽象类的进一步抽象，是方法声明和常量的定义集合；
-接口是一种行为规范，是一种“契约”；</code></pre>
-<h5 id="具体格式如下所示："><a href="#具体格式如下所示：" class="headerlink" title="具体格式如下所示："></a>具体格式如下所示：</h5><pre><code>&lt;访问符&gt; interface 接口名 &#123;
-    [访问符] &lt;返回类型&gt; 方法名([参数列表])；
-    ......
-&#125;</code></pre>
-<h6 id="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public-static-final-型，且必须赋初值-。"><a href="#注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public-static-final-型，且必须赋初值-。" class="headerlink" title="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public static final 型，且必须赋初值 。"></a>注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public static final 型，且必须赋初值 。</h6><h5 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h5><pre><code>接口的使用通过“implements”关键字来实现，示例代码如下 
-public class MyClass implements MyInterface &#123;
-    public void add(int x, int y) &#123;
-        // do something
-    &#125;
-    public void volume(int x, int y, int z) &#123;
-        // do something
-    &#125;
-&#125;</code></pre>
-<h5 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h5><pre><code>通过实现多个接口来实现多重继承，示例代码如下 ：
-public class MyClass2 implements MyInterface, MultiInterface&#123;
-    ......//实现多个接口中的所有方法
-&#125;</code></pre>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>抽象类</th>
-<th>接口</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>相同点</td>
-<td>只被继承  不能通过new方式实例化变量可以引用具体实现类的实例</td>
-<td></td>
-</tr>
-<tr>
-<td>不同点属性</td>
-<td>可以定义任意属性可以重新定义或赋值</td>
-<td>默认是常量,用public static final修饰的,必须赋初值</td>
-</tr>
-<tr>
-<td>不同点方法</td>
-<td>可以由抽象方法和已实现的方法</td>
-<td>方法均只有方法声明吗,没有方法体;不存在以实现的方法</td>
-</tr>
-<tr>
-<td>不同点继承</td>
-<td>extends来表示继承抽象类只能继承一个父类继承抽象类的同时必须实现抽象类中的所有方法</td>
-<td>implements来实现接口;实现接口的同时实现接口中的所有方法</td>
-</tr>
-<tr>
-<td>不同点静态</td>
-<td>可以有静态代码块和静态方法</td>
-<td>不能有静态代码块和静态方法</td>
-</tr>
-<tr>
-<td>总结</td>
-<td>接口不是类   单继承的多实现</td>
-<td></td>
-</tr>
-</tbody></table>
-<h6 id="抽象类的子类可以是一个抽象类也可以是一个具体实现类"><a href="#抽象类的子类可以是一个抽象类也可以是一个具体实现类" class="headerlink" title="抽象类的子类可以是一个抽象类也可以是一个具体实现类"></a>抽象类的子类可以是一个抽象类也可以是一个具体实现类</h6><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h5 id="1-成员内部类"><a href="#1-成员内部类" class="headerlink" title="1.成员内部类"></a>1.成员内部类</h5><h5 id="成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："><a href="#成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：" class="headerlink" title="　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："></a>　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">double</span> radius <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> radius<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>radius <span class="token operator">=</span> radius<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">class</span> <span class="token class-name">Draw</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//内部类</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">drawSahpe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"drawshape"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h1 id="了解Java"><a href="#了解Java" class="headerlink" title="了解Java"></a>了解Java</h1><h2 id="Java特点"><a href="#Java特点" class="headerlink" title="Java特点"></a>Java特点</h2><ol>
+<li><pre><code>1. ​简单性
+2. ​面向对象性
+3. ​分布式
+4. ​健壮性
+5. ​高性能
+6. ​多线程
+7. ​动态性</code></pre>
+</li>
+</ol>
+<h2 id="Java运行环境"><a href="#Java运行环境" class="headerlink" title="Java运行环境"></a>Java运行环境</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><ul>
+<li><pre><code>- ​    JAVA_HOME
+  ​        JAVA_HOME=JDK的安装路径(自己的安装路径C:\Program Files\Java\jdk1.8.0_151) 
+- ​    Path(系统在任何路径都可以识别 java, javac命令)
+  ​        Path=%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin (系统自带的路径不要删掉)
+- ​    CLASSPATH
+  ​        JAVA加载类路径，只有类在classpath中，java命令才能识别，在路径前加了个  &quot;.&quot;表示
+  ​        当前路径  CLASSPATH=.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</code></pre>
+</li>
+</ul>
+<h3 id="JDK-java-开发-工具包-opt-jdk-or-opt-jdk-1-6-01"><a href="#JDK-java-开发-工具包-opt-jdk-or-opt-jdk-1-6-01" class="headerlink" title="JDK java 开发 工具包 /opt/jdk or /opt/jdk_1.6.01"></a>JDK java 开发 工具包 /opt/jdk or /opt/jdk_1.6.01</h3><ul>
+<li><pre><code>- ​    |-- bin 开发工具(命令：java,javac,jar,javad,jar,rmic,jps...)
+- ​    |-- lib 开发工具的核心实现(tools.jar)
+- ​    |-- src.zip API的源文件 System.java
+- ​    |-- jre JRE Java运行环境
+- ​    |-- lib (rt.jar) Java API(应用编程接口，系统类库)
+- ​    |  (java 提供的现成组件) System.class String.class ...
+- ​    |-- bin (java_vm)JVM Java虚拟机</code></pre>
+</li>
+</ul>
+<h3 id="JDK、JRE、JVM之间的关系"><a href="#JDK、JRE、JVM之间的关系" class="headerlink" title="JDK、JRE、JVM之间的关系"></a>JDK、JRE、JVM之间的关系</h3><ul>
+<li><pre><code>- ​    JDK(Java Developer     Kit) Java开发工具包
+- ​    JRE(Java Runtime     Environment)Java运行环境
+- ​    JVM(Java Virtual     Machine) Java虚拟机</code></pre>
+</li>
+</ul>
+<h3 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h3><ul>
+<li><pre><code>- ​    JDK=JRE+Java开发工具
+- ​    JRE=JVM+Java类库
+- ​    JDK包含JRE，JRE包含JVM</code></pre>
+</li>
+</ul>
+<h2 id="Java运行原理"><a href="#Java运行原理" class="headerlink" title="Java运行原理"></a>Java运行原理</h2><ul>
+<li><pre><code>- ​Java文件类型
+- ​.java  Java源文件
+- ​.class  二进制字节码文件</code></pre>
+</li>
+</ul>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><ol>
+<li><pre><code>1. ​首先，编写.java文件，通过javac命令将.java文件编译成.class文件（字节码文件）。编译过程只能简单的检查语错误；
+2. ​其次，java命令去执行.class文件。
+3. ​类加载器会进行代码装载，如果类需要跨网络，类加载器将执行安全检查；
+4. ​字节码校验器将校验代码格式和对象类型转换，并检查是否发生越权访问；
+5. ​即时编译器会将字节码转换成机器码，如果系统没有即时编译器，java解释器会处理并执行字节码类</code></pre>
+</li>
+</ol>
+<h4 id="一个Java程序的基本结构："><a href="#一个Java程序的基本结构：" class="headerlink" title="一个Java程序的基本结构："></a>一个Java程序的基本结构：</h4><pre class=" language-java"><code class="language-java">    <span class="token keyword">package</span>  xxx<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// package 包，此类的路径</span>
+    <span class="token keyword">import</span>  xxx<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span>Xxxx<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//引入其他类</span>
+    <span class="token comment" spellcheck="true">//类名称：书写格式：首字母大写，若类名由多个单词组成每个单词的首字母大写</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">XxxXxx</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/* main方法  */</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 方法体</span>
         <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="2-局部内部类"><a href="#2-局部内部类" class="headerlink" title="2.局部内部类"></a>2.局部内部类</h5><h5 id="局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"><a href="#局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。" class="headerlink" title="　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"></a>　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">People</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Man</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Man</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> People <span class="token function">getWoman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">class</span> <span class="token class-name">Woman</span> <span class="token keyword">extends</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//局部内部类</span>
-            <span class="token keyword">int</span> age <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Woman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="3-匿名内部类"><a href="#3-匿名内部类" class="headerlink" title="3.匿名内部类"></a>3.匿名内部类</h5><h5 id="匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："><a href="#匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：" class="headerlink" title="　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："></a>　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>​    例子：HelloWorld.java</p>
+<pre class=" language-Java"><code class="language-Java">public class HelloWorld&#123;
+/*第一个Java程序
+*它将打印字符串Hello World
+*/
+    public static void main(String []args)&#123;
+        System.out.println("Hello World");//打印Hello World
+    &#125;
+&#125;</code></pre>
+<h5 id="编译源文件："><a href="#编译源文件：" class="headerlink" title="编译源文件："></a>编译源文件：</h5><pre><code>javac HelloWorld.java </code></pre>
+<h5 id="执行class文件"><a href="#执行class文件" class="headerlink" title="执行class文件"></a>执行class文件</h5><pre><code>java HelloWorld</code></pre>
+<h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><ol>
+<li><pre><code>1. 行注释  // 对某代码进行注释
+2. 块注释  /*… …*/ 注释多行代码或用于说明文件、方法。数据结构等
+3. 文档注释  /**… …*/用于生成HTML格式的代码报告。必须收发室在类、域、构造函数、方法，以及字段定义之间。</code></pre>
+</li>
+</ol>
 
             </div>
             <hr/>
@@ -590,7 +578,7 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/">https://kilitom.github.io/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/</a>
+                    <a href="https://kilitom.github.io/2020/08/03/Java%E5%85%A5%E9%97%A8/">https://kilitom.github.io/2020/08/03/Java%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1049,6 +1037,14 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
         lang: 'zh-cn',
         placeholder: 'just go go'
     });
+    <!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
 </script>
 
     
@@ -1064,28 +1060,26 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/10/java-yi-chang/">
+                <a href="/2020/08/04/Java%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java异常">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java基础">
                         
-                        <span class="card-title">Java异常</span>
+                        <span class="card-title">Java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常异常发生的原因用户输入了非法数据。
-要打开的文件不存在。
-网络通信时连接中断，或者JVM内存溢出
-ThrowableErreo(错误)Error（错误）：JVM系统内部错误、资源耗尽等严重情况
-Exception因编程错误或偶然的外在因
+                            Java基础标识符Java中标识符的命名必须满足以下原则：标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符
+标识符可以包含数字，但不能以数字开头
+除下划线“_”和“$”符号外，标识符中不包含任何特殊字符
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
                         </span>
                         <span class="publish-author">
                             
@@ -1114,30 +1108,39 @@ Exception因编程错误或偶然的外在因
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/06/java-lei-zhi-jian-de-guan-xi/">
+                <a href="/2020/08/03/Java%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
                         
-                        <span class="card-title">Java类之间的关系</span>
+                        <span class="card-title">Java入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            继承父类---&gt;子类
-超类---&gt;派生类
-关键字:extends
-重写当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，则可以在子类中对父类的方法进行改造，也称作重写（overr
+                            了解JavaJava特点
+1. ​简单性
+2. ​面向对象性
+3. ​分布式
+4. ​健壮性
+5. ​高性能
+6. ​多线程
+7. ​动态性
+
+
+Java运行环境环境变量配置
+- ​    JAVA_HOME
+  ​        JAVA
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
                             </span>
                         <span class="publish-author">
                             
@@ -1151,6 +1154,7 @@ Exception因编程错误或偶然的外在因
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
