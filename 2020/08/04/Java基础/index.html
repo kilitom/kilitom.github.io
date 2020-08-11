@@ -625,9 +625,11 @@ array[1] = 2;</code></pre>
 <h5 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h5><pre><code>使用循环语句进行复制
     使用循环语句遍历源数组每个元素，赋值给目标数组对应位置。
 使用clone()方法
-    在Java中，Object类是所有类的父类，其clone()方法一般用于创建并返回此对象的一个副本，Java中认为一切都是“对象”，所以使用该方法也可以实现数组的复制。
+    在Java中，Object类是所有类的父类，其clone()方法一般用于创建并返回此对象的一个副本，
+    Java中认为一切都是“对象”，所以使用该方法也可以实现数组的复制。
 使用System.arraycopy方法
-    arraycopy()方法是System类的一个静态方法（并且是本地方法，效率非常高），其可以方便的实现数组拷贝功能System.arraycopy()方法的结构如下：
+    arraycopy()方法是System类的一个静态方法（并且是本地方法，效率非常高），其可以方便
+    的实现数组拷贝功能System.arraycopy()方法的结构如下：
     System.arraycopy(from, fromIndex, to, toIndex, count)</code></pre>
 <h5 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h5><h6 id="如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下："><a href="#如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下：" class="headerlink" title="如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下："></a>如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下：</h6><pre><code>    data_type[ ][ ] varName;</code></pre>
 <h6 id="动态初始化二维数组"><a href="#动态初始化二维数组" class="headerlink" title="动态初始化二维数组"></a>动态初始化二维数组</h6><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 定义二维数组</span>
@@ -1190,8 +1192,9 @@ StringBuffer:支持并发操作,线程安全,适合多线程使用</code></pre>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            面向对象封装封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
-封装的原则使对象以外的部分不能随意存取对象的内部
+                            面向对象封装封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个
+不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
+封装的原则使对象以外的部分不能随意存取对象的内
                         
                     </div>
                     <div class="publish-info">
