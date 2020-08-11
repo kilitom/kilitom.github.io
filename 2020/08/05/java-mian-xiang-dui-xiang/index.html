@@ -473,11 +473,11 @@
             <div id="articleContent">
                 <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><pre><code>封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。</code></pre>
 <h2 id="封装的原则"><a href="#封装的原则" class="headerlink" title="封装的原则"></a>封装的原则</h2><pre><code>使对象以外的部分不能随意存取对象的内部数据，从而有效的避免了外部错误对它的“交叉感染”。数据隐藏特性提升了系统安全性，使软件错误能够局部化，减少查错和排错的难度。 </code></pre>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><pre><code>继承是软件重用的一种形式，它通过重用现有类的属性和方法，并增加新功能或修改现有功能来构建新的类。</code></pre>
-<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><pre><code>多态是指在父类中定义的属性或方法被子类继承之后，可以具有不同的表现行为。这使得同一个属性或方法在父类及其各个子类中具有不同的语义。</code></pre>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><pre><code>继承是软件重用的一种形式</code></pre>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><pre><code>多态是指在父类中定义的属性或方法被子类继承之后，可以具有不同的表现行为。</code></pre>
 <h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><pre><code>类是对象的模板,对象是类的实例</code></pre>
-<h5 id="类由属性和方法构成"><a href="#类由属性和方法构成" class="headerlink" title="类由属性和方法构成"></a>类由属性和方法构成</h5><pre><code>对象的特征在类中表示为成员变量，称为类的属性。 
-类的方法是对象执行操作的一种规范。方法指定以何种方式操作对象的数据，是操作的实际实现。</code></pre>
+<h5 id="类由属性和方法构成"><a href="#类由属性和方法构成" class="headerlink" title="类由属性和方法构成"></a>类由属性和方法构成</h5><pre><code>对象--&gt;成员变量--&gt;属性 
+类的方法是对象执行操作的一种规范</code></pre>
 <h5 id="Java中声明类的格式"><a href="#Java中声明类的格式" class="headerlink" title="Java中声明类的格式"></a>Java中声明类的格式</h5><pre class=" language-java"><code class="language-java"><span class="token punctuation">[</span>访问符<span class="token punctuation">]</span> <span class="token punctuation">[</span>修饰符<span class="token punctuation">]</span> <span class="token keyword">class</span> <span class="token operator">&lt;</span>类名<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
          <span class="token punctuation">[</span>属性<span class="token punctuation">]</span>
          <span class="token punctuation">[</span>方法<span class="token punctuation">]</span>
@@ -491,10 +491,10 @@ rect2 <span class="token operator">=</span> <span class="token keyword">new</spa
 
 Rectangle rect3 <span class="token operator">=</span> null<span class="token punctuation">;</span>
 rect3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><pre><code>构造方法是一种特殊的方法，在对象被创建时用来初始化对象；
-它具有和它所在的类完全一样的名字；
-构造方法和类的方法类似，只不过构造方法没有返回类型；
-构造方法的任务是初始化一个对象的内部状态。</code></pre>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><pre><code>构造方法在对象被创建时用来初始化对象；
+与类名相同
+没有返回类型；
+构造方法是初始化一个对象的内部状态。</code></pre>
 <h6 id="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"><a href="#如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法-；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。" class="headerlink" title="如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。"></a>如果在类中没有定义任何的构造方法，则编译器将会自动加上一个无参构造方法 ；一旦创建了自己的构造方法，缺省的构造方法将不复存在，如果需要则手动添加无参构造方法。</h6><h5 id="this调用的是本类中的对象或者方法"><a href="#this调用的是本类中的对象或者方法" class="headerlink" title="this调用的是本类中的对象或者方法"></a>this调用的是本类中的对象或者方法</h5><h5 id="对象的初始化"><a href="#对象的初始化" class="headerlink" title="对象的初始化"></a>对象的初始化</h5><pre class=" language-java"><code class="language-java">Rectangle rectangle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></code></pre>
 <h5 id="类的方法"><a href="#类的方法" class="headerlink" title="类的方法"></a>类的方法</h5><pre><code>方法是类行为的体现，其他对象可以根据类的方法对类进行访问。类的方法包括方法的说明和方法的实现两部分 ，格式如下所示：
 [access]  [modifiers] &lt;return_type&gt; methodName ([&lt;argu_list&gt;])  &#123;&#125;</code></pre>
@@ -504,11 +504,11 @@ rect3 <span class="token operator">=</span> <span class="token keyword">new</spa
 <h1 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h1><h5 id="按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"><a href="#按值传递-将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。" class="headerlink" title="按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。"></a>按值传递 ,将要传递的参数的值传递给被调方法，被调方法通过创建一份新的内存拷贝来存储传递的值，然后在内存拷贝上进行数值操作，所以按值传递不会改变原始参数的值。</h5><h5 id="引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"><a href="#引用传递-也称为传地址方法调用时实际参数传递的是对象-这时实际参数与形式参数指向同一个地址-在方法执行中-对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。" class="headerlink" title="引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。"></a>引用传递,也称为传地址方法调用时实际参数传递的是对象,这时实际参数与形式参数指向同一个地址,在方法执行中,对形式参数的操作实际上就是对实际参数的操作所以会改变实际参数的值。</h5><h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><pre><code>在Java程序中，如果同一个类中存在两个方法同名，方法的签名(参数个数、参数类型、类型排列次序)上也一样，将无法编译通过。但在Java中多个方法重名是允许的，只要保证方法签名不同即可，这种特性称为方法重载（overload）。</code></pre>
 <h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><pre><code>方法名相同；
 参数列表（个数、类型、顺序）不同；</code></pre>
-<h6 id="注意：返回值不影响方法重载。构造方法也可以重载-。"><a href="#注意：返回值不影响方法重载。构造方法也可以重载-。" class="headerlink" title="注意：返回值不影响方法重载。构造方法也可以重载 。"></a>注意：返回值不影响方法重载。构造方法也可以重载 。</h6><h2 id="封装-1"><a href="#封装-1" class="headerlink" title="封装"></a>封装</h2><pre><code>Java中为了将数据有效的保护起来，提供了访问修饰符用来声明、控制属性、方法乃至类本身的访问，以实现隐藏一个类的实现细节，防止对封装数据未经授权的访问，此种形式称为“封装”。
-引入封装，使用者只能通过事先定制好的方法来访问数据，可以方便的加入控制逻辑，限制对属性的不合理操作，有利于保证数据的完整性。
-实现封装的关键是不让外界直接与对象属性交互，而是要通过指定的方法操作对象的属性，如下图所示：</code></pre>
+<h6 id="注意：返回值不影响方法重载。构造方法也可以重载-。"><a href="#注意：返回值不影响方法重载。构造方法也可以重载-。" class="headerlink" title="注意：返回值不影响方法重载。构造方法也可以重载 。"></a>注意：返回值不影响方法重载。构造方法也可以重载 。</h6><h2 id="封装-1"><a href="#封装-1" class="headerlink" title="封装"></a>封装</h2><pre><code>隐藏类的实现细节
+让使用者只能通过程序员规定的方法来访问数据
+可以方便的加入存取控制语句,限制不合理操作</code></pre>
 <h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><pre><code>Java中定义了private（私有的）、protected（受保护的）和public（公共的）的访问修饰符，同时也定义了一个缺省的访问级别，用于声明类、属性、方法的访问权限。明确访问修饰符的限制是用好“封装”的关键 ：</code></pre>
-<h5 id="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"><a href="#使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；" class="headerlink" title="使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；"></a>使用public访问修饰符，类的成员可被同一包或不同包中的所有类访问，也就是说，public访问修饰符可以使类的特性公用于任何类；</h5><h5 id="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"><a href="#使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；" class="headerlink" title="使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；"></a>使用protected访问修饰符允许类本身、同一包中的所有类和不同包中的子类访问；</h5><h5 id="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"><a href="#如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；" class="headerlink" title="如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；"></a>如果一个类或类的成员前没有任何访问修饰符时，它们获得缺省的访问权限，缺省的可以被同一包中的其他类访问；</h5><h5 id="private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"><a href="#private访问修饰符是限制性最大的一种访问修饰符-被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。" class="headerlink" title="private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。"></a>private访问修饰符是限制性最大的一种访问修饰符,被声明为private的成员只能被此类中的其他成员访问，不能在类外看到。</h5><table>
+<h5 id="public-可以被同一个项目中所有类访问-具有项目可见性-这是最大的访问权限"><a href="#public-可以被同一个项目中所有类访问-具有项目可见性-这是最大的访问权限" class="headerlink" title="public:可以被同一个项目中所有类访问,具有项目可见性,这是最大的访问权限"></a>public:可以被同一个项目中所有类访问,具有项目可见性,这是最大的访问权限</h5><h5 id="protected-可以被同一个包中的类访问-被同一个项目中不同包中的子类访问"><a href="#protected-可以被同一个包中的类访问-被同一个项目中不同包中的子类访问" class="headerlink" title="protected:可以被同一个包中的类访问,被同一个项目中不同包中的子类访问"></a>protected:可以被同一个包中的类访问,被同一个项目中不同包中的子类访问</h5><h5 id="default-成员变量和方法只能被同一个包里的类访问-具有包可见性"><a href="#default-成员变量和方法只能被同一个包里的类访问-具有包可见性" class="headerlink" title="default:成员变量和方法只能被同一个包里的类访问,具有包可见性"></a>default:成员变量和方法只能被同一个包里的类访问,具有包可见性</h5><h5 id="private-成员变量和方法只能在类内被访问-具有类可见性-。"><a href="#private-成员变量和方法只能在类内被访问-具有类可见性-。" class="headerlink" title="private:成员变量和方法只能在类内被访问,具有类可见性.。"></a>private:成员变量和方法只能在类内被访问,具有类可见性.。</h5><table>
 <thead>
 <tr>
 <th>访问控制</th>
