@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Kilitom">
+    <meta name="keywords" content="Java异常, Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Kilitom</title>
+    <title>Java异常 | Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Java异常</h1>
                 </div>
             </div>
         </div>
@@ -428,12 +428,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">-Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                Java学习笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,123 +471,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>3.1、网络编程（了解）</strong></p>
-<p>网络编程指的就是通过网络进行程序数据操作，既然是网络开发，那么一定就分为用户和服务两端，而这两个端的开发实际上就有以下的两种不同的架构（<strong>面试题：</strong>请解释C/S和B/S的区别？）：</p>
-<blockquote>
-<p>  · C/S（Client /<br>  Server）：要开发两套程序，一套是服务器端，另外一套是与之对应的客户端，但是这种程序在日后进行维护的时候，是需要维护两套程序，而且客户端的程序更新也必须及时，此类程序安全；</p>
-</blockquote>
-<blockquote>
-<p>  · B/S（Browser /<br>  Server）：要开发一套程序，只开发服务器端的，客户端使用浏览器进行访问，这种程序在日后进行程序维护的时候只需要维护服务器端即可，客户端不需要做任何的修改，此类程序使用公共端口，包括公共协议，所以安全性很差。</p>
-</blockquote>
-<p>如果从网络的开发而言，大的分类是以上的两类，可是从现在的开发来讲，更多的情况是针对于B/S程序进行的开发，或者可以这么理解：B/S程序的开发属于网络时代，而C/S程序的开发属于单机时代。而对于WebService的开发，实话而言，也属于B/S结构的程序（跨平台）。</p>
-<p>而在日后学习Android开发的时候，如果要考虑安全性使用Socket，如果要考虑方便性，还是基于WEB的开发方便使用。而对于网络的开发在Java中也分为两种：TCP（传输控制协议，可靠的传输）、UDP（数据报协议），对于网络开发，本次只专注于TCP程序的实现。</p>
-<p><strong>3.2、网络程序的基本实现（了解）</strong></p>
-<p>如果要进行网络程序的开发，那么首先应该开发出的就是服务器端，本次的操作使用服务器端向客户端输出一个“Hello<br>World.”的字符串信息，而如果要想完成服务器端的开发，则需要java.net包中的两个类：</p>
-<p>·<br>ServerSocket类：是一个封装支持TCP协议的操作类，主要工作在服务器端，用于接收客户端请求；</p>
-<p>· Socket类：也是一个封装了TCP协议的操作类，每一个Socket对象都表示一个客户端。</p>
-<p>而现在必须观察这两个类之中的操作方法：</p>
-<p>· ServerSocket类的方法：</p>
-<table>
-<thead>
-<tr>
-<th><strong>No.</strong></th>
-<th><strong>方法名称</strong></th>
-<th><strong>类型</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>public ServerSocket(int port) throws IOException</td>
-<td>构造</td>
-<td>开辟一个指定的端口监听，一般使用5000以上</td>
-</tr>
-<tr>
-<td>2</td>
-<td>public Socket accept() throws IOException</td>
-<td>普通</td>
-<td>服务器端接收客户端请求，通过Socket返回</td>
-</tr>
-<tr>
-<td>3</td>
-<td>public void close() throws IOException</td>
-<td>普通</td>
-<td>关闭服务器端</td>
-</tr>
-</tbody></table>
-<p>· Socket类的方法：</p>
-<table>
-<thead>
-<tr>
-<th><strong>No.</strong></th>
-<th><strong>方法名称</strong></th>
-<th><strong>类型</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>public Socket(String host, int port) throws UnknownHostException, IOException</td>
-<td>构造</td>
-<td>指定要连接的主机（IP地址）和端口</td>
-</tr>
-<tr>
-<td>2</td>
-<td>public OutputStream getOutputStream() throws IOException</td>
-<td>普通</td>
-<td>取得指定客户端的输出对象，使用的时候肯定使用PrintStream装饰操作</td>
-</tr>
-<tr>
-<td>3</td>
-<td>public InputStream getInputStream() throws IOException</td>
-<td>普通</td>
-<td>从指定的客户端读取数据，使用Scanner操作</td>
-</tr>
-</tbody></table>
-<p><strong>范例：</strong>完成一个服务器端程序代码</p>
-<table>
-<thead>
-<tr>
-<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>public class</strong> HelloServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); // 在9999端口监听 System.<em>out</em>.println(“服务开始启动…”); Socket client = server.accept(); // 接收客户端连接，进入到阻塞状态 PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); out.println(“Hello World .”); // 向客户端输出 out.close(); // 输出流的关闭 client.close(); // 关闭客户端 server.close(); // 关闭服务器端 System.<em>out</em>.println(“服务器已关闭…”); } }</th>
-</tr>
-</thead>
-</table>
-<p>现在服务器端已经开发完成了，而现在的服务器端虽然是通过Java编写的，但是使用的是TCP协议，所以可以利用系统命令的telnet进行访问。</p>
-<p>· 使用运行方式输入：telnet；</p>
-<p>· 连接服务器：open ip地址 端口，open localhost 9999；</p>
-<p>但是现在是利用了系统的工具完成的，那么在开发之中是不可能使用这工具，应该自己去编写客户端。</p>
-<p><strong>范例：</strong>编写一个客户端</p>
-<table>
-<thead>
-<tr>
-<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> HelloClient { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { Socket client = <strong>new</strong> Socket(“localhost”, 9999); Scanner scan = <strong>new</strong> Scanner(client.getInputStream()); scan.useDelimiter(“\n”) ; <strong>if</strong> (scan.hasNext()) { // 有数据 System.<em>out</em>.println(“服务器的回应数据：” + scan.next()); } scan.close() ; client.close() ; } }</th>
-</tr>
-</thead>
-</table>
-<p>整个的操作就是一个输出和输入的过程，只是现在的输出和输入的来源在于网络，而不是像之前那样是通过文件操作了。</p>
-<p><strong>3.3、网络开发的经典模型 —— ECHO程序</strong></p>
-<p>这种开发模型的典型模式指的是客户端要输入信息，而后服务器端接收这端信息之后，前面增加一个“ECHO：”的信息再返回给客户端，也就是说现在的服务器端需要输入和输出数据。</p>
-<p><strong>范例：</strong>编写一个程序的基本模型</p>
-<table>
-<thead>
-<tr>
-<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> EchoServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); <strong>boolean</strong> flag = <strong>true</strong>; System.<em>out</em>.println(“服务器运行…”); Socket client = server.accept(); // 接收客户端请求 Scanner <em>scan</em> = <strong>new</strong> Scanner(client.getInputStream()); PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); <strong>while</strong> (flag) { <strong>if</strong> (scan.hasNext()) { // 有内容 String str = scan.next(); <strong>if</strong> (“byebye”.equalsIgnoreCase(str.trim())) { // 程序结束 out.println(“Bye Bye…”); flag = <strong>false</strong>; // 退出循环 } out.println(“ECHO：” + str.trim()); // 回应数据 } } System.<em>out</em>.println(“服务器停止运行…”); server.close(); } }</th>
-</tr>
-</thead>
-</table>
-<p>这个时候程序实际上是一种单线程的运行状态，这样的程序运行起来只能够为一个用户进行服务，所以如果希望一个服务器可以同时处理多个客户的操作，那么就必须为其实现多线程的处理机制，让每一个客户端表示一个独立的线程对象，每个线程对象有自己独立的输入输出操作。</p>
-<p><strong>范例：</strong>为服务器端增加多线程机制，使用匿名内部类</p>
-<table>
-<thead>
-<tr>
-<th><strong>package</strong> cn.mldn.netdemo; <strong>import</strong> java.io.IOException; <strong>import</strong> java.io.PrintStream; <strong>import</strong> java.net.ServerSocket; <strong>import</strong> java.net.Socket; <strong>import</strong> java.util.Scanner; <strong>public class</strong> EchoServer { <strong>public static void</strong> main(String[] args) <strong>throws</strong> Exception { ServerSocket server = <strong>new</strong> ServerSocket(9999); <strong>boolean</strong> flag = <strong>true</strong>; System.<em>out</em>.println(“服务器运行…”); <strong>while</strong> (flag) { <strong>final</strong> Socket client = server.accept(); // 接收客户端请求 <strong>new</strong> Thread(<strong>new</strong> Runnable() { @Override <strong>public void</strong> run() { <strong>boolean</strong> runFlag = <strong>true</strong>; <strong>try</strong> { Scanner <em>scan</em> = <strong>new</strong> Scanner(client.getInputStream()); PrintStream out = <strong>new</strong> PrintStream(client.getOutputStream()); <strong>while</strong> (runFlag) { <strong>if</strong> (scan.hasNext()) { // 有内容 String str = scan.next(); <strong>if</strong> (“byebye”.equalsIgnoreCase(str.trim())) { // 程序结束 out.println(“Bye Bye…”); runFlag = <strong>false</strong>; // 退出循环 } out.println(“ECHO：” + str.trim()); // 回应数据 } } } <strong>catch</strong> (IOException e) { e.printStackTrace(); } <strong>try</strong> { client.close() ; } <strong>catch</strong> (IOException e) { e.printStackTrace(); } } }).start(); } System.<em>out</em>.println(“服务器停止运行…”); server.close(); } }</th>
-</tr>
-</thead>
-</table>
-<p>但是，在这个时候对于线程的控制也需要处理好，如果处理不好，可能就出现死锁问题了。</p>
-<p><strong>4、总结</strong></p>
-<p>知道什么叫网络编程就行了，暂时用不到。</p>
-
+                <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h5 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h5><pre><code>异常是指由于程序中的错误而导致正常的程序流程中断的一种事件。如：除数为0，数组越界，文件找不到等都属于异常。</code></pre>
+<h5 id="Java异常分类"><a href="#Java异常分类" class="headerlink" title="Java异常分类"></a>Java异常分类</h5><pre><code>从理论的角度Java中异常分为两类，分别为 ：
+Error（错误）：JVM系统内部错误、资源耗尽等严重情况
+Exception（异常）：因编程错误或偶然的外在因素导致的一般性问题，例如：对负数开平方根、空指针访问、试图读取不存在的文件、网络连接中断等。 </code></pre>
+<h5 id="从编程角度考虑可以将异常（Exception）分为以下两类-："><a href="#从编程角度考虑可以将异常（Exception）分为以下两类-：" class="headerlink" title="从编程角度考虑可以将异常（Exception）分为以下两类 ："></a>从编程角度考虑可以将异常（Exception）分为以下两类 ：</h5><pre><code>非检查型（unchecked）异常 ：是指编译器不要求强制处置的异常，该异常是因设计或实现方式不当导致的问题，是程序员的原因导致的，可以避免这种问题的产生
+检查型(checked)异常 ：是指编译器要求必须处置的异常，是程序在运行时由于外界因素造成的一般性异常，该类异常是Exception类型及其子类（RuntimeException类及其子类除外） </code></pre>
+<h5 id="从开发应用角度考虑可以将异常分为以下两类-："><a href="#从开发应用角度考虑可以将异常分为以下两类-：" class="headerlink" title="从开发应用角度考虑可以将异常分为以下两类 ："></a>从开发应用角度考虑可以将异常分为以下两类 ：</h5><pre><code>系统异常：系统异常在性质上比应用异常更加严重，前者通常和应用逻辑无关，而是底层出现了问题，如数据库服务器的异常终止等。
+应用异常：应用异常是由于违反了商业规则或者业务逻辑而导致的错误。例如，一个被锁定的用户试图登入应用。 </code></pre>
+<h5 id="Java异常体系"><a href="#Java异常体系" class="headerlink" title="Java异常体系"></a>Java异常体系</h5><p><img src="/2020/08/10/java-yi-chang/Exception.png" alt="异常体系"></p>
+<h5 id="Java语言提供两种处理异常的机制："><a href="#Java语言提供两种处理异常的机制：" class="headerlink" title="Java语言提供两种处理异常的机制："></a>Java语言提供两种处理异常的机制：</h5><pre><code>捕获异常 ：在程序运行过程中系统得到一个异常对象时，它将会沿着方法的调用栈逐层回溯，寻找处理这一异常的代码，找到处理这种类型异常的方法后，运行时系统把当前异常对象交给这个方法进行处理，该过程称为捕获(catch)异常。
+声明抛出异常 ：当运行时系统得到一个异常对象，如果当前方法并不知道如何处理所出现的异常或者此时处理不合适，则可在定义方法时，声明抛出（throws）异常。 </code></pre>
+<h5 id="处理异常关键字"><a href="#处理异常关键字" class="headerlink" title="处理异常关键字"></a>处理异常关键字</h5><pre><code>try , catch ,finally ,throw和throws
+try: 可能引发异常的语句,监视异常的发生
+catch: 对发生的异常进行捕获
+finally :无论是否发生异常都会运行
+throw:明确抛出一个异常
+throws:方法声明抛出异常</code></pre>
+<h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><pre><code>为了构建自己的业务异常逻辑, 提高用户体验</code></pre>
+<h5 id="多重异常流程"><a href="#多重异常流程" class="headerlink" title="多重异常流程"></a>多重异常流程<img src="/2020/08/10/java-yi-chang/Exceptions.png" alt="多重异常"></h5>
             </div>
             <hr/>
 
@@ -599,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/10/java-wang-luo-bian-cheng/">https://kilitom.github.io/2020/08/10/java-wang-luo-bian-cheng/</a>
+                    <a href="https://kilitom.github.io/2020/08/10/java-yi-chang/">https://kilitom.github.io/2020/08/10/java-yi-chang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -636,7 +551,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">-Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -806,37 +725,48 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/10/mian-xiang-dui-xiang-06/">
+                <a href="/2020/08/11/java-ji-he/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Java集合">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Java集合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            3.1、匿名内部类（重点）内部类：在一个类的内部定义了另外的类，称为内部类，匿名内部类指的是没有名字的内部类。为了清楚内部类的主要作用，下面首先来观察如下的程序：
-范例：思考程序的问题
-
-
-
-interface Message { // 定
+                            集合ArrayList LinkedList  HashSet  HashMap
+主要接口:Collection  List  Set  Map
+list.size();//获取集合长度
+list.get();//获取某个索引的元素
+lis
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Kilitom
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    Java学习笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">-Java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -848,34 +778,45 @@ interface Message { // 定
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/10/bao/">
+                <a href="/2020/08/07/java-chou-xiang-lei-jie-kou-nei-bu-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java类之间的关系">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Java类之间的关系</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            3.1、包（重点）
-3.1.1、包的定义
-在Java程序之中的包，主要的目的是可以将不同功能的文件进行分割。在之前的代码开发之中，所有的程序都保存在了同一个目录之中，这样一来所带来的问题：如果出现了同名文件，那么会发生覆盖问题，因为在同一个
+                            抽象类抽象类在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一类具体的对象，这样的类就是抽象类。
+抽象类往往用来表征对问题领域进行分析、设计中得出的抽象概念，是对一系列
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Kilitom
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    Java学习笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">-Java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
