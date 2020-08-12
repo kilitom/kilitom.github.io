@@ -474,19 +474,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><h5 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h5><pre><code>在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含
-足够的信息来描绘一类具体的对象，这样的类就是抽象类。</code></pre>
-<h5 id="抽象类需要注意以下几点："><a href="#抽象类需要注意以下几点：" class="headerlink" title="抽象类需要注意以下几点："></a>抽象类需要注意以下几点：</h5><pre><code>abstract放在class前，指明该类是抽象类；
-abstract放在方法声明中，则该方法是抽象方法，抽象方法没有方法体；
-一个抽象类可以含有多个抽象方法，也可以含有已实现的方法。</code></pre>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h5 id="接口概述"><a href="#接口概述" class="headerlink" title="接口概述"></a>接口概述</h5><pre><code>Java是单继承的语言，利用接口可以模拟多继承；
-接口是对抽象类的进一步抽象，是方法声明和常量的定义集合；
-接口是一种行为规范，是一种“契约”；</code></pre>
-<h5 id="具体格式如下所示："><a href="#具体格式如下所示：" class="headerlink" title="具体格式如下所示："></a>具体格式如下所示：</h5><pre><code>&lt;访问符&gt; interface 接口名 &#123;
+                <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><h5 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h5><blockquote>
+<p>在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含<br>足够的信息来描绘一类具体的对象，这样的类就是抽象类。</p>
+</blockquote>
+<h6 id="抽象类需要注意以下几点："><a href="#抽象类需要注意以下几点：" class="headerlink" title="抽象类需要注意以下几点："></a>抽象类需要注意以下几点：</h6><blockquote>
+<p>abstract放在class前，指明该类是抽象类；<br>abstract放在方法声明中，则该方法是抽象方法，抽象方法没有方法体；<br>一个抽象类可以含有多个抽象方法，也可以含有已实现的方法。</p>
+</blockquote>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="接口概述"><a href="#接口概述" class="headerlink" title="接口概述"></a>接口概述</h3><blockquote>
+<p>Java是单继承的语言，利用接口可以模拟多继承；<br>接口是对抽象类的进一步抽象，是方法声明和常量的定义集合；<br>接口是一种行为规范，是一种“契约”;</p>
+</blockquote>
+<h4 id="具体格式如下所示："><a href="#具体格式如下所示：" class="headerlink" title="具体格式如下所示："></a>具体格式如下所示：</h4><pre><code>&lt;访问符&gt; interface 接口名 &#123;
     [访问符] &lt;返回类型&gt; 方法名([参数列表])；
     ......
 &#125;</code></pre>
-<h6 id="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public-static-final-型，且必须赋初值-。"><a href="#注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public-static-final-型，且必须赋初值-。" class="headerlink" title="注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public static final 型，且必须赋初值 。"></a>注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public static final 型，且必须赋初值 。</h6><h5 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h5><pre><code>接口的使用通过“implements”关键字来实现，示例代码如下 
+<blockquote>
+<p>注意：在定义接口的时候，接口中的所有方法和常量自动定义为public；接口中定义的变量默认是public static final 型，且必须赋初值 。</p>
+</blockquote>
+<h4 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h4><pre><code>接口的使用通过“implements”关键字来实现，示例代码如下 
 public class MyClass implements MyInterface &#123;
     public void add(int x, int y) &#123;
         // do something
@@ -495,7 +499,7 @@ public class MyClass implements MyInterface &#123;
         // do something
     &#125;
 &#125;</code></pre>
-<h5 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h5><pre><code>通过实现多个接口来实现多重继承，示例代码如下 ：
+<h4 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h4><pre><code>通过实现多个接口来实现多重继承，示例代码如下 ：
 public class MyClass2 implements MyInterface, MultiInterface&#123;
     ......//实现多个接口中的所有方法
 &#125;</code></pre>
@@ -538,7 +542,10 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
 <td></td>
 </tr>
 </tbody></table>
-<h6 id="抽象类的子类可以是一个抽象类也可以是一个具体实现类"><a href="#抽象类的子类可以是一个抽象类也可以是一个具体实现类" class="headerlink" title="抽象类的子类可以是一个抽象类也可以是一个具体实现类"></a>抽象类的子类可以是一个抽象类也可以是一个具体实现类</h6><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h5 id="1-成员内部类"><a href="#1-成员内部类" class="headerlink" title="1.成员内部类"></a>1.成员内部类</h5><h5 id="成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："><a href="#成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：" class="headerlink" title="　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："></a>　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<blockquote>
+<p>抽象类的子类可以是一个抽象类也可以是一个具体实现类</p>
+</blockquote>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h3 id="1-成员内部类"><a href="#1-成员内部类" class="headerlink" title="1.成员内部类"></a>1.成员内部类</h3><h4 id="成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："><a href="#成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：" class="headerlink" title="　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式："></a>　　成员内部类是最普通的内部类，它的定义为位于另一个类的内部，形如下面的形式：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">double</span> radius <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> radius<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>radius <span class="token operator">=</span> radius<span class="token punctuation">;</span>
@@ -549,7 +556,7 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
         <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="2-局部内部类"><a href="#2-局部内部类" class="headerlink" title="2.局部内部类"></a>2.局部内部类</h5><h5 id="局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"><a href="#局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。" class="headerlink" title="　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"></a>　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<h3 id="2-局部内部类"><a href="#2-局部内部类" class="headerlink" title="2.局部内部类"></a>2.局部内部类</h3><h4 id="局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"><a href="#局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。" class="headerlink" title="　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。"></a>　　局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token function">People</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
@@ -563,7 +570,8 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
         <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Woman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h5 id="3-匿名内部类"><a href="#3-匿名内部类" class="headerlink" title="3.匿名内部类"></a>3.匿名内部类</h5><h5 id="匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："><a href="#匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：" class="headerlink" title="　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码："></a>　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<h3 id="3-匿名内部类"><a href="#3-匿名内部类" class="headerlink" title="3.匿名内部类"></a>3.匿名内部类</h3><p>####　　匿名内部类应该是平时我们编写代码时用得最多的，在编写事件监听的代码时使用匿名内部类不但方便，而且使代码更加容易维护。下面这段代码是一段Android事件监听代码：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             <span class="token annotation punctuation">@Override</span>
             <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
                 <span class="token comment" spellcheck="true">// TODO Auto-generated method stub</span>
@@ -1088,11 +1096,13 @@ public class MyClass2 implements MyInterface, MultiInterface&#123;
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常异常发生的原因用户输入了非法数据。
-要打开的文件不存在。
-网络通信时连接中断，或者JVM内存溢出
-ThrowableErreo(错误)Error（错误）：JVM系统内部错误、资源耗尽等严重情况
-Exception因编程错误或偶然的外在因
+                            异常异常发生的原因
+   用户输入了非法数据。   要打开的文件不存在。   网络通信时连接中断，或者JVM内存溢出
+
+ThrowableErreo(错误)
+   Error（错误）：JVM系统内部错误、资源耗尽等严重情况
+
+Excepti
                         
                     </div>
                     <div class="publish-info">
@@ -1141,11 +1151,11 @@ Exception因编程错误或偶然的外在因
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            继承父类---&gt;子类
-超类---&gt;派生类
-关键字:extends
-重写当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，
-则可以在子类中对父类的方法进行改造，也称作重写（over
+                            继承
+  父类—&gt;子类    超类—&gt;派生类    关键字:extends
+
+重写
+   当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，   则可以在子类中对父类的方法进行改
                         
                     </div>
                     <div class="publish-info">

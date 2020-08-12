@@ -474,21 +474,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><pre><code>父类---&gt;子类
-超类---&gt;派生类
-关键字:extends</code></pre>
-<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><pre><code>当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，
-则可以在子类中对父类的方法进行改造，也称作重写（override）。重写是Java多态性的另一种体现。</code></pre>
-<h5 id="重写的原则"><a href="#重写的原则" class="headerlink" title="重写的原则"></a>重写的原则</h5><pre><code>重写的方法的签名必须要和被重写的方法的签名完全匹配；
-重写的方法的返回值必须和被重写的方法的返回一致或者是其子类；
-重写的方法所抛出的异常必须和被重写方法的所抛出的异常一致，或者是其子类；
-私有方法不能被重写
-子类重写父类方法的过程中，可访问性只能一样或变的更公开。</code></pre>
-<h5 id="子类向父类的转换为向上转型"><a href="#子类向父类的转换为向上转型" class="headerlink" title="子类向父类的转换为向上转型"></a>子类向父类的转换为向上转型</h5><h5 id="向上转型语法"><a href="#向上转型语法" class="headerlink" title="向上转型语法"></a>向上转型语法</h5><pre><code>父类型 引用变名=new 子类型();</code></pre>
-<h6 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h6><pre><code>子类转父类规则
-将一个父类的引用指向子类对象,称为向上转型,自动进行类型转换
-此时通过父类引用变量调用的是子类覆盖或继承父类的方法,不是父类的方法
-此时通过父类型引用变量无法调用子类特有的方法</code></pre>
+                <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
+<p>  父类—&gt;子类<br>    超类—&gt;派生类<br>    关键字:extends</p>
+</blockquote>
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><blockquote>
+<p>   当一个子类继承了一个父类时，可以在子类中直接使用父类的属性和方法。如果父类的方法无法满足子类的需求，<br>   则可以在子类中对父类的方法进行改造，也称作重写（override）。重写是Java多态性的另一种体现。</p>
+</blockquote>
+<h5 id="重写的原则"><a href="#重写的原则" class="headerlink" title="重写的原则"></a>重写的原则</h5><blockquote>
+<p>  重写的方法的签名必须要和被重写的方法的签名完全匹配；<br>  重写的方法的返回值必须和被重写的方法的返回一致或者是其子类；<br>  重写的方法所抛出的异常必须和被重写方法的所抛出的异常一致，或者是其子类；<br>  私有方法不能被重写<br>  子类重写父类方法的过程中，可访问性只能一样或变的更公开。</p>
+</blockquote>
+<h5 id="子类向父类的转换为向上转型"><a href="#子类向父类的转换为向上转型" class="headerlink" title="子类向父类的转换为向上转型"></a>子类向父类的转换为向上转型</h5><h5 id="向上转型语法"><a href="#向上转型语法" class="headerlink" title="向上转型语法"></a>向上转型语法</h5><blockquote>
+<p>   父类型 引用变名=new 子类型();</p>
+</blockquote>
+<h6 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h6><blockquote>
+<p>   子类转父类规则<br>   将一个父类的引用指向子类对象,称为向上转型,自动进行类型转换<br>   此时通过父类引用变量调用的是子类覆盖或继承父类的方法,不是父类的方法<br>   此时通过父类型引用变量无法调用子类特有的方法</p>
+</blockquote>
 <h5 id="super关键字-代表父类对象-通过使用super关键字可以访问父类属性或方法-也可以在子类构造方法中调用父类的构造方法以便初始化父类继承的属性"><a href="#super关键字-代表父类对象-通过使用super关键字可以访问父类属性或方法-也可以在子类构造方法中调用父类的构造方法以便初始化父类继承的属性" class="headerlink" title="super关键字:代表父类对象,通过使用super关键字可以访问父类属性或方法,也可以在子类构造方法中调用父类的构造方法以便初始化父类继承的属性."></a>super关键字:代表父类对象,通过使用super关键字可以访问父类属性或方法,也可以在子类构造方法中调用父类的构造方法以便初始化父类继承的属性.</h5><h5 id="final关键字-不可改变的一旦定义不能改变"><a href="#final关键字-不可改变的一旦定义不能改变" class="headerlink" title="final关键字:不可改变的一旦定义不能改变"></a>final关键字:不可改变的一旦定义不能改变</h5><table>
 <thead>
 <tr>
@@ -568,11 +568,9 @@ public class Person &#123;
         System.out.println(tom);
     &#125;
 &#125;</code></pre>
-<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><pre><code>多态的重要表现就是方法的重写
-存在的三个必要条件:
-    继承
-    重写
-    父类引用指向子类对象</code></pre>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><blockquote>
+<p>   多态的重要表现就是方法的重写<br>   存在的三个必要条件:<br>       继承<br>       重写<br>       父类引用指向子类对象</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -1092,9 +1090,11 @@ public class Person &#123;
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            抽象类抽象类在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含
-足够的信息来描绘一类具体的对象，这样的类就是抽象类。
-抽象类需要注意以下几点：abstract放在class前，指明该类是
+                            抽象类抽象类
+在面向对象的概念中，所有的对象都是通过类来表述，但并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一类具体的对象，这样的类就是抽象类。
+
+抽象类需要注意以下几点：
+abstract放在class前，指明该
                         
                     </div>
                     <div class="publish-info">
@@ -1143,9 +1143,11 @@ public class Person &#123;
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            面向对象封装封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个
-不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
-封装的原则使对象以外的部分不能随意存取对象的内
+                            面向对象封装
+  封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个    不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
+
+封装的原则
+   使对象以外的部
                         
                     </div>
                     <div class="publish-info">

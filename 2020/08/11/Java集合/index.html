@@ -474,31 +474,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><pre><code>ArrayList LinkedList  HashSet  HashMap
-主要接口:Collection  List  Set  Map
-list.size();//获取集合长度
-list.get();//获取某个索引的元素
-list.add();//添加元素</code></pre>
-<h2 id="队列分两种结构"><a href="#队列分两种结构" class="headerlink" title="队列分两种结构"></a>队列分两种结构</h2><pre><code>循环数组: 查询快,增删慢
-链表结构: 插入删除快,查询慢
-collection顺序是无序的</code></pre>
-<h2 id="Set集合-继承-Collection接口"><a href="#Set集合-继承-Collection接口" class="headerlink" title="Set集合 继承 Collection接口"></a>Set集合 继承 Collection接口</h2><pre><code>元素不能重复
-add()添加元素
-remove()删除元素
-size()集合大小
-不能通过索引添加元素
-不能通过索引删除元素
-存储的数据是无序的</code></pre>
-<h2 id="Map接口-不继承Collection接口-HashSet散列表结构存储"><a href="#Map接口-不继承Collection接口-HashSet散列表结构存储" class="headerlink" title="Map接口 不继承Collection接口(HashSet散列表结构存储,"></a>Map接口 不继承Collection接口(HashSet散列表结构存储,</h2><pre><code> TreeMap使用数状结构,允许快速检索)
- 用与维护键值对key不可重复 value可以重复</code></pre>
+                <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><blockquote>
+<p>  ArrayList LinkedList  HashSet  HashMap<br>    主要接口:Collection  List  Set  Map<br>    list.size();//获取集合长度<br>    list.get();//获取某个索引的元素<br>    list.add();//添加元素</p>
+</blockquote>
+<h2 id="队列分两种结构"><a href="#队列分两种结构" class="headerlink" title="队列分两种结构"></a>队列分两种结构</h2><blockquote>
+<p>  循环数组: 查询快,增删慢<br>  链表结构: 插入删除快,查询慢<br>  collection顺序是无序的</p>
+</blockquote>
+<h2 id="Set集合-继承-Collection接口"><a href="#Set集合-继承-Collection接口" class="headerlink" title="Set集合 继承 Collection接口"></a>Set集合 继承 Collection接口</h2><blockquote>
+<p>  元素不能重复<br>    add()添加元素<br>    remove()删除元素<br>    size()集合大小<br>    不能通过索引添加元素<br>    不能通过索引删除元素<br>    存储的数据是无序的</p>
+</blockquote>
+<h2 id="Map接口-不继承Collection接口-HashSet散列表结构存储"><a href="#Map接口-不继承Collection接口-HashSet散列表结构存储" class="headerlink" title="Map接口 不继承Collection接口(HashSet散列表结构存储,"></a>Map接口 不继承Collection接口(HashSet散列表结构存储,</h2><blockquote>
+<p>   TreeMap使用数状结构,允许快速检索)<br>   用与维护键值对key不可重复 value可以重复</p>
+</blockquote>
 <h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><h5 id="put-Object-key-Object-value-添加元素"><a href="#put-Object-key-Object-value-添加元素" class="headerlink" title="put(Object key,Object value) 添加元素"></a>put(Object key,Object value) 添加元素</h5><h5 id="enterSet-获取键值对集合"><a href="#enterSet-获取键值对集合" class="headerlink" title="enterSet() 获取键值对集合"></a>enterSet() 获取键值对集合</h5><p><img src="/2020/08/11/Java%E9%9B%86%E5%90%88/clipimage001.png"></p>
 <h5 id="keySet-获取键集合"><a href="#keySet-获取键集合" class="headerlink" title="keySet() 获取键集合"></a>keySet() 获取键集合</h5><p><img src="/2020/08/11/Java%E9%9B%86%E5%90%88/clipimage002.png"></p>
 <h5 id="values-获取值的集合"><a href="#values-获取值的集合" class="headerlink" title="values()  获取值的集合"></a>values()  获取值的集合</h5><p><img src="/2020/08/11/Java%E9%9B%86%E5%90%88/clipimage003.png"></p>
 <h5 id="TreeSet不能存空键"><a href="#TreeSet不能存空键" class="headerlink" title="TreeSet不能存空键"></a>TreeSet不能存空键</h5><h5 id="Collection和Arrays是辅助类"><a href="#Collection和Arrays是辅助类" class="headerlink" title="Collection和Arrays是辅助类"></a>Collection和Arrays是辅助类</h5><h5 id="Array-sort-升序排序"><a href="#Array-sort-升序排序" class="headerlink" title="Array.sort()升序排序"></a>Array.sort()升序排序</h5><h2 id="Iterator迭代器"><a href="#Iterator迭代器" class="headerlink" title="Iterator迭代器"></a>Iterator迭代器</h2><h5 id="Iterator遍历List集合"><a href="#Iterator遍历List集合" class="headerlink" title="Iterator遍历List集合"></a>Iterator遍历List集合</h5><h5 id="Interator无序-子接口ListIterator有序"><a href="#Interator无序-子接口ListIterator有序" class="headerlink" title="Interator无序 子接口ListIterator有序"></a>Interator无序 子接口ListIterator有序</h5><p><img src="/2020/08/11/Java%E9%9B%86%E5%90%88/clipimage004.png"></p>
-<h2 id="在集合中常见的数据结构-掌握"><a href="#在集合中常见的数据结构-掌握" class="headerlink" title="在集合中常见的数据结构(掌握)"></a>在集合中常见的数据结构(掌握)</h2><pre><code>  ArrayXxx:底层数据结构是数组，查询快，增删慢
-  LinkedXxx:底层数据结构是链表，查询慢，增删快
-  HashXxx:底层数据结构是哈希表。依赖两个方法：hashCode()和equals()
-  TreeXxx:底层数据结构是二叉树。两种方式排序：自然排序和比较器排序</code></pre>
+<h2 id="在集合中常见的数据结构-掌握"><a href="#在集合中常见的数据结构-掌握" class="headerlink" title="在集合中常见的数据结构(掌握)"></a>在集合中常见的数据结构(掌握)</h2><blockquote>
+<pre><code>ArrayXxx:底层数据结构是数组，查询快，增删慢
+LinkedXxx:底层数据结构是链表，查询慢，增删快
+HashXxx:底层数据结构是哈希表。依赖两个方法：hashCode()和equals()
+TreeXxx:底层数据结构是二叉树。两种方式排序：自然排序和比较器排序     </code></pre>
+</blockquote>
+<p><strong>面试题：</strong>请解释Collection和Collections的区别？</p>
+<blockquote>
+<p>Collection是一个接口，用于定义集合操作的标准；<br>Collections是一个工具类，可以操作任意的集合对象。</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -1002,34 +1003,45 @@ size()集合大小
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/11/Java%E9%9B%86%E5%90%88/">
+                <a href="/2020/08/11/JavaIO%E6%B5%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Java集合">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JavaIO流">
                         
-                        <span class="card-title">Java集合</span>
+                        <span class="card-title">JavaIO流</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            集合ArrayList LinkedList  HashSet  HashMap
-主要接口:Collection  List  Set  Map
-list.size();//获取集合长度
-list.get();//获取某个索引的元素
-lis
+                            文件File类方法
+
+
+方法名
+功能说明
+
+
+
+File(String pathname)
+构造方法，用于创建一个指定路径名的File对象
+
+
+boolean canRead()
+判断文件或目录是否可读
+
+
+boolean createNe
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1042,7 +1054,6 @@ lis
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1073,11 +1084,13 @@ lis
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常异常发生的原因用户输入了非法数据。
-要打开的文件不存在。
-网络通信时连接中断，或者JVM内存溢出
-ThrowableErreo(错误)Error（错误）：JVM系统内部错误、资源耗尽等严重情况
-Exception因编程错误或偶然的外在因
+                            异常异常发生的原因
+   用户输入了非法数据。   要打开的文件不存在。   网络通信时连接中断，或者JVM内存溢出
+
+ThrowableErreo(错误)
+   Error（错误）：JVM系统内部错误、资源耗尽等严重情况
+
+Excepti
                         
                     </div>
                     <div class="publish-info">

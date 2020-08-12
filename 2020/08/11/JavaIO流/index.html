@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础, Kilitom">
+    <meta name="keywords" content="JavaIO流, Kilitom">
     <meta name="description" content="书中自有颜如玉,书中自有黄金屋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java基础 | Kilitom</title>
+    <title>JavaIO流 | Kilitom</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础</h1>
+                    <h1 class="description center-align post-title">JavaIO流</h1>
                 </div>
             </div>
         </div>
@@ -458,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-04
+                    2020-08-11
                 </div>
                 
 
@@ -474,165 +474,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="Java中标识符的命名必须满足以下原则："><a href="#Java中标识符的命名必须满足以下原则：" class="headerlink" title="Java中标识符的命名必须满足以下原则："></a>Java中标识符的命名必须满足以下原则：</h3><blockquote>
-<p>  标识符必须以字母、下划线（_）或美元符（$）开头，后面可以跟字母、数字、下划线或美元符<br>    标识符可以包含数字，但不能以数字开头<br>    除下划线“_”和“$”符号外，标识符中不包含任何特殊字符，如空格<br>    标识符区分大小写，比如，“abc”和“Abc”是两个不同的标识符<br>    对于标识符的长度没有限制<br>    不能使用Java关键字作为标识符 例如 static public void  main</p>
-</blockquote>
-<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><blockquote>
-<p>Java中分隔符分为两类：<br>    没有意义的空白符<br>    拥有确定含义的普通分隔符</p>
-</blockquote>
-<table>
+                <h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><h2 id="File类方法"><a href="#File类方法" class="headerlink" title="File类方法"></a>File类方法</h2><table>
 <thead>
 <tr>
-<th align="left">普通分隔符</th>
-<th align="left">名称</th>
-<th align="left">功能说明</th>
+<th><strong>方法名</strong></th>
+<th><strong>功能说明</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">{}</td>
-<td align="left">大括号</td>
-<td align="left">用来定义程序块，类，方法以及局部范围;</td>
+<td>File(String pathname)</td>
+<td>构造方法，用于创建一个指定路径名的File对象</td>
 </tr>
 <tr>
-<td align="left">[]</td>
-<td align="left">中括号</td>
-<td align="left">用来进行数组的声明，也可用来表示撤销对数组的引用;</td>
+<td>boolean canRead()</td>
+<td>判断文件或目录是否可读</td>
 </tr>
 <tr>
-<td align="left">()</td>
-<td align="left">小括号</td>
-<td align="left">在定义和调用方法时用来容纳参数表，在控制语句或强制类型转换组成的表达式中用来表示执行或计算的优先级 ;</td>
+<td>boolean createNewFile()</td>
+<td>自动创建一个File对象指定文件名的空文件，只有在指定文件名文件不存在的时候才能成功</td>
 </tr>
 <tr>
-<td align="left">;</td>
-<td align="left">分号</td>
-<td align="left">用来表示一条语句的结束 ;在for控制语句中用来将圆括号内的语法连接起来;</td>
+<td>boolean delete()</td>
+<td>删除File对象对应的文件或目录</td>
 </tr>
 <tr>
-<td align="left">,</td>
-<td align="left">逗号</td>
-<td align="left">在变量声明中，用于分割变量表中的各个变量;在for控制语句中用来将圆括号内的语法连接起来;</td>
+<td>boolean exists()</td>
+<td>判断File对象对应的文件或目录是否存在</td>
 </tr>
 <tr>
-<td align="left">:</td>
-<td align="left">冒号</td>
-<td align="left">说明语句标号。例如在三元运算符中使用;</td>
+<td>String getAbsolutePath()</td>
+<td>获取File对象对应的文件或目录的绝对路径</td>
+</tr>
+<tr>
+<td>String getName()</td>
+<td>获取File对象对应的文件或目录的名称</td>
+</tr>
+<tr>
+<td>String getPath()</td>
+<td>获取File对象对应的文件或目录的路径</td>
+</tr>
+<tr>
+<td>boolean isDirectory()</td>
+<td>判断File对象指向的是否为一个目录</td>
+</tr>
+<tr>
+<td>boolean isFile()</td>
+<td>判断File对象指向的是否为一个文件</td>
+</tr>
+<tr>
+<td>long length()</td>
+<td>返回File对象对应的文件的大小，单位为字节</td>
+</tr>
+<tr>
+<td>boolean mkdir()</td>
+<td>新建一个File对象所定义的一个路径，如果新建成功，返回true,否则返回false，此时File对象必须是目录对象</td>
+</tr>
+<tr>
+<td>boolean renameTo(File dest)</td>
+<td>重命名File对象对应的文件，如果命名成功，返回true，否则返回false</td>
+</tr>
+<tr>
+<td>long lastModified()</td>
+<td>返回此File对象的最后一次被修改的时间</td>
 </tr>
 </tbody></table>
-<h2 id="基本数据类型："><a href="#基本数据类型：" class="headerlink" title="基本数据类型："></a>基本数据类型：</h2><h3 id="（1）数值型："><a href="#（1）数值型：" class="headerlink" title="（1）数值型："></a>（1）数值型：</h3><blockquote>
-<p>1）整数类型（byte、short、int、long）<br>2)浮点类型（float、double）<br> 注:long a=1234567890L(末尾加“L”、“l”),否则默认为int型；<br> float b=2.3f(末尾加“F”、“f”),否则默认为double型；<br> 八进制必须以0（零） 开头；十六必须进制以0X或0x开头（零X或零x）。</p>
+<h2 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h2><blockquote>
+<p>  ../../文件名</p>
 </blockquote>
-<h3 id="（2）字符型：char型"><a href="#（2）字符型：char型" class="headerlink" title="（2）字符型：char型"></a>（2）字符型：char型</h3><blockquote>
-<p>注：每个字符在unicode表中都有相对应的位置，如a在unicode表中的位置是97.<br>转义字符（是字符就要加单引号）：\ddd:1-3为8进制数据所表示的字符，如\123<br>                                 \uxxxx:4位16进制数据所表示的字符，如\u0052<br>                                 &#39;:单引号字符<br>                                 \:反斜杠字符<br>                                 \t:垂直制表符，将光标移到下一个制表符的位置<br>                                 \r:回车<br>                                 \n:换行<br>                                 \b:退格<br>                                 \f:换页</p>
+<h2 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h2><blockquote>
+<p>  盘符://xx/xx/文件名</p>
 </blockquote>
-<h3 id="（3）布尔型（boolean）"><a href="#（3）布尔型（boolean）" class="headerlink" title="（3）布尔型（boolean）:"></a>（3）布尔型（boolean）:</h3><blockquote>
-<pre><code>又称为逻辑类型，只有true和false两个值，表示真和假。</code></pre>
+<h1 id="I-O流"><a href="#I-O流" class="headerlink" title="I/O流"></a>I/O流</h1><h2 id="字符流-Writer-Reader"><a href="#字符流-Writer-Reader" class="headerlink" title="字符流(Writer Reader)"></a>字符流(Writer Reader)</h2><blockquote>
+<p>  16位的Unicode</p>
 </blockquote>
-<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h3 id="1-常量：在程序执行过程中，其值不能被改变的量。"><a href="#1-常量：在程序执行过程中，其值不能被改变的量。" class="headerlink" title="1.常量：在程序执行过程中，其值不能被改变的量。"></a>1.常量：在程序执行过程中，其值不能被改变的量。</h3><blockquote>
-<p>   (1)常量的声明（定义常量）：1)final 数据类型 常量名称[=值];如final int a=5;<br>      注:1）常量通常也被称为final变量<br>   2）用final定义“成员变量（全局变量）”时，必须立刻设初值，否则会产生编译错误。</p>
+<blockquote>
+<p>  FileReader</p>
 </blockquote>
-<h3 id="2-变量：在程序执行过程中，其值能被改变的量。"><a href="#2-变量：在程序执行过程中，其值能被改变的量。" class="headerlink" title="2.变量：在程序执行过程中，其值能被改变的量。"></a>2.变量：在程序执行过程中，其值能被改变的量。</h3><blockquote>
-<p>  (1)成员变量（全局变量）：定义在类中；成员变量又分为静态变量和实例变量；<br>   1）静态变量（有static关键字）：有效范围跨类，甚至可达整个程序中（应用程序由若干个类构成）。<br>   2）实例变量（无static关键字）：有效范围当前类。<br>  (2)局部变量：定义在方法中。<br>     注：当局部变量名与成员变量名相通时，成员变量将在此方法中暂时失效。</p>
+<blockquote>
+<p>  从InputStreamReader类继承而来</p>
 </blockquote>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="1-赋值运算符（-）"><a href="#1-赋值运算符（-）" class="headerlink" title="(1)赋值运算符（=）"></a>(1)赋值运算符（=）</h3><blockquote>
-<p>   例：int a=3;(将3赋给a)<br>       int b=a+c;(将a+c的和赋给b)<br>       x=y=z=5;(将5的值赋给x、y、z，不建议使用)</p>
+<blockquote>
+<p>  按字符读取流中数据</p>
 </blockquote>
-<h3 id="2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））"><a href="#2-算术运算符（-（加）、-（减）、-（乘）、-（除）、-（取余））" class="headerlink" title="(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））"></a>(2)算术运算符（+（加）、-（减）、*（乘）、/（除）、%（取余））</h3><blockquote>
-<p>   例：12.45f<em>15=27.45;<br>       45-30=15;<br>       5</em>3=15;<br>       6/2=3;<br>       12%10=2;</p>
+<blockquote>
+<p>  FileWriter</p>
 </blockquote>
-<h3 id="3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量"><a href="#3-自增、自减运算符（-、–）-操作员必须是一个整型或浮点型变量" class="headerlink" title="(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量"></a>(3)自增、自减运算符（++、–）:操作员必须是一个整型或浮点型变量</h3><blockquote>
-<p>   例：假设a=5;以自增为例。<br>       b=++a;//此时a先加1，再赋值给b,所以b=6;<br>       b=a++;//此时a直接赋给b,之后加1，所以b=5;</p>
+<blockquote>
+<p>  从OutputStreamReader类继承而来</p>
 </blockquote>
-<h3 id="4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）"><a href="#4-比较运算符（大于-gt-、小于-lt-、等于-、大于等于-gt-、小于等于-lt-、不等于-）" class="headerlink" title="(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）"></a>(4)比较运算符（大于(&gt;)、小于(&lt;)、等于(==)、大于等于(&gt;=)、小于等于(&lt;=)、不等于(!=)）</h3><blockquote>
-<p>   例：4&gt;5,结果为false.<br>       4!=5,结果为true.<br>   注：结果为布尔值</p>
+<blockquote>
+<p>  按字符向流中写入数据</p>
 </blockquote>
-<h3 id="5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）"><a href="#5-逻辑运算符（与-amp-amp-、-amp-、或-、非-）" class="headerlink" title="(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）"></a>(5)逻辑运算符（与(&amp;&amp;、&amp;)、或(||)、非(!)）</h3><blockquote>
-<p>   与：同真为真<br>   或：一真为真<br>   注：1）结果都为布尔值（flase、true）<br>       2）短路运算符（&amp;&amp;）：第一个为假，就不再判断第二个。<br>          非短路运算符（&amp;）：第一个为假，依然判断第二个，相比之下更浪费时间。</p>
+<h2 id="字节流-OutputStream-InputStream"><a href="#字节流-OutputStream-InputStream" class="headerlink" title="字节流(OutputStream InputStream)"></a>字节流(OutputStream InputStream)</h2><blockquote>
+<p>  8位的byte流</p>
 </blockquote>
-<h3 id="6-三元运算符（条件式？值1：值2）：等价于if…-else语句"><a href="#6-三元运算符（条件式？值1：值2）：等价于if…-else语句" class="headerlink" title="(6)三元运算符（条件式？值1：值2）：等价于if…..else语句"></a>(6)三元运算符（条件式？值1：值2）：等价于if…..else语句</h3><blockquote>
-<p>   例：int y=a&gt;b?x+1:x-1;<br>      含义：如果a&gt;b成立，y=x+1;否则y=x-1；</p>
+<h2 id="字符流和字节流主要的区别："><a href="#字符流和字节流主要的区别：" class="headerlink" title="字符流和字节流主要的区别："></a>字符流和字节流主要的区别：</h2><blockquote>
+<p>  字节流没有使用到缓冲区，而字符流使用了；</p>
 </blockquote>
-<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h3 id="（1）隐式类型转换（自动类型转换）"><a href="#（1）隐式类型转换（自动类型转换）" class="headerlink" title="（1）隐式类型转换（自动类型转换）"></a>（1）隐式类型转换（自动类型转换）</h3><blockquote>
-<p>   例：int a=3;<br>       float x=a;<br>       执行结果为3.0</p>
+<blockquote>
+<p>  处理各种数据都可以通过字节流完成，而在处理中文的时候使用字符流会更好。</p>
 </blockquote>
-<h3 id="（2）显式类型转换（强制类型转换）"><a href="#（2）显式类型转换（强制类型转换）" class="headerlink" title="（2）显式类型转换（强制类型转换）"></a>（2）显式类型转换（强制类型转换）</h3><blockquote>
-<p>  例：int a=(int)4.25;<br>      执行结果为：4</p>
+<h3 id="输入流"><a href="#输入流" class="headerlink" title="输入流"></a>输入流</h3><blockquote>
+<p>  只能读 不能写</p>
 </blockquote>
-<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="分支语句-if-else-switch"><a href="#分支语句-if-else-switch" class="headerlink" title="分支语句 if-else , switch"></a>分支语句 if-else , switch</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
-     statement1<span class="token punctuation">;</span>
-<span class="token punctuation">[</span><span class="token keyword">else</span> 
-     statement2<span class="token punctuation">;</span>
-<span class="token punctuation">]</span> 
-<span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token string">'value1'</span><span class="token operator">:</span> 
-      statement1<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token string">'value2 '</span><span class="token operator">:</span> 
-      statement2<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span> 
-    <span class="token keyword">case</span> <span class="token string">'valueN'</span><span class="token operator">:</span> 
-      statementN<span class="token punctuation">;</span>
-      <span class="token keyword">break</span><span class="token punctuation">;</span>
-   <span class="token punctuation">[</span><span class="token keyword">default</span><span class="token operator">:</span>defaultStatement<span class="token punctuation">;</span><span class="token punctuation">]</span> 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h3 id="迭代语句-while-do-while-for"><a href="#迭代语句-while-do-while-for" class="headerlink" title="迭代语句 while , do-while , for"></a>迭代语句 while , do-while , for</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    statement<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">do</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    statement<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span>initialization；condition；update<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-     statements<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h3 id="转移语句-break-continue-return"><a href="#转移语句-break-continue-return" class="headerlink" title="转移语句 break , continue , return"></a>转移语句 break , continue , return</h3><blockquote>
-<p>break语句：在循环中用于立即从当前循环终止控制；<br>continue语句：从其调用处跳至循环的开始处；<br>return语句 ：其之后的语句将不再执行；<br>ava中没有goto语句，在多层循环时，可以用break、continue实现goto语句的功能。</p>
+<h3 id="输出流"><a href="#输出流" class="headerlink" title="输出流"></a>输出流</h3><blockquote>
+<p>  只能写 不能读</p>
 </blockquote>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><blockquote>
-<p>  属于引用数据类型;<br>  由类型相同的元素组成的有顺序的数据集合;<br>  数组的长度是固定的,不能扩展;<br>  可以存储基本数据库类型或对象;</p>
+<h3 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a>对象流</h3><h4 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h4><blockquote>
+<p>  序列化是一种将对象以一连串字节描述的过程:(输出流)</p>
 </blockquote>
-<h2 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h2><pre><code>data_type[] varName;
-或
-data_type varName[];
-示例:
-int a[];
-double b[];</code></pre>
-<h3 id="利用new来为数组型变量分配内存空间"><a href="#利用new来为数组型变量分配内存空间" class="headerlink" title="利用new来为数组型变量分配内存空间"></a>利用new来为数组型变量分配内存空间</h3><pre><code>a= new int[10];
-double b = new double[10];</code></pre>
-<h3 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h3><pre><code>静态初始化
-int[] k = &#123;1,2,3,4&#125;
-或
-int k[] = new int&#123;1,2,3,4&#125;
-动态初始化
-int array = new int[2];
-array[0] = 1;
-array[1] = 2;</code></pre>
-<h3 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><blockquote>
-<p>  使用循环语句进行复制<br>     使用循环语句遍历源数组每个元素，赋值给目标数组对应位置。<br>  使用clone()方法<br>      在Java中，Object类是所有类的父类，其clone()方法一般用于创建并返回此对象的一个副本，<br>      Java中认为一切都是“对象”，所以使用该方法也可以实现数组的复制。<br>  使用System.arraycopy方法<br>      arraycopy()方法是System类的一个静态方法（并且是本地方法，效率非常高），其可以方便<br>      的实现数组拷贝功能System.arraycopy()方法的结构如下：<br>      System.arraycopy(from, fromIndex, to, toIndex, count)</p>
-</blockquote>
-<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><blockquote>
-<p> 如果一维数组元素的数据类型还是一维数组的话，这种数组就被称为二维数组。二维数组定义语法如下：<br>        data_type[ ][ ] varName;<br>动态初始化二维数组</p>
-</blockquote>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 定义二维数组</span>
-   <span class="token keyword">int</span><span class="token punctuation">[</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> <span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-             array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 把1,2,3,4分别赋给array[i][j]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><h3 id="Scanner类-获取控制台输入。它是一个工具类，属于java-util包。"><a href="#Scanner类-获取控制台输入。它是一个工具类，属于java-util包。" class="headerlink" title="Scanner类:获取控制台输入。它是一个工具类，属于java.util包。"></a>Scanner类:获取控制台输入。它是一个工具类，属于java.util包。</h3><blockquote>
-<p>  用法：Scanner console = new Scanner(System.in);//定义一个Scanner类<br>  方法: console.nextInt();//输入整数<br>        console.nextLine();//输入字符串<br>        console.nextDouble() ;//输入小数</p>
-</blockquote>
-<h3 id="Random类-实现的随机算法是伪随机，也就是有规则的随机"><a href="#Random类-实现的随机算法是伪随机，也就是有规则的随机" class="headerlink" title="Random类:实现的随机算法是伪随机，也就是有规则的随机"></a>Random类:实现的随机算法是伪随机，也就是有规则的随机</h3><blockquote>
-<p>   用法：Random random = new Random();<br>   方法： random.nextInt();//随机整数<br>         random.nextInt(int n);//随机返回[0，n)之间的整数<br>         random. nextDouble();//随机返回[0.0,1.0)之间的小数</p>
-</blockquote>
-<h3 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h3><blockquote>
-<p>   Math.random()是令系统随机选取大于等于 0.0 且小于 1.0 的伪随机 double 值<br>   公式：Math.random()*(n-m)+m，生成大于等于m小于n的随机数；<br>   Math.abs();//绝对值<br>   Math.sqrt();//立方根<br>   Math.max();//两者之间较大的<br>   Math.min();//两者之间较小的<br>   Math.random();//随机数<br>   Math.pow();//幂<br>   Math.ceil();//向上取整<br>   Math.floor();//向下取整<br>   Math.round();//四舍五入</p>
-</blockquote>
-<h2 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><blockquote>
-<p>   charAt(int index)//返回执行下标index对应的字符<br>   concat(String str)//连接两个字符串返回组合后的字符串<br>   endsWith(String suffix)//判断字符是否以suffix结尾 true/false<br>   startWith(String suffix)//判断字符是否以suffix开头 true/false<br>   equals(Obgect obj)//判断两个字符是否相等,true/false<br>   indexOf(String suffix)//返回字串suffix对应的下标<br>   lastindexOf(String suffix)//返回字串suffix最后一次出现的位置<br>   length()//返回字符串的长度<br>   matches(String regex)//判断字符串是否与正则表达式相等<br>   replace(char oldChar,char newChar)//字符串中旧的字串oldChar替换为新的字串newChar<br>   split(String regex)//按regex对应字符串进行拆分,返回子字符数组<br>   substring(int beginIndex,int endIndex)//截取指示下标范围内的字串返回子字符串[)<br>   trim()//去空格</p>
-</blockquote>
-<h3 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h3><blockquote>
-<p>   StringBuilder:不支持并发操作,线程不安全,不适合多线程使用<br>   StringBuffer:支持并发操作,线程安全,适合多线程使用<br>总结:若操作少量的数据可以使用String;若操作大量数据且要求数据线程安全的情况下,必须使用StringBuffer;其他情况使用StringBuilder.</p>
+<h4 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h4><blockquote>
+<p>  反序列化是一种将这些字节重组成一个对象的过程:(输入流)</p>
 </blockquote>
 
             </div>
@@ -659,7 +611,7 @@ array[1] = 2;</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kilitom.github.io/2020/08/04/Java%E5%9F%BA%E7%A1%80/">https://kilitom.github.io/2020/08/04/Java%E5%9F%BA%E7%A1%80/</a>
+                    <a href="https://kilitom.github.io/2020/08/11/JavaIO%E6%B5%81/">https://kilitom.github.io/2020/08/11/JavaIO%E6%B5%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1137,33 +1089,46 @@ array[1] = 2;</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/05/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                <a href="/2020/08/11/JavaIO%E6%B5%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java面向对象">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JavaIO流">
                         
-                        <span class="card-title">Java面向对象</span>
+                        <span class="card-title">JavaIO流</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            面向对象封装
-  封装就是把对象的属性（状态）和方法（行为）结合在一起，并尽可能隐蔽对象的内部细节，成为一个    不可分割的独立单位（即对象），对外形成一个边界，只保留有限的对外接口使之与外部发生联系。
+                            文件File类方法
 
-封装的原则
-   使对象以外的部
+
+方法名
+功能说明
+
+
+
+File(String pathname)
+构造方法，用于创建一个指定路径名的File对象
+
+
+boolean canRead()
+判断文件或目录是否可读
+
+
+boolean createNe
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1176,6 +1141,7 @@ array[1] = 2;</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1194,39 +1160,25 @@ array[1] = 2;</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/03/Java%E5%85%A5%E9%97%A8/">
+                <a href="/2020/08/11/Java%E9%9B%86%E5%90%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java入门">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Java集合">
                         
-                        <span class="card-title">Java入门</span>
+                        <span class="card-title">Java集合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            了解JavaJava特点
-
-简单性
-面向对象性
-分布式
-健壮性
-高性能
-多线程
-动态性
-
-
-
-
-Java运行环境环境变量配置
-
-​    JAVA_HOME ​        JAVA_HOME=JDK的安装路径(自己的安装路径C:\Pro
+                            集合
+  ArrayList LinkedList  HashSet  HashMap    主要接口:Collection  List  Set  Map    list.size();//获取集合长度    list.get();//获
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
                             </span>
                         <span class="publish-author">
                             
